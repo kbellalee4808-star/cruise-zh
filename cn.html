@@ -1,0 +1,2035 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>邮轮订阅会员 — 每月准备，用积分预订</title>
+<meta name="description" content="不必一次付一大笔钱，每月准备一点，再用累积的积分预订邮轮。积分怎么累积、怎么预订，用计算机亲自算算看。">
+
+
+<meta property="og:type"         content="website">
+<meta property="og:site_name"    content="Cruise Club">
+<meta property="og:title"        content="邮轮订阅会员 — 每月准备，用积分预订">
+<meta property="og:description"  content="每月准备一点，用累积的积分预订邮轮。积分怎么累积、怎么预订，用计算机算算看。">
+<meta property="og:image"        content="https://kbellalee4808-star.github.io/cruise-zh/img/hero.jpg">
+<meta property="og:image:width"  content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale"       content="zh_CN">
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="邮轮订阅会员 — 每月准备，用积分预订">
+<meta name="twitter:description" content="每月准备一点，用累积的积分预订邮轮。">
+<meta name="twitter:image"       content="https://kbellalee4808-star.github.io/cruise-zh/img/hero.jpg">
+<meta name="theme-color" content="#0a1f38">
+<link rel="icon" type="image/png" sizes="64x64" href="img/2.png">
+<link rel="icon" type="image/png" sizes="512x512" href="img/3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/4.png">
+<meta name="apple-mobile-web-app-title" content="Cruise Club">
+<meta name="application-name" content="Cruise Club">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --font-display: 'Noto Sans SC','PingFang SC','Microsoft YaHei',-apple-system,sans-serif;
+  --font-body:    'Noto Sans SC','PingFang SC','Microsoft YaHei',-apple-system,sans-serif;
+  --teal:        #0a9eb5;
+  --coral:       #d9534f;
+  --gold-dark:   #8a6000;
+  --green-light: #edfbf4;
+  --rs:          14px;
+  --navy:        #0a1f38;
+  --navy2:       #102d50;
+  --ocean:       #1a6fa8;
+  --ocean-lt:    #2485c4;
+  --sky:         #f0f6fc;
+  --sky2:        #e6f2fb;
+  --gold:        #c8983a;
+  --gold-lt:     #f5c842;
+  --gold-pale:   #fdf6e3;
+  --ivory:       #fafcfe;
+  --white:       #ffffff;
+  --text:        #0a1f38;
+  --text2:       #334e68;
+  --muted:       #5f7d96;
+  --muted2:      #8fa8bc;
+  --border:      #dbeaf5;
+  --border2:     #ccdded;
+  --green:       #1a7a4a;
+  --green-lt:    #edfbf4;
+  --red:         #c0392b;
+  --red-lt:      #fdf0ef;
+
+  --shadow-sm:   0 2px 8px rgba(10,31,56,.06);
+  --shadow:      0 4px 20px rgba(10,31,56,.09);
+  --shadow-lg:   0 8px 40px rgba(10,31,56,.14);
+  --r:           16px;
+  --r-sm:        10px;
+  --r-xs:        7px;
+
+  --fs-hero:     26px;
+  --fs-h1:       22px;
+  --fs-h2:       18px;
+  --fs-h3:       16px;
+  --fs-body:     14px;
+  --fs-sm:       13px;
+  --fs-xs:       12px;
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; overflow-x:hidden; }
+body {
+  background: linear-gradient(160deg, #e8f2fb 0%, #eff7ff 50%, #f5f9fd 100%);
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: var(--text);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  word-break:normal;
+  overflow-x: hidden;
+  overflow-wrap: anywhere;
+}
+img { max-width:100%; display:block; }
+button { font-family: inherit; }
+
+h1, h2, h3, .panel-head-t, .step-badge, .acc-title { font-family: var(--font-display); }
+
+.wrap {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 16px 60px;
+  box-sizing: border-box;
+}
+
+
+.toc-chip{
+  background:var(--white); border:1.5px solid var(--border2); border-radius:12px;
+  padding:13px 8px; font-size:12px; font-weight:800; color:var(--navy);
+  cursor:pointer; text-align:center; line-height:1.35; transition:all .15s;
+  -webkit-tap-highlight-color:transparent; box-shadow:var(--shadow-sm);
+}
+.toc-chip:active{ transform:scale(.97); }
+.toc-chip.toc-hot{ background:#fffdf5; border-color:#e8d060; }
+.toc-chip.on{
+  background:linear-gradient(135deg,var(--navy),var(--ocean));
+  border-color:var(--navy); color:#fff;
+  box-shadow:0 4px 14px rgba(10,31,56,.28);
+}
+
+
+.panel{ display:none; margin-top:14px; }
+.panel.open{ display:block; animation:fadeUp .16s ease; }
+.panel img{ background: var(--sky); }
+.panel .img-skel{ background: var(--sky); min-height:90px; }
+.panel-head{
+  display:flex; align-items:center; gap:10px;
+  background:linear-gradient(135deg,var(--navy),var(--ocean));
+  border-radius:var(--r) var(--r) 0 0;
+  padding:15px 18px; margin-bottom:12px;
+  position:sticky; top:0; z-index:50;
+  box-shadow:0 4px 16px rgba(10,31,56,.18);
+}
+.panel-head-n{
+  width:28px; height:28px; border-radius:50%;
+  background:rgba(255,255,255,.18); border:1px solid rgba(255,255,255,.3);
+  color:#fff; font-size:12px; font-weight:900;
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+}
+.panel-head-t{ flex:1; min-width:0; font-size:15px; font-weight:900; color:#fff; letter-spacing:-.3px; }
+.panel-close{
+  flex-shrink:0; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.3);
+  color:#fff; font-size:11.5px; font-weight:800; padding:6px 12px; border-radius:50px;
+  cursor:pointer; -webkit-tap-highlight-color:transparent; white-space:nowrap;
+}
+.panel-close:active{ background:rgba(255,255,255,.3); }
+.panel-foot{
+  display:flex; align-items:center; justify-content:center; gap:6px;
+  width:100%; margin:14px 0 4px; padding:13px;
+  background:var(--white); border:1.5px solid var(--border2); border-radius:50px;
+  color:var(--ocean); font-size:13px; font-weight:800;
+  cursor:pointer; -webkit-tap-highlight-color:transparent; box-shadow:var(--shadow-sm);
+}
+.panel-foot:active{ background:var(--sky); }
+
+/* ─── CARD ─── */
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 20px 18px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ─── ACCORDION ─── */
+.acc {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  margin-bottom: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.acc-t {
+  display: flex; align-items: center; gap: 12px;
+  padding: 16px 18px; cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none; transition: background .15s;
+}
+.acc-t:active { background: var(--sky); }
+.acc-ic {
+  width: 42px; height: 42px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; flex-shrink: 0;
+}
+.acc-ic.b { background: #e8f3fc; }
+.acc-ic.g { background: var(--green-lt); }
+.acc-ic.y { background: #fef8e6; }
+.acc-ic.p { background: #f2ecff; }
+.acc-tw { flex: 1; min-width: 0; }
+.acc-title { font-size: 15px; font-weight: 900; color: var(--text); letter-spacing: -.3px; }
+.acc-sub { font-size: 12px; color: var(--muted); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.acc-arr { font-size: 14px; color: var(--muted2); transition: transform .3s; flex-shrink: 0; }
+.acc-arr.open { transform: rotate(180deg); }
+.acc-body { display: none; padding: 0 18px 20px; border-top: 1px solid var(--sky); }
+.acc-body.open { display: block; }
+
+.step-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--ocean); color: #fff; font-size: 13px; font-weight: 900; flex-shrink: 0;
+}
+.divider { height: 1px; background: var(--border); margin: 16px 0; }
+
+
+#float-toc {
+  position: fixed; bottom: 76px; right: 16px; z-index: 998;
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 10px 15px; border-radius: 50px;
+  background: var(--white); border: 1.5px solid var(--ocean); color: var(--ocean);
+  font-size: 12px; font-weight: 900; cursor: pointer; box-shadow: var(--shadow);
+  opacity: 0; transform: translateY(8px); transition: opacity .3s, transform .3s;
+  -webkit-tap-highlight-color: transparent; white-space: nowrap;
+}
+#float-toc.show { opacity: 1; transform: translateY(0); }
+#float-toc:active { transform: scale(.96); }
+#float-top {
+  position: fixed; bottom: 22px; right: 16px; z-index: 998;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--navy2); color: #fff; font-size: 16px; border: none;
+  cursor: pointer; box-shadow: var(--shadow);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transform: translateY(8px); transition: opacity .3s, transform .3s;
+  -webkit-tap-highlight-color: transparent;
+}
+#float-top.show { opacity: 1; transform: translateY(0); }
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+
+@keyframes fadeUp { from { opacity:0; transform:translateY(10px);} to { opacity:1; transform:translateY(0);} }
+
+@media (min-width: 600px) {
+  :root { --fs-hero:30px; --fs-h1:26px; --fs-h2:21px; --fs-h3:18px; --fs-body:15px; --fs-sm:14px; --fs-xs:13px; }
+  .wrap { max-width: 560px; padding: 0 24px 70px; }
+  .card { padding: 24px 22px; margin-bottom: 14px; }
+  .acc-t { padding: 18px 22px; }
+  .acc-body { padding: 0 22px 22px; }
+  .acc-title { font-size: 16px; }
+  .toc-chip { font-size: 13px; padding: 14px 8px; }
+  .panel-head-t { font-size: 16px; }
+  .grid2 { gap: 12px; }
+}
+@media (min-width: 900px) {
+  :root { --fs-hero:36px; --fs-h1:30px; --fs-h2:24px; --fs-h3:20px; --fs-body:16px; --fs-sm:15px; --fs-xs:14px; }
+  .wrap { max-width: 680px; padding: 0 40px 80px; }
+  .card { padding: 30px 28px; margin-bottom: 16px; }
+  .acc-t { padding: 20px 28px; }
+  .acc-body { padding: 0 28px 26px; }
+  .acc-ic { width: 46px; height: 46px; border-radius: 14px; }
+  .acc-title { font-size: 17px; }
+  .grid2 { gap: 14px; }
+  .grid3 { gap: 10px; }
+}
+</style>
+<style>
+.sf-sub{font-size:12px;color:var(--muted);margin:-4px 0 14px;line-height:1.6;}
+.sf{position:relative;background:#fff;border:1.5px solid #E2E6EC;border-radius:12px;padding:20px 11px 13px;}
+.sf-tag{position:absolute;top:-10px;left:11px;background:var(--navy);color:#fff;font-size:10.5px;font-weight:700;padding:2px 9px;border-radius:10px;}
+.sf-g{display:grid;grid-template-columns:1fr 1fr;gap:11px 8px;}
+.sf-g>div{min-width:0;}
+.sf-full{grid-column:1/-1;}
+.sf-l{font-size:12.5px;font-weight:700;color:#1f2937;margin-bottom:4px;}
+.sf-l i{color:#e11d48;font-style:normal;margin-left:1px;}
+.sf-i{border:1.5px solid var(--gold);background:#FFFCF5;border-radius:8px;padding:9px 8px;font-size:13px;color:#111827;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:flex;align-items:center;gap:6px;}
+.sf-i.sm{font-size:11.5px;}
+.sf-i.pw{justify-content:space-between;letter-spacing:2px;}
+.sf-i .eye{font-size:12px;opacity:.55;letter-spacing:0;}
+.sf-i .cc{color:#374151;border-right:1px solid #D5DBE3;padding-right:5px;flex-shrink:0;}
+.sf-i.sel{justify-content:space-between;}
+.sf-h{margin-top:3px;font-size:11px;color:#8a6a1f;line-height:1.4;}
+.sf-h b{color:#b5862a;}
+.sf-n{font-size:11.5px;color:#6b7280;background:var(--sky);border-radius:7px;padding:6px 8px;}
+.sf-n b{color:var(--navy);}
+.sf-cap{display:flex;align-items:center;gap:9px;background:#F9F9F9;border:1px solid #D3D3D3;border-radius:4px;padding:10px 11px;font-size:13px;color:#222;max-width:260px;}
+.sf-cap .box{width:22px;height:22px;border:2px solid #4CAF50;border-radius:3px;color:#4CAF50;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;}
+.sf-cap .sf-rc{margin-left:auto;font-size:9.5px;color:#666;}
+.sf-btn{background:#F0913A;color:#fff;text-align:center;font-weight:700;font-size:15px;border-radius:9px;padding:11px;}
+.sf-name{margin-top:10px;background:#fff;border:1px solid var(--border);border-radius:10px;padding:11px 12px;font-size:12px;color:var(--navy);line-height:1.7;}
+.sf-name b{color:var(--ocean);}
+</style>
+</head>
+<body>
+
+
+<button id="float-toc" onclick="closePanel(true)" aria-label="回到目录">📑 目录</button>
+<button id="float-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到顶端">↑</button>
+
+<div class="wrap">
+<div style="display:flex; justify-content:flex-end; gap:6px; margin-top:12px;"><a href="./" style="min-height:34px; display:inline-flex; align-items:center; padding:0 15px; border-radius:999px; font-size:13px; font-weight:800; text-decoration:none; background:#fff; color:var(--navy); border:1.5px solid var(--border2);">繁體</a><a href="cn.html" style="min-height:34px; display:inline-flex; align-items:center; padding:0 15px; border-radius:999px; font-size:13px; font-weight:800; text-decoration:none; background:var(--navy); color:#fff; border:1.5px solid var(--navy);">简体</a></div>
+
+
+<script>const CONFIG = {};</script>
+
+
+
+<div style="margin-bottom:0; margin-top:16px;">
+  <div style="border-radius:var(--r) var(--r) 0 0; overflow:hidden; box-shadow:var(--shadow);"><img src="img/hero.jpg" alt="停靠在港口的邮轮" style="width:100%; height:min(64vw,360px); object-fit:cover; display:block;"></div>
+
+  
+  <div style="background:linear-gradient(135deg,var(--navy) 0%,#0a4a7a 100%); border-radius:0 0 var(--r) var(--r); padding:28px 24px 32px; text-align:center; margin-bottom:16px;">
+    <div style="display:inline-block; background:var(--gold); color:var(--navy); font-size:11px; font-weight:900; letter-spacing:2px; padding:5px 14px; border-radius:20px; margin-bottom:14px;">邮轮订阅平台</div>
+    <div style="font-size:3.8rem; font-weight:900; color:var(--gold); line-height:1.1; margin-bottom:8px;">$0</div>
+    <div style="font-size:1.3rem; font-weight:900; color:#fff; margin-bottom:10px;">积分 100% 全额支付</div>
+    <div style="font-size:14px; color:rgba(255,255,255,.75); line-height:1.7;">
+      用累积的积分<br>邮轮舱房费用可 <strong style="color:var(--gold);">全额支付</strong> 
+    </div>
+  </div>
+
+  
+  <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-bottom:20px;">
+    <span style="background:var(--sky); border:1px solid var(--border); color:var(--ocean); font-size:12px; font-weight:700; padding:6px 14px; border-radius:20px;">✅ 14 天内可退费</span>
+    <span style="background:var(--sky); border:1px solid var(--border); color:var(--ocean); font-size:12px; font-weight:700; padding:6px 14px; border-radius:20px;">🛡️ 月费不会白缴</span>
+    <span style="background:var(--sky); border:1px solid var(--border); color:var(--ocean); font-size:12px; font-weight:700; padding:6px 14px; border-radius:20px;">🎁 月费双倍积分回馈</span>
+    <span style="background:var(--sky); border:1px solid var(--border); color:var(--ocean); font-size:12px; font-weight:700; padding:6px 14px; border-radius:20px;">🏷️ 会员专属 17% 折扣</span>
+    <span style="background:var(--sky); border:1px solid var(--border); color:var(--ocean); font-size:12px; font-weight:700; padding:6px 14px; border-radius:20px;">🌍 全球邮轮一站比价</span>
+    <span style="background:var(--sky); border:1px solid var(--border); color:var(--ocean); font-size:12px; font-weight:700; padding:6px 14px; border-radius:20px;">🚢 直购会员价，省去中间商</span>
+    <span style="background:var(--sky); border:1px solid var(--border); color:var(--ocean); font-size:12px; font-weight:700; padding:6px 14px; border-radius:20px;">💎 越久越划算的忠诚会员制度</span>
+  </div>
+</div>
+
+
+<div style="text-align:center; padding:28px 8px 22px; word-break:normal;">
+  <div style="font-size:72px; line-height:1; margin-bottom:20px;">🛳️</div>
+  <div style="display:inline-block; background:var(--white); border:1.5px solid var(--border2); border-radius:50px; padding:8px 22px; font-size:13px; font-weight:700; color:var(--navy); margin-bottom:24px; box-shadow:var(--shadow-sm);">
+    邮轮会员指南
+  </div>
+  <h1 style="font-size:clamp(28px,8vw,42px); font-weight:900; color:var(--navy); line-height:1.35; margin-bottom:20px; letter-spacing:-1px;">
+    邮轮旅行，<br>
+    <span style="color:var(--ocean);">也能用订阅的</span><br>
+    <span style="color:var(--ocean);">每月准备，积分预订</span>
+  </h1>
+  <div style="font-size:15px; color:var(--muted); line-height:2.1;">
+    一般人一次付全额，<br>
+    会员每月准备一点，<br>
+    再用累积的积分预订邮轮
+  </div>
+</div>
+
+
+<div style="background:var(--white); border:2px solid var(--gold); border-radius:var(--r); padding:22px 18px; text-align:center; box-shadow:var(--shadow-lg); margin-bottom:22px;">
+  <div style="font-size:11px; font-weight:800; color:var(--gold); margin-bottom:10px; letter-spacing:1.5px;">GLOBAL NETWORK</div>
+  <h2 style="font-size:18px; font-weight:900; color:var(--navy); line-height:1.6; margin-bottom:16px; word-break:normal;">
+    遍及全球 <span style="color:var(--ocean);">200 多个国家</span>,<br>
+    <span style="color:var(--ocean);">20 万个以上</span>的目的地<br>
+    全球邮轮直购平台
+  </h2>
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; margin-bottom:14px;">
+    <div style="background:var(--sky); border:1px solid var(--border); border-radius:12px; padding:14px 8px;">
+      <div style="font-size:22px; margin-bottom:6px;">🌍</div>
+      <div style="font-size:18px; font-weight:900; color:var(--ocean); line-height:1;">200+</div>
+      <div style="font-size:10px; color:var(--muted); margin-top:3px; font-weight:700;">个国家</div>
+    </div>
+    <div style="background:var(--sky); border:1px solid var(--border); border-radius:12px; padding:14px 8px;">
+      <div style="font-size:22px; margin-bottom:6px;">🗺️</div>
+      <div style="font-size:18px; font-weight:900; color:var(--ocean); line-height:1;">20 万+</div>
+      <div style="font-size:10px; color:var(--muted); margin-top:3px; font-weight:700;">目的地</div>
+    </div>
+    <div style="background:var(--sky); border:1px solid var(--border); border-radius:12px; padding:14px 8px;">
+      <div style="font-size:22px; margin-bottom:6px;">🛳️</div>
+      <div style="font-size:18px; font-weight:900; color:var(--ocean); line-height:1;">全球</div>
+      <div style="font-size:10px; color:var(--muted); margin-top:3px; font-weight:700;">邮轮公司</div>
+    </div>
+  </div>
+  <div style="border-radius:12px; overflow:hidden; height:180px;">
+    <img src="img/5.jpg"
+      loading="lazy" decoding="async" alt="停靠多艘邮轮的港口全景"
+      style="width:100%; height:100%; object-fit:cover; display:block;">
+  </div>
+</div>
+
+
+<div class="card" id="toc-menu" style="margin-bottom:8px; padding:18px 16px;">
+  <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:4px;">📑 想了解什么？</div>
+  <div style="font-size:11.5px; color:var(--muted); margin-bottom:14px; line-height:1.6;">点击下面任一项目，内容就会在下方展开</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+    <button onclick="openPanel('sec1')"       class="toc-chip" id="chip-sec1">什么是邮轮？</button>
+    <button onclick="openPanel('sec2')"       class="toc-chip" id="chip-sec2">为什么选邮轮</button>
+    <button onclick="openPanel('sec3')"       class="toc-chip" id="chip-sec3">预订方式</button>
+    <button onclick="openPanel('sec4')"       class="toc-chip" id="chip-sec4">什么是会员？</button>
+    <button onclick="openPanel('sec5')"       class="toc-chip" id="chip-sec5">怎么开始</button>
+    <button onclick="openPanel('sec6')"       class="toc-chip toc-hot" id="chip-sec6">积分累积</button>
+    <button onclick="openPanel('sec7')"       class="toc-chip toc-hot" id="chip-sec7">用积分预订</button>
+    <button onclick="openPanel('sec8')"       class="toc-chip" id="chip-sec8">实际范例</button>
+    <button onclick="openPanel('sec9')"       class="toc-chip" id="chip-sec9">费用比较</button>
+    <button onclick="openPanel('sec10')"      class="toc-chip" id="chip-sec10">舱房选择</button>
+    <button onclick="openPanel('sec11')"      class="toc-chip toc-hot" id="chip-sec11" style="grid-column:1 / -1;">加入方式</button>
+    <button onclick="openPanel('sec-dday')"   class="toc-chip toc-hot" id="chip-sec-dday" style="grid-column:1 / -1;">📅 什么时候可以预订？</button>
+    <button onclick="openPanel('sec-reward')" class="toc-chip toc-hot" id="chip-sec-reward" style="grid-column:1 / -1;">💎 积分计算机</button>
+    <button onclick="openPanel('sec-trust')"  class="toc-chip" id="chip-sec-trust" style="grid-column:1 / -1;">🏆 值得信赖的理由</button>
+  </div>
+</div>
+
+
+<div id="panel-zone">
+
+
+<div class="panel" id="sec1" data-n="1" data-title="邮轮旅行是什么？">
+<div class="card" style="word-break:normal;">
+  <div style="font-size:18px; font-weight:900; color:var(--navy); margin-bottom:6px;">🚢 用一句话来说</div>
+  <div style="font-size:17px; color:var(--ocean); font-weight:700; background:var(--sky); border-radius:10px; padding:14px; line-height:1.7; margin-bottom:16px;">
+    一座在海上移动的酒店
+  </div>
+  <div style="display:flex; flex-direction:column; gap:10px;">
+    <div style="display:flex; gap:12px; align-items:center; padding:10px 14px; background:var(--sky2); border-radius:10px;">
+      <span style="font-size:22px; flex-shrink:0;">🛏️</span>
+      <div><strong style="font-size:13px;">住宿</strong> <span style="font-size:12px; color:var(--muted);">＋餐饮＋交通，一次包办</span></div>
+    </div>
+    <div style="display:flex; gap:12px; align-items:center; padding:10px 14px; background:var(--sky2); border-radius:10px;">
+      <span style="font-size:22px; flex-shrink:0;">🎭</span>
+      <div><strong style="font-size:13px;">表演・泳池・SPA</strong> <span style="font-size:12px; color:var(--muted);">都在船上</span></div>
+    </div>
+    <div style="display:flex; gap:12px; align-items:center; padding:10px 14px; background:var(--sky2); border-radius:10px;">
+      <span style="font-size:22px; flex-shrink:0;">🗺️</span>
+      <div><strong style="font-size:13px;">睡觉时前往下一座城市</strong> <span style="font-size:12px; color:var(--muted);">醒来就是新的港口</span></div>
+    </div>
+  </div>
+</div>
+
+<div style="margin-bottom:12px;">
+  <div style="font-size:12px; font-weight:700; color:var(--muted); letter-spacing:1px; margin-bottom:10px; text-align:center;">📸 邮轮旅行实景</div>
+  <div style="border-radius:16px; overflow:hidden; margin-bottom:8px; box-shadow:var(--shadow);">
+    <img src="img/6.jpg" loading="lazy" decoding="async" alt="邮轮甲板泳池"
+      style="width:100%; height:220px; object-fit:cover; display:block;">
+    <div style="background:var(--white); padding:10px 14px; border:1px solid var(--border); border-top:none; border-radius:0 0 16px 16px;">
+      <div style="font-size:12px; font-weight:700; color:var(--navy);">🌅 邮轮上的风景</div>
+      <div style="font-size:11px; color:var(--muted); margin-top:2px;">在海上迎接每一天</div>
+    </div>
+  </div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:8px;">
+    <div style="border-radius:12px; overflow:hidden; box-shadow:var(--shadow);">
+      <img loading="lazy" decoding="async" src="img/7.jpg" alt="邮轮泳池"
+        style="width:100%; height:130px; object-fit:cover; display:block;">
+      <div style="background:var(--white); padding:8px 12px; border:1px solid var(--border); border-top:none; border-radius:0 0 12px 12px;">
+        <div style="font-size:11px; font-weight:700; color:var(--navy);">🏊 船上泳池</div>
+      </div>
+    </div>
+    <div style="border-radius:12px; overflow:hidden; box-shadow:var(--shadow);">
+      <img loading="lazy" decoding="async" src="img/8.jpg" alt="邮轮餐厅"
+        style="width:100%; height:130px; object-fit:cover; display:block;">
+      <div style="background:var(--white); padding:8px 12px; border:1px solid var(--border); border-top:none; border-radius:0 0 12px 12px;">
+        <div style="font-size:11px; font-weight:700; color:var(--navy);">🍽️ 船上餐厅</div>
+      </div>
+    </div>
+  </div>
+  <div style="border-radius:12px; overflow:hidden; box-shadow:var(--shadow);">
+    <img loading="lazy" decoding="async" src="img/9.jpg" alt="阿玛菲海岸"
+      style="width:100%; height:150px; object-fit:cover; display:block;">
+    <div style="background:var(--white); padding:10px 14px; border:1px solid var(--border); border-top:none; border-radius:0 0 12px 12px;">
+      <div style="font-size:12px; font-weight:700; color:var(--navy);">🏖️ 停靠港海滩观光</div>
+      <div style="font-size:11px; color:var(--muted); margin-top:2px;">每次靠港，都是一座新城市</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="panel" id="sec2" data-n="2" data-title="为什么选邮轮旅行？">
+<div class="card" style="word-break:normal;">
+  <div style="font-size:14px; font-weight:700; color:var(--muted); margin-bottom:14px;">一般出国旅行是这样的</div>
+  <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:16px;">
+    <div style="display:flex; align-items:center; gap:10px; padding:10px 14px; background:#fff5f5; border-radius:10px; font-size:13px; color:#8a3a3a;">
+      <span>😫</span> 住宿另外订・费用另外算
+    </div>
+    <div style="display:flex; align-items:center; gap:10px; padding:10px 14px; background:#fff5f5; border-radius:10px; font-size:13px; color:#8a3a3a;">
+      <span>😫</span> 每餐都要另外花钱
+    </div>
+    <div style="display:flex; align-items:center; gap:10px; padding:10px 14px; background:#fff5f5; border-radius:10px; font-size:13px; color:#8a3a3a;">
+      <span>😫</span> 每换一座城市就多一笔交通费
+    </div>
+    <div style="display:flex; align-items:center; gap:10px; padding:10px 14px; background:#fff5f5; border-radius:10px; font-size:13px; color:#8a3a3a;">
+      <span>😫</span> 最后的花费比预期多很多
+    </div>
+  </div>
+  <div style="text-align:center; font-size:20px; color:var(--muted); margin:4px 0 12px;">⬇️</div>
+  <div style="background:linear-gradient(135deg,var(--sky),#ddeef9); border-radius:12px; padding:16px; text-align:center;">
+    <div style="font-size:13px; color:var(--ocean); font-weight:700; margin-bottom:6px;">邮轮一次解决这些问题</div>
+    <div style="font-size:12px; color:var(--muted); line-height:1.8;">住宿・餐饮・交通・娱乐<br>全部包含的旅行方式</div>
+  </div>
+</div>
+</div>
+
+
+<div class="panel" id="sec3" data-n="3" data-title="邮轮要怎么预订？">
+<div class="card" style="word-break:normal;">
+  <div style="font-size:14px; color:var(--muted); margin-bottom:16px; line-height:1.7;">预订邮轮大致有两种方式。</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+    <div style="background:#f8f9fa; border:1.5px solid #d8e0e8; border-radius:14px; padding:16px;">
+      <div style="font-size:18px; margin-bottom:8px;">🧳</div>
+      <div style="font-size:13px; font-weight:900; color:#6a7a8a; margin-bottom:8px;">通过旅行社</div>
+      <div style="font-size:11px; color:#8a9ab0; line-height:2;">由旅行社代订<br>虽然方便<br>但含手续费<br>费用可能比较高</div>
+    </div>
+    <div style="background:#f0faff; border:2.5px solid var(--ocean); border-radius:14px; padding:16px; box-shadow:0 5px 18px rgba(26,111,168,.22);">
+      <div style="font-size:18px; margin-bottom:8px;">🛳️</div>
+      <div style="font-size:13px; font-weight:900; color:var(--ocean); margin-bottom:8px;">自己直接订</div>
+      <div style="font-size:11px; color:#1a6a8a; line-height:2;">自己挑选<br>了解方式后<br>可以订得<br>更划算</div>
+    </div>
+  </div>
+  <div style="margin-top:14px; background:var(--sky); border-radius:10px; padding:12px 14px; font-size:13px; color:#1a4a6e; line-height:1.7;">
+    💡 那么，有没有 <strong>让自己订得更划算的方法</strong>呢？<br>
+    → 就是善用 <strong style="color:var(--red); font-weight:900;">邮轮会员</strong>。
+  </div>
+</div>
+</div>
+
+
+<div class="panel" id="sec4" data-n="4" data-title="邮轮会员是什么？">
+<div class="card" style="word-break:normal;">
+  <div style="font-size:16px; font-weight:900; color:var(--navy); margin-bottom:10px;">一句话定义</div>
+  <div style="background:linear-gradient(135deg,var(--sky),#ddeef9); border-radius:12px; padding:16px; font-size:15px; font-weight:700; color:var(--ocean); line-height:1.7; margin-bottom:16px; text-align:center;">
+    预先准备邮轮旅费，<br>再用积分预订的累积型会员
+  </div>
+  <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:var(--navy);">
+    <div style="display:flex; gap:10px; align-items:flex-start; padding:10px 14px; background:var(--sky2); border-radius:10px;">
+      <span style="font-size:18px; flex-shrink:0;">💳</span>
+      <div><strong>每月维持会员</strong>，积分就会持续累积</div>
+    </div>
+    <div style="display:flex; gap:10px; align-items:flex-start; padding:10px 14px; background:var(--sky2); border-radius:10px;">
+      <span style="font-size:18px; flex-shrink:0;">✨</span>
+      <div>累积的积分 <strong>用来预订邮轮</strong></div>
+    </div>
+    <div style="display:flex; gap:10px; align-items:flex-start; padding:10px 14px; background:var(--sky2); border-radius:10px;">
+      <span style="font-size:18px; flex-shrink:0;">🚫</span>
+      <div>积分不能换成 <span style="color:#e53935; font-weight:900;">现金</span><span style="color:#111; font-weight:700;"> ，是</span> <span style="color:#0a3d8f; font-weight:900;">预订邮轮专用</span></div>
+    </div>
+    <div style="display:flex; gap:10px; align-items:flex-start; padding:10px 14px; background:var(--green-light); border-radius:10px;">
+      <span style="font-size:18px; flex-shrink:0;">✅</span>
+      <div>会员需维持到预订的邮轮上船为止，<br>旅行结束后可以自由 <strong style="color:#e53935; font-size:120%;">终止</strong></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="card" style="border-left:4px solid #f5a623; background:linear-gradient(135deg,#fffbf0,#fff8e6);">
+  <div style="font-size:15px; font-weight:900; color:#0b2540; margin-bottom:14px;">⚠️ 如果没有缴月费会怎么样？</div>
+  <div style="display:flex; flex-direction:column; gap:0;">
+
+    <div style="display:flex; gap:12px; align-items:flex-start;">
+      <div style="display:flex; flex-direction:column; align-items:center; flex-shrink:0;">
+        <div style="width:32px; height:32px; border-radius:50%; background:#f5a623; color:#fff; font-size:12px; font-weight:900; display:flex; align-items:center; justify-content:center;">1</div>
+        <div style="width:2px; height:28px; background:#f5a623; opacity:.3;"></div>
+      </div>
+      <div style="padding:6px 0 20px;">
+        <div style="font-size:13px; font-weight:900; color:#0b2540; margin-bottom:4px;">账单发出</div>
+        <div style="font-size:12px; color:#5a6a7a; line-height:1.6;">每月会发出月费账单</div>
+      </div>
+    </div>
+
+    <div style="display:flex; gap:12px; align-items:flex-start;">
+      <div style="display:flex; flex-direction:column; align-items:center; flex-shrink:0;">
+        <div style="width:32px; height:32px; border-radius:50%; background:#e07b54; color:#fff; font-size:12px; font-weight:900; display:flex; align-items:center; justify-content:center;">2</div>
+        <div style="width:2px; height:28px; background:#e07b54; opacity:.3;"></div>
+      </div>
+      <div style="padding:6px 0 20px;">
+        <div style="font-size:13px; font-weight:900; color:#0b2540; margin-bottom:4px;">30 天内未付款 → 转为基本权限</div>
+        <div style="font-size:12px; color:#5a6a7a; line-height:1.6;">账单发出后 <strong style="color:#e53935;">30 天</strong> 内未付款，<br>会员权益会转为 <strong>基本权限状态</strong></div>
+      </div>
+    </div>
+
+    <div style="display:flex; gap:12px; align-items:flex-start;">
+      <div style="display:flex; flex-direction:column; align-items:center; flex-shrink:0;">
+        <div style="width:32px; height:32px; border-radius:50%; background:#0a6e9e; color:#fff; font-size:12px; font-weight:900; display:flex; align-items:center; justify-content:center;">✓</div>
+      </div>
+      <div style="padding:6px 0;">
+        <div style="font-size:13px; font-weight:900; color:#0b2540; margin-bottom:8px;">转为基本权限后会这样</div>
+        <div style="background:#fff5f5; border:1px solid #f5c6c6; border-radius:12px; padding:14px; display:flex; flex-direction:column; gap:10px; margin-bottom:10px;">
+          <div style="display:flex; gap:8px; align-items:flex-start; font-size:12px; color:#0b2540; line-height:1.7;">
+            <span style="color:#c0392b; flex-shrink:0; font-size:14px;">✕</span>
+            <div><strong style="color:#c0392b;">双倍累积的优惠会消失</strong><br><span style="color:#5a6a7a;">原本以双倍累积的积分不会全部保留</span></div>
+          </div>
+          <div style="display:flex; gap:8px; align-items:flex-start; font-size:12px; color:#0b2540; line-height:1.7;">
+            <span style="color:#1a8a3a; flex-shrink:0; font-size:14px;">✓</span>
+            <div><strong style="color:#1a8a3a;">实际付过的金额会 100% 保留</strong><br><span style="color:#5a6a7a;">付过的钱不会消失</span></div>
+          </div>
+        </div>
+        <div style="background:#e8f4fd; border:1px solid #b0d8f0; border-radius:12px; padding:14px; display:flex; flex-direction:column; gap:8px;">
+          <div style="display:flex; gap:8px; align-items:flex-start; font-size:12px; color:#0b2540; line-height:1.7;">
+            <span style="color:#0a6e9e; flex-shrink:0; font-size:14px;">🎯</span>
+            <div>在剩余积分的 <strong>额度内</strong> ，预订时可享 <strong>17% 折扣</strong></div>
+          </div>
+          <div style="display:flex; gap:8px; align-items:flex-start; font-size:12px; color:#0b2540; line-height:1.7;">
+            <span style="color:#1a8a3a; flex-shrink:0; font-size:14px;">♾️</span>
+            <div>剩余积分 <strong style="color:#1a8a3a;">在退会前都不会过期</strong></div>
+          </div>
+        </div>
+        <div style="margin-top:12px; background:#fff; border:1px solid var(--border); border-radius:12px; padding:12px 10px;">
+          <svg viewBox="0 0 480 258" style="width:100%; height:auto; display:block;" role="img" xmlns="http://www.w3.org/2000/svg">
+            <title>停止付款后，双倍累积的优惠消失，付过的金额照样保留</title>
+            <desc>付了 1,500 美元，加上双倍奖励共累积 3,000 积分；停止付款后奖励消失，保留与付款金额相同的 1,500 积分。</desc>
+            <g font-family="'Noto Sans SC',sans-serif">
+              <text x="8" y="18" font-size="13" font-weight="700" fill="#0a1f38">邮轮会员</text>
+              <text x="120" y="46" font-size="11" font-weight="700" fill="#5a6a7a" text-anchor="middle">会员维持中</text>
+              <text x="360" y="46" font-size="11" font-weight="700" fill="#5a6a7a" text-anchor="middle">停止付款・基本权限</text>
+              <rect x="30" y="60" width="180" height="86" rx="8" fill="#fdf6e3" stroke="#c8983a" stroke-width="1.2"/>
+              <text x="120" y="94" font-size="13" font-weight="700" fill="#8a6000" text-anchor="middle">双倍奖励</text>
+              <text x="120" y="118" font-size="12" font-weight="700" fill="#8a6000" text-anchor="middle">3,000 积分</text>
+              <rect x="30" y="150" width="180" height="86" rx="8" fill="#e8f4fd" stroke="#1a6fa8" stroke-width="1.2"/>
+              <text x="120" y="184" font-size="13" font-weight="700" fill="#1a5a8a" text-anchor="middle">我付的钱</text>
+              <text x="120" y="208" font-size="12" fill="#1a5a8a" text-anchor="middle">$1,500</text>
+              <line x1="222" y1="148" x2="258" y2="148" stroke="#9aa8b8" stroke-width="2" stroke-linecap="round"/>
+              <path d="M250 142 L258 148 L250 154" fill="none" stroke="#9aa8b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="270" y="60" width="180" height="86" rx="8" fill="#f1f4f7" stroke="#9aa8b8" stroke-width="1.2" stroke-dasharray="6 5"/>
+              <text x="360" y="94" font-size="13" font-weight="700" fill="#8a97a8" text-anchor="middle">奖励消失</text>
+              <text x="360" y="118" font-size="12" fill="#8a97a8" text-anchor="middle">2 倍 → 回到 1 倍</text>
+              <rect x="270" y="150" width="180" height="86" rx="8" fill="#e8f4fd" stroke="#1a6fa8" stroke-width="1.2"/>
+              <text x="360" y="184" font-size="13" font-weight="700" fill="#1a5a8a" text-anchor="middle">我付的钱</text>
+              <text x="360" y="208" font-size="12" fill="#1a5a8a" text-anchor="middle">1,500 积分</text>
+            </g>
+          </svg>
+        </div>
+        <div style="margin-top:10px; background:#f8fafc; border-left:3px solid #0a6e9e; border-radius:0 8px 8px 0; padding:11px 13px; font-size:11.5px; color:#3a4a5a; line-height:1.8;">
+          📌 一句话整理 — <strong style="color:#0b2540;">消失的是“双倍累积”这项优惠，不是你付过的钱。</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="card" style="background:var(--white); border:1px solid var(--border); padding:20px 18px;">
+  <div style="font-size:14px; font-weight:900; color:var(--navy); margin-bottom:14px;">📺 熟悉的订阅模式 — 用在邮轮上</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:0; background:var(--sky); border-radius:14px; overflow:hidden; margin-bottom:16px;">
+    <div style="display:flex; flex-direction:column; align-items:center; padding:14px 6px; border-right:1px solid var(--border2);">
+      <div style="width:36px; height:36px; background:#e50914; border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:7px; box-shadow:0 2px 8px rgba(229,9,20,.25);">
+        <span style="color:#fff; font-size:15px; font-weight:900; letter-spacing:-1px;">N</span>
+      </div>
+      <div style="font-size:11px; font-weight:700; color:var(--text); margin-bottom:4px; text-align:center; line-height:1.3;">Netflix</div>
+      <div style="font-size:10px; color:var(--muted); text-align:center; line-height:1.6;">月费<br>→ 看视频</div>
+    </div>
+    <div style="display:flex; flex-direction:column; align-items:center; padding:14px 6px; border-right:1px solid var(--border2);">
+      <div style="width:36px; height:36px; background:#1fc0e0; border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:7px; box-shadow:0 2px 8px rgba(31,192,224,.25);">
+        <span style="color:#fff; font-size:15px; font-weight:900;">购</span>
+      </div>
+      <div style="font-size:11px; font-weight:700; color:var(--text); margin-bottom:4px; text-align:center; line-height:1.3;">购物会员</div>
+      <div style="font-size:10px; color:var(--muted); text-align:center; line-height:1.6;">月费<br>→ 免运费</div>
+    </div>
+    <div style="display:flex; flex-direction:column; align-items:center; padding:14px 6px; border-right:1px solid var(--border2);">
+      <div style="width:36px; height:36px; background:#ff0000; border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:7px; box-shadow:0 2px 8px rgba(255,0,0,.25);">
+        <span style="color:#fff; font-size:15px; font-weight:900;">▶</span>
+      </div>
+      <div style="font-size:11px; font-weight:700; color:var(--text); margin-bottom:4px; text-align:center; line-height:1.3;">YouTube<br>Premium</div>
+      <div style="font-size:10px; color:var(--muted); text-align:center; line-height:1.6;">月费<br>→ 无广告</div>
+    </div>
+    <div style="display:flex; flex-direction:column; align-items:center; padding:14px 6px; background:linear-gradient(160deg,#e8f3fc,#ddeef8); border:2.5px solid var(--red); border-radius:12px; box-shadow:0 4px 14px rgba(192,57,43,.18);">
+      <div style="width:36px; height:36px; background:var(--ocean); border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:7px; box-shadow:0 2px 8px rgba(26,111,168,.3);">
+        <span style="color:#fff; font-size:15px;">🚢</span>
+      </div>
+      <div style="font-size:11px; font-weight:900; color:var(--ocean); margin-bottom:4px; text-align:center; line-height:1.3;">邮轮<br>订阅</div>
+      <div style="font-size:10px; color:var(--ocean); text-align:center; font-weight:700; line-height:1.6;">月费<br>→ 双倍积分 ✦</div>
+    </div>
+  </div>
+
+  <div style="font-size:13px; font-weight:900; color:var(--navy); margin-bottom:10px;">💸 省去中间利润，以积分回馈</div>
+  <div style="background:var(--sky); border-radius:12px; padding:16px 14px;">
+    <div style="margin-bottom:14px;">
+      <div style="font-size:12px; font-weight:800; color:#c0392b; margin-bottom:8px;">❌ 一般旅行</div>
+      <div style="display:flex; align-items:stretch; height:48px;">
+        <div style="flex:1; background:var(--ocean); border-radius:8px 0 0 8px; display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:12px; font-weight:900; color:#fff;">🚢 邮轮公司</span>
+        </div>
+        <div style="width:0; height:0; border-top:24px solid transparent; border-bottom:24px solid transparent; border-left:10px solid var(--ocean);"></div>
+        <div style="flex:1.6; background:#b85c00; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:2px;">
+          <span style="font-size:12px; font-weight:900; color:#fff;">旅行社</span>
+          <span style="font-size:10px; color:#ffd4a8; font-weight:700;">层层加价 ↑</span>
+        </div>
+        <div style="width:0; height:0; border-top:24px solid transparent; border-bottom:24px solid transparent; border-left:10px solid #b85c00;"></div>
+        <div style="flex:1; background:#6b7280; border-radius:0 8px 8px 0; display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:12px; font-weight:900; color:#fff;">旅客 😔</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:12px; font-weight:800; color:var(--green); margin-bottom:8px;">✅ 邮轮直购</div>
+      <div style="display:flex; align-items:stretch; height:48px;">
+        <div style="flex:1; background:var(--ocean); border-radius:8px 0 0 8px; display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:12px; font-weight:900; color:#fff;">🚢 邮轮公司</span>
+        </div>
+        <div style="width:0; height:0; border-top:24px solid transparent; border-bottom:24px solid transparent; border-left:10px solid var(--ocean);"></div>
+        <div style="flex:1.6; background:#1a7a4a; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:2px;">
+          <span style="font-size:12px; font-weight:900; color:#fff;">直购平台</span>
+          <span style="font-size:10px; color:#a8ffd8; font-weight:700;">利润 → 积分</span>
+        </div>
+        <div style="width:0; height:0; border-top:24px solid transparent; border-bottom:24px solid transparent; border-left:10px solid #1a7a4a;"></div>
+        <div style="flex:1; background:linear-gradient(135deg,#0a6e9e,#1a7a4a); border-radius:0 8px 8px 0; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:2px;">
+          <span style="font-size:12px; font-weight:900; color:#fff;">会员 😊</span>
+          <span style="font-size:10px; color:#a8f0ff; font-weight:700;">双倍积分！</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="panel" id="sec5" data-n="5" data-title="要怎么做？">
+<div class="card" style="word-break:normal;">
+  <div style="font-size:14px; color:var(--muted); margin-bottom:18px;">用 3 个步骤了解</div>
+  <div style="display:flex; flex-direction:column; gap:0;">
+    <div style="display:flex; gap:16px; align-items:flex-start; padding-bottom:20px;">
+      <div style="display:flex; flex-direction:column; align-items:center; flex-shrink:0;">
+        <div class="step-badge">1</div>
+        <div style="width:2px; height:40px; background:var(--border); margin-top:6px;"></div>
+      </div>
+      <div style="padding-top:4px;">
+        <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:4px;">开始会员</div>
+        <div style="font-size:13px; color:var(--muted); line-height:1.7;">每月准备旅行预算<br>
+          <span style="font-size:12px; display:flex; flex-direction:column; gap:3px; margin-top:4px;">
+            <span>💙 每月 <strong style="color:#085a8a;">$100</strong> → <strong style="color:#085a8a;">200 RP</strong> 累积</span>
+            <span>❤️ 每月 <strong style="color:#a02050;">$250</strong> → <strong style="color:#a02050;">500 RP</strong> 累积</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex; gap:16px; align-items:flex-start; padding-bottom:20px;">
+      <div style="display:flex; flex-direction:column; align-items:center; flex-shrink:0;">
+        <div class="step-badge">2</div>
+        <div style="width:2px; height:40px; background:var(--border); margin-top:6px;"></div>
+      </div>
+      <div style="padding-top:4px;">
+        <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:4px;">积分累积</div>
+        <div style="font-size:13px; color:var(--muted); line-height:1.7;">准时付款，就会累积可用于预订的积分<br><span style="font-size:12px; color:var(--ocean); font-weight:700;">（账单发出后 5 天内付款 <strong style="color:#e53935;">双倍累积</strong>)</span></div>
+      </div>
+    </div>
+    <div style="display:flex; gap:16px; align-items:flex-start;">
+      <div style="display:flex; flex-direction:column; align-items:center; flex-shrink:0;">
+        <div class="step-badge" style="background:var(--green);">3</div>
+      </div>
+      <div style="padding-top:4px;">
+        <div style="font-size:15px; font-weight:900; color:var(--green); margin-bottom:4px;">预订邮轮 🎉</div>
+        <div style="font-size:13px; color:var(--muted); line-height:1.7;">用累积的积分预订邮轮<br><span style="font-size:12px;">行程・舱房・航线都自己选</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="panel" id="sec6" data-n="6" data-title="积分怎么累积？">
+<div class="card" style="padding:22px 18px;">
+  <div style="text-align:center; margin-bottom:20px;">
+    <div style="font-size:17px; color:var(--navy); margin-bottom:6px;">两种方案都能累积月费的</div>
+    <div style="font-size:clamp(1.6rem, 5vw, 2.2rem); font-weight:900; color:#e53935; line-height:1.1;">双倍积分<span style="font-size:1.4rem; color:var(--navy);"> ！</span></div>
+  </div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:18px;">
+    <div style="background:linear-gradient(160deg,#e8f4ff,#d0e8ff); border:2px solid #5ba8e0; border-radius:16px; padding:18px 12px; text-align:center;">
+      <div style="font-size:12px; font-weight:900; color:#085a8a; letter-spacing:1.5px; margin-bottom:10px; background:rgba(8,90,138,.1); border-radius:20px; padding:3px 10px; display:inline-block;">CLASSIC</div>
+      <div style="font-size:16px; color:#2a5a8a; margin-bottom:6px; font-weight:700;">月费 $100</div>
+      <div style="font-size:1rem; font-weight:900; color:#085a8a; margin-bottom:4px;">→</div>
+      <div style="font-size:clamp(1.5rem, 4.5vw, 2rem); font-weight:900; color:#085a8a; line-height:1;">$200</div>
+      <div style="font-size:13px; color:#0a6e9e; font-weight:800; margin-top:6px; background:rgba(8,90,138,.12); border-radius:20px; padding:3px 12px; display:inline-block;">积分累积</div>
+    </div>
+    <div style="background:linear-gradient(160deg,#ffe8f0,#ffd0e0); border:2px solid #e0507a; border-radius:16px; padding:18px 12px; text-align:center; position:relative;">
+      <div style="position:absolute; top:-1px; right:-1px; background:linear-gradient(135deg,#e91e8c,#ff6eb4); color:#fff; font-size:10px; font-weight:900; padding:4px 10px; border-radius:0 16px 0 10px;">推荐</div>
+      <div style="font-size:12px; font-weight:900; color:#a02050; letter-spacing:1.5px; margin-bottom:10px; background:rgba(160,32,80,.1); border-radius:20px; padding:3px 10px; display:inline-block;">PREMIUM</div>
+      <div style="font-size:16px; color:#7a1030; margin-bottom:6px; font-weight:700;">月费 $250</div>
+      <div style="font-size:1rem; font-weight:900; color:#a02050; margin-bottom:4px;">→</div>
+      <div style="font-size:clamp(1.5rem, 4.5vw, 2rem); font-weight:900; color:#a02050; line-height:1;">$500</div>
+      <div style="font-size:13px; color:#c0395a; font-weight:800; margin-top:6px; background:rgba(160,32,80,.12); border-radius:20px; padding:3px 12px; display:inline-block;">积分累积</div>
+    </div>
+  </div>
+
+  <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:12px; display:flex; align-items:center; gap:8px;">
+    <span style="background:var(--ocean); color:#fff; border-radius:8px; padding:4px 10px; font-size:13px;">📊</span>
+    尊享方案 5 个月累积范例
+  </div>
+
+  <div style="background:linear-gradient(135deg,#fffbeb,#fff8d6); border:2px solid #f5c842; border-radius:14px; padding:16px 18px; margin-bottom:16px;">
+    <div style="font-size:15px; font-weight:900; color:#7a5a00; margin-bottom:10px;">💡 什么是激活费？</div>
+    <div style="font-size:14px; color:#5a4000; line-height:2;">
+      刚开始会员时 <strong style="color:#c07000;">只需付一次</strong> 的费用。<br>
+      第一个月：月费 $250 ＋ 激活费 $250 ＝ <strong style="color:#c07000; font-size:16px;">$500</strong><br>
+      所以第一个月会特别累积 <strong style="color:#e53935; font-size:18px;">$800</strong> 积分。
+    </div>
+  </div>
+
+  <div style="border-radius:14px; overflow:hidden; border:2px solid #d0dff0; margin-bottom:16px;">
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; background:linear-gradient(135deg,#0a6e9e,#0b2540); padding:13px 16px;">
+      <div style="font-size:13px; font-weight:900; color:#fff;">月份</div>
+      <div style="text-align:center; font-size:14px; font-weight:900; color:#fff;">付款金额</div>
+      <div style="text-align:right; font-size:14px; font-weight:900; color:#FFD700;">累积积分 🔴</div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; padding:13px 16px; border-bottom:1.5px solid #e8f0f8; align-items:center; background:linear-gradient(135deg,#fff5f5,#fff0f0);">
+      <div>
+        <div style="font-size:13px; font-weight:700; color:var(--navy);">第 1 个月</div>
+        <div style="font-size:11px; color:#e53935; font-weight:800; margin-top:2px;">含激活费</div>
+      </div>
+      <div style="text-align:center; font-size:16px; font-weight:800; color:var(--navy);">$500</div>
+      <div style="text-align:right; font-size:1.4rem; font-weight:900; color:#e53935;">$800</div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; padding:13px 16px; border-bottom:1.5px solid #e8f0f8; align-items:center; background:#fff;">
+      <div style="font-size:13px; font-weight:700; color:var(--navy);">第 2 个月</div>
+      <div style="text-align:center; font-size:16px; font-weight:800; color:var(--navy);">$250</div>
+      <div style="text-align:right; font-size:1.4rem; font-weight:900; color:#0a6e9e;">$500</div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; padding:13px 16px; border-bottom:1.5px solid #e8f0f8; align-items:center; background:#f8fbff;">
+      <div style="font-size:13px; font-weight:700; color:var(--navy);">第 3 个月</div>
+      <div style="text-align:center; font-size:16px; font-weight:800; color:var(--navy);">$250</div>
+      <div style="text-align:right; font-size:1.4rem; font-weight:900; color:#0a6e9e;">$500</div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; padding:13px 16px; border-bottom:1.5px solid #e8f0f8; align-items:center; background:#fff;">
+      <div style="font-size:13px; font-weight:700; color:var(--navy);">第 4 个月</div>
+      <div style="text-align:center; font-size:16px; font-weight:800; color:var(--navy);">$250</div>
+      <div style="text-align:right; font-size:1.4rem; font-weight:900; color:#0a6e9e;">$500</div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; padding:13px 16px; border-bottom:2px solid #0a6e9e; align-items:center; background:#f8fbff;">
+      <div style="font-size:13px; font-weight:700; color:var(--navy);">第 5 个月</div>
+      <div style="text-align:center; font-size:16px; font-weight:800; color:var(--navy);">$250</div>
+      <div style="text-align:right; font-size:1.4rem; font-weight:900; color:#0a6e9e;">$500</div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; padding:16px; align-items:center; background:linear-gradient(135deg,#0b2540,#0a3a6e);">
+      <div style="font-size:16px; font-weight:900; color:#fff;">合计</div>
+      <div style="text-align:center; font-size:18px; font-weight:900; color:#FFD700;">$1,500</div>
+      <div style="text-align:right; font-size:1.8rem; font-weight:900; color:#50e3c2; text-shadow:0 0 14px rgba(80,227,194,.5);">$2,800</div>
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#0a1f38,#102d50); border-radius:16px; padding:22px 16px;">
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:6px;">
+      <div style="text-align:center; flex:1;">
+        <div style="font-size:12px; font-weight:700; color:#88b4d0; margin-bottom:6px; letter-spacing:.5px;">5 个月付款</div>
+        <div style="font-size:clamp(1.4rem,5vw,1.9rem); font-weight:900; color:#fff; line-height:1.1;">$1,500</div>
+        <div style="font-size:11px; color:#88b4d0; margin-top:6px; font-weight:700; background:rgba(255,255,255,.08); border-radius:50px; padding:3px 10px; display:inline-block;">含激活费</div>
+      </div>
+      <div style="text-align:center; flex:0; padding:0 2px;">
+        <div style="font-size:11px; font-weight:800; color:#c8983a; margin-bottom:3px;">双倍累积</div>
+        <div style="font-size:1.6rem; color:#c8983a; font-weight:900; line-height:1;">→</div>
+      </div>
+      <div style="text-align:center; flex:1;">
+        <div style="font-size:12px; font-weight:700; color:#88b4d0; margin-bottom:6px; letter-spacing:.5px;">累积积分总计</div>
+        <div style="font-size:clamp(1.4rem,5vw,1.9rem); font-weight:900; color:#f5c842; line-height:1.1; text-shadow:0 2px 10px rgba(245,200,66,.3);">$2,800</div>
+        <div style="font-size:11px; color:#88b4d0; margin-top:6px; font-weight:700; background:rgba(255,255,255,.08); border-radius:50px; padding:3px 10px; display:inline-block;">可用于预订邮轮</div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:10px; font-size:12px; color:#7a9ab8; text-align:center; font-weight:600; line-height:1.8;">
+    ※ 以尊享 (Premium) 方案为例<br>
+    <span style="color:#a8c8e8;">可降级为经典 (Classic) $100 方案（限一次）</span>
+  </div>
+</div>
+
+
+<div style="background:linear-gradient(135deg,var(--navy),#0a3a6e); border-radius:var(--r); padding:24px 20px; margin-bottom:12px; box-shadow:0 6px 28px rgba(10,37,64,.25); position:relative; overflow:hidden;">
+  <div style="position:absolute; right:-20px; bottom:-20px; font-size:114px; opacity:.05;">💎</div>
+  <div style="text-align:center; margin-bottom:16px;">
+    <div style="display:inline-block; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); color:rgba(255,255,255,.8); font-size:11px; font-weight:700; letter-spacing:2px; padding:4px 14px; border-radius:20px;">积分使用规则</div>
+  </div>
+  <div style="display:flex; flex-direction:column; gap:10px; position:relative;">
+    <div style="background:rgba(245,200,66,.1); border:1.5px solid rgba(245,200,66,.45); border-radius:14px; padding:16px 18px;">
+      <div style="font-size:12px; font-weight:900; color:var(--gold-lt); letter-spacing:.5px; margin-bottom:10px;">第 1 步・积分折抵</div>
+      <div style="display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:12px;">
+        <div style="text-align:center;">
+          <div style="font-size:40px; font-weight:900; color:var(--gold-lt); line-height:1;">1</div>
+          <div style="font-size:10px; font-weight:700; color:rgba(255,255,255,.6); margin-top:3px;">RP</div>
+        </div>
+        <div style="font-size:26px; font-weight:900; color:rgba(255,255,255,.35);">=</div>
+        <div style="text-align:center;">
+          <div style="font-size:40px; font-weight:900; color:#4ade80; line-height:1;">$1</div>
+          <div style="font-size:10px; font-weight:700; color:rgba(255,255,255,.6); margin-top:3px;">折抵</div>
+        </div>
+      </div>
+      <div style="font-size:12.5px; color:rgba(255,255,255,.85); text-align:center; line-height:1.8;">
+        上限为舱房价的 <strong style="color:var(--gold-lt);">50%</strong><br>
+        <span style="font-size:11.5px; color:rgba(255,255,255,.6);">（不是说积分只能用掉 50%）</span>
+      </div>
+    </div>
+    <div style="background:rgba(255,255,255,.07); border:1.5px solid rgba(255,255,255,.18); border-radius:14px; padding:16px 18px;">
+      <div style="font-size:12px; font-weight:900; color:#8fc4e8; letter-spacing:.5px; margin-bottom:10px;">第 2 步・剩余金额</div>
+      <div style="display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:12px;">
+        <div style="text-align:center;">
+          <div style="font-size:40px; font-weight:900; color:#8fc4e8; line-height:1;">2</div>
+          <div style="font-size:10px; font-weight:700; color:rgba(255,255,255,.6); margin-top:3px;">RP</div>
+        </div>
+        <div style="font-size:26px; font-weight:900; color:rgba(255,255,255,.35);">=</div>
+        <div style="text-align:center;">
+          <div style="font-size:40px; font-weight:900; color:#4ade80; line-height:1;">$1</div>
+          <div style="font-size:10px; font-weight:700; color:rgba(255,255,255,.6); margin-top:3px;">支付</div>
+        </div>
+      </div>
+      <div style="font-size:12.5px; color:rgba(255,255,255,.85); text-align:center; line-height:1.8;">
+        <strong>刷卡支付</strong>，或<br>
+        用积分支付时，以 <strong style="color:#8fc4e8;">2 RP = $1</strong>计算
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="card" style="border:2px solid var(--ocean); padding:18px 16px;">
+  <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:4px;">🧮 积分预订试算</div>
+  <div style="font-size:12px; color:var(--muted); margin-bottom:16px; line-height:1.6;">输入舱房价和你的积分，马上帮你算</div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:16px;">
+    <div style="background:var(--sky); border-radius:10px; padding:12px;">
+      <label style="font-size:10px; font-weight:700; color:var(--muted); display:block; margin-bottom:6px;">🛳️ 舱房价 <span style="font-weight:500;">（含税）</span></label>
+      <div style="display:flex; align-items:center; gap:4px;">
+        <span style="font-size:14px; font-weight:800; color:var(--navy); flex-shrink:0;">$</span>
+        <input id="sim_room" type="number" inputmode="numeric" value="1800" min="0" oninput="simCalc()"
+          style="flex:1; min-width:0; font-size:18px; font-weight:900; color:var(--ocean); border:2px solid var(--ocean); border-radius:8px; padding:7px 8px; text-align:right; background:#fff; outline:none; -webkit-appearance:none; appearance:none; width:100%;">
+      </div>
+    </div>
+    <div style="background:#fdf9e8; border-radius:10px; padding:12px;">
+      <label style="font-size:10px; font-weight:700; color:var(--muted); display:block; margin-bottom:6px;">✨ 积分</label>
+      <div style="display:flex; align-items:center; gap:4px;">
+        <input id="sim_rp" type="number" inputmode="numeric" value="2800" min="0" oninput="simCalc()"
+          style="flex:1; min-width:0; font-size:18px; font-weight:900; color:#8a6000; border:2px solid var(--gold); border-radius:8px; padding:7px 8px; text-align:right; background:#fff; outline:none; -webkit-appearance:none; appearance:none; width:100%;">
+        <span style="font-size:12px; font-weight:800; color:#8a6000; flex-shrink:0;">RP</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#fffdf5; border:1.5px solid #e8d060; border-radius:12px; padding:14px; margin-bottom:10px;">
+    <div style="font-size:13.5px; font-weight:900; color:var(--navy); margin-bottom:4px;">💡 积分可以 100% 用完</div>
+    <div style="font-size:11.5px; color:var(--muted); line-height:1.7; margin-bottom:11px;">
+      不过， <strong style="color:var(--navy);">双人舱房价的 50% 以内</strong> 可用 1 RP = $1 折抵。
+    </div>
+    <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:11px;">
+      <div style="background:#fff; border:1px solid var(--border); border-radius:10px; padding:12px 13px;">
+        <div style="display:flex; align-items:center; gap:7px; margin-bottom:7px;">
+          <span style="background:var(--ocean); color:#fff; font-size:10px; font-weight:900; width:18px; height:18px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; flex-shrink:0;">1</span>
+          <span style="font-size:12.5px; font-weight:900; color:var(--navy);">第 1 步 &mdash; 积分折抵</span>
+          <span style="margin-left:auto; font-size:10px; font-weight:900; color:#8a6000; background:#fff3c0; border:1px solid #e8d060; padding:2px 8px; border-radius:20px; flex-shrink:0;">1 RP = $1</span>
+        </div>
+        <div style="font-size:11.5px; color:var(--muted); line-height:1.85;">
+          上限为舱房价的 <strong style="color:var(--navy);">50%</strong> ，可用积分折抵。<br>
+          积分 <strong style="color:var(--navy);">1 分＝1 美元</strong>
+        </div>
+      </div>
+      <div style="background:#fff; border:1px solid var(--border); border-radius:10px; padding:12px 13px;">
+        <div style="display:flex; align-items:center; gap:7px; margin-bottom:7px;">
+          <span style="background:var(--gold); color:#fff; font-size:10px; font-weight:900; width:18px; height:18px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; flex-shrink:0;">2</span>
+          <span style="font-size:12.5px; font-weight:900; color:var(--navy);">第 2 步 &mdash; 两种方式择一</span>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <div style="background:var(--sky); border-radius:8px; padding:9px 11px; font-size:11.5px; color:var(--navy); line-height:1.7;">
+            <strong>①</strong> 余额 <strong>刷卡支付</strong>
+          </div>
+          <div style="background:#fffdf5; border:1px solid #e8d060; border-radius:8px; padding:9px 11px; font-size:11.5px; color:var(--navy); line-height:1.7;">
+            <strong>②</strong> 余额 <strong>用积分支付</strong><br>
+            <span style="color:var(--muted);">积分 <strong style="color:#8a6000;">2 分＝1 美元</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="background:#f0f8ff; border-left:3px solid var(--ocean); border-radius:0 8px 8px 0; padding:13px 14px; font-size:11.5px; color:#3a4a5a; line-height:1.9;">
+      <strong style="color:var(--navy); font-size:12.5px;">“积分是不是用不完？”</strong>
+      <span style="display:block; margin-top:8px;">不是的， <strong style="color:var(--ocean);">积分可以 100% 用完。</strong></span>
+      <span style="display:block; margin-top:6px;">50% 不是使用上限，而是 <strong style="color:var(--navy);">积分价值最高的区间</strong>。</span>
+      <span style="display:block; margin-top:6px;">用完这个区间之后，积分还是可以继续使用。</span>
+    </div>
+  </div>
+
+  <div style="background:#f0f8ff; border:1.5px solid #b8d8f0; border-radius:12px; padding:14px; margin-bottom:10px;">
+    <div style="display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-bottom:10px;">
+      <span style="background:var(--ocean); color:#fff; font-size:11px; font-weight:900; padding:3px 11px; border-radius:20px;">STEP 1</span>
+      <span style="font-size:13px; font-weight:900; color:var(--ocean);">最高积分折抵</span>
+    </div>
+    <div style="margin-bottom:10px;">
+      <span style="background:#fff3c0; color:#8a6000; font-size:11px; font-weight:900; padding:4px 12px; border-radius:20px; border:1px solid #e8d060; display:inline-block;">以 1 RP = $1 计算</span>
+    </div>
+    <div style="font-size:12px; color:var(--muted); margin-bottom:10px; line-height:1.6;">
+      以 1 RP = $1 折抵的上限是 <strong style="color:var(--navy);">舱房价（含税）的 50%</strong>。
+    </div>
+    <div style="background:var(--white); border-radius:8px; padding:12px; border:1px solid var(--border);">
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:5px 0; border-bottom:1px solid var(--border);">
+        <span style="font-size:12px; color:var(--muted);">舱房价</span>
+        <span style="font-size:14px; font-weight:900; color:var(--navy);" id="sim_room_disp">$1,800</span>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:5px 0; border-bottom:1px solid var(--border);">
+        <span style="font-size:12px; color:var(--muted);">最高积分折抵金额 <span style="font-size:10px;">（舱房价的 50%）</span></span>
+        <span style="font-size:14px; font-weight:900; color:var(--ocean);" id="sim_max_reward">$900</span>
+      </div>
+    </div>
+    <div id="sim_rp_status" style="font-size:12px; text-align:center; font-weight:700; padding:8px; border-radius:8px; background:var(--green-light); color:var(--green); margin-top:10px;">
+      ✅ 积分足够 — 可使用最高折抵
+    </div>
+  </div>
+
+  <div style="background:#f0fff6; border:1.5px solid #86efac; border-radius:12px; padding:14px; margin-bottom:12px;">
+    <div style="display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-bottom:12px;">
+      <span style="background:var(--green); color:#fff; font-size:11px; font-weight:900; padding:3px 11px; border-radius:20px;">STEP 2</span>
+      <span style="font-size:13px; font-weight:900; color:var(--green);">选择剩余金额的支付方式</span>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:12px;">
+      <button id="tab_allrp" onclick="simSelectTab('allrp')"
+        style="padding:10px 8px; border-radius:10px; border:2px solid var(--ocean); background:var(--ocean); color:#fff; font-size:12px; font-weight:900; cursor:pointer; -webkit-tap-highlight-color:transparent; word-break:normal;">
+        💎 全额积分
+      </button>
+      <button id="tab_card" onclick="simSelectTab('card')"
+        style="padding:10px 8px; border-radius:10px; border:2px solid var(--border); background:#fff; color:var(--muted); font-size:12px; font-weight:900; cursor:pointer; -webkit-tap-highlight-color:transparent; word-break:normal;">
+        💳 刷卡支付
+      </button>
+    </div>
+    <div id="result_allrp">
+      <div style="background:rgba(22,100,74,.05); border-radius:10px; padding:12px; margin-bottom:8px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:6px 0; border-bottom:1px dashed #86efac;">
+          <div style="flex:1;">
+            <div style="font-size:12px; color:#1a5c38; font-weight:700; margin-bottom:4px;">① 积分折抵（50%）</div>
+            <span style="background:#fff3c0; color:#8a6000; font-size:10px; font-weight:900; padding:2px 8px; border-radius:20px; border:1px solid #e8d060; display:inline-block;">1 RP = $1</span>
+          </div>
+          <strong id="sim_step1_rp" style="font-size:13px; color:var(--navy); flex-shrink:0;">900 RP</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:6px 0; border-bottom:1px dashed #86efac;">
+          <div style="flex:1;">
+            <div style="font-size:12px; color:#1a5c38; font-weight:700; margin-bottom:4px;">② 剩余金额也用积分支付</div>
+            <span style="background:#e8f3fc; color:var(--ocean); font-size:10px; font-weight:900; padding:2px 8px; border-radius:20px; border:1px solid #b8d8f0; display:inline-block;">2 RP = $1</span>
+          </div>
+          <strong id="sim_step2_rp" style="font-size:13px; color:var(--navy); flex-shrink:0;">1,800 RP</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:6px 0;">
+          <span style="font-size:12px; color:#1a5c38; font-weight:700;">所需积分总计</span>
+          <strong id="sim_total_rp" style="font-size:14px; color:var(--ocean);">2,700 RP</strong>
+        </div>
+      </div>
+      <div id="sim_allrp_result" style="background:var(--green-light); border-radius:8px; padding:10px 12px; text-align:center; font-size:13px; font-weight:700; color:var(--green);">
+        ✅ 我的积分可以全额支付！
+      </div>
+    </div>
+    <div id="result_card" style="display:none;">
+      <div style="background:rgba(10,110,158,.05); border-radius:10px; padding:12px; margin-bottom:8px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:6px 0; border-bottom:1px dashed #86efac;">
+          <div style="flex:1;">
+            <div style="font-size:12px; color:#1a5c38; font-weight:700; margin-bottom:4px;">① 用积分支付（50%）</div>
+            <span style="background:#fff3c0; color:#8a6000; font-size:10px; font-weight:900; padding:2px 8px; border-radius:20px; border:1px solid #e8d060; display:inline-block;">1 RP = $1</span>
+          </div>
+          <strong id="sim_card_rp" style="font-size:13px; color:var(--navy); flex-shrink:0;">900 RP</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:6px 0;">
+          <span style="font-size:12px; color:#1a5c38;">② 刷卡支付</span>
+          <strong id="sim_card_pay" style="font-size:13px; color:var(--ocean);">$900</strong>
+        </div>
+      </div>
+      <div id="sim_card_result" style="background:#f0f8ff; border-radius:8px; padding:10px 12px; text-align:center; font-size:13px; font-weight:700; color:var(--ocean);">
+        💳 刷卡金额：$900
+      </div>
+    </div>
+  </div>
+
+  <div style="font-size:11px; color:var(--muted2); text-align:center; line-height:1.7;">
+    ※ 上方舱房价为 <strong style="color:var(--navy);">含税金额</strong>，1 RP = $1 折抵的上限为其 <strong style="color:var(--navy);">50%</strong>。<br>
+    <span style="display:inline-block; margin-top:6px;">实际金额依邮轮公司・行程・舱房而不同，请以预订画面的最终金额为准。</span>
+  </div>
+</div>
+</div>
+
+
+<div class="panel" id="sec-dday" data-n="📅" data-title="什么时候可以预订？">
+<div class="card" style="border:2px solid var(--ocean); padding:20px 18px;">
+  <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:4px;">📅 可预订日期计算机</div>
+  <div style="font-size:12px; color:var(--muted); margin-bottom:16px; line-height:1.6;">
+    选择基准日，马上告诉你可以用积分预订的日期
+  </div>
+
+  <div style="background:#fff; border:1.5px solid var(--ocean); border-radius:12px; padding:16px;">
+    <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+      <span style="font-size:12px; color:var(--muted); flex-shrink:0; font-weight:700;">基准日</span>
+      <input class="dday-from" type="date" onchange="calcDday(this)"
+        style="flex:1; min-width:0; font-size:14px; font-weight:700; color:var(--navy); border:1.5px solid var(--border2); border-radius:8px; padding:9px 10px; background:#fff; outline:none; font-family:inherit;">
+    </div>
+    <div style="background:linear-gradient(135deg,var(--navy),var(--ocean)); border-radius:10px; padding:18px 14px; text-align:center;">
+      <div style="font-size:11px; color:rgba(255,255,255,.7); margin-bottom:6px; font-weight:700; letter-spacing:1px;">270 天后</div>
+      <div class="dday-result" style="font-size:22px; font-weight:900; color:var(--gold-lt); letter-spacing:-.3px;">-</div>
+      <div style="font-size:11px; color:rgba(255,255,255,.75); margin-top:8px; line-height:1.7;">
+        这个日期 <strong style="color:#fff;">之后出发</strong>的邮轮，<br>可以只用积分预订
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card" style="word-break:normal;">
+  <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:12px;">💡 为什么是 270 天？</div>
+  <div style="background:var(--sky); border-radius:12px; padding:14px 16px; font-size:13px; color:#1a4a6e; line-height:1.9; margin-bottom:12px;">
+    只有在只用积分 <strong>全额支付</strong>时才适用这个条件。<br>
+    <strong style="color:var(--navy);">搭配刷卡支付</strong>，就没有 270 天的限制。
+  </div>
+
+  <div style="background:#fffbeb; border:1px solid var(--gold); border-radius:12px; padding:14px 16px;">
+    <div style="font-size:12.5px; font-weight:900; color:var(--gold-dark); margin-bottom:8px;">🛳️ 邮轮预订时机</div>
+    <div style="font-size:12.5px; color:#6a5000; line-height:1.9;">
+      邮轮通常在 <strong>出发前 1 年半～2 年</strong> 就开放预订。<br>
+      越早订 ✓ <strong>价格越划算</strong>，<br>
+      ✓ <strong>舱房选择越多</strong>。<br>
+      实际上，大家平均在 <strong>出发前 7～18 个月</strong>预订。
+    </div>
+    <div style="margin-top:10px; background:#fff3cd; border-radius:8px; padding:11px 13px; font-size:12.5px; color:#7a5500; line-height:1.8;">
+      👉 一边累积积分，一边 <strong>提早预订</strong>，就是搭邮轮的诀窍！
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="panel" id="sec7" data-n="7" data-title="怎么预订？">
+<div class="card" style="margin-bottom:10px;">
+  <div style="font-size:13px; color:var(--muted); margin-bottom:16px; line-height:1.7;">
+    用积分预订邮轮，大致有两种方式。
+  </div>
+
+  <div style="background:#f0faff; border:1.5px solid #b0d8f0; border-radius:14px; padding:18px; margin-bottom:12px;">
+    <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+      <span style="background:var(--ocean); color:#fff; font-size:10px; font-weight:900; padding:3px 12px; border-radius:20px;">方法 1</span>
+      <span style="font-size:14px; font-weight:900; color:var(--ocean);">全额积分支付</span>
+      <span style="font-size:10px; color:var(--muted);">All Reward Point</span>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:12px;">
+      <div style="display:flex; align-items:flex-start; gap:10px; padding:11px 14px; background:rgba(10,110,158,.07); border-radius:10px;">
+        <span style="font-size:16px; flex-shrink:0;">1️⃣</span>
+        <div style="font-size:13px; color:#1a5a8a; line-height:1.7;">
+          舱房总价的 <strong>50%</strong><br>
+          → <strong>以 1 RP = $1</strong>折抵<br>
+          <span style="background:#fff3c0; color:#8a6000; font-size:10px; font-weight:900; padding:2px 8px; border-radius:20px; border:1px solid #e8d060; display:inline-block; margin-top:4px;">1 RP = $1</span>
+        </div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:10px; padding:11px 14px; background:rgba(10,110,158,.07); border-radius:10px;">
+        <span style="font-size:16px; flex-shrink:0;">2️⃣</span>
+        <div style="font-size:13px; color:#1a5a8a; line-height:1.7;">
+          其余 <strong>50%</strong><br>
+          → <strong>2RP = $1</strong> 的比例用积分支付
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#ddeef8; border-radius:10px; padding:12px 14px; margin-bottom:10px;">
+      <div style="font-size:11px; font-weight:700; color:var(--ocean); margin-bottom:8px;">📌 范例 — $1,800 的舱房</div>
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:12px; color:#1a5a8a;">
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:6px;">
+          <div>
+            <div style="margin-bottom:3px;">① 50% 用积分折抵</div>
+            <span style="background:#fff3c0; color:#8a6000; font-size:10px; font-weight:900; padding:2px 8px; border-radius:20px; border:1px solid #e8d060; display:inline-block;">1 RP = $1</span>
+          </div>
+          <strong style="flex-shrink:0;">$900 (900 RP)</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:6px;">
+          <div>
+            <div style="margin-bottom:3px;">② 其余 $900 → 用积分支付</div>
+            <span style="background:#0a6e9e; color:#fff; font-size:10px; font-weight:900; padding:2px 8px; border-radius:20px; display:inline-block;">2 RP = $1</span>
+          </div>
+          <strong style="flex-shrink:0;">1,800 RP</strong>
+        </div>
+        <div style="height:1px; background:rgba(10,110,158,.2); margin:3px 0;"></div>
+        <div style="display:flex; justify-content:space-between; font-weight:900; color:var(--ocean);"><span>使用积分总计</span><span>2,700 RP → 全额支付 ✓</span></div>
+      </div>
+    </div>
+
+    <div style="background:var(--green-light); border-radius:8px; padding:10px 12px; font-size:12px; color:#1a5c38; font-weight:700; text-align:center; margin-bottom:10px;">
+      💳 不用现金，只用积分就能全额支付
+    </div>
+
+    <div style="background:#fffbeb; border:1px solid var(--gold); border-radius:12px; padding:14px 16px; margin-bottom:10px;">
+      <div style="font-size:12px; font-weight:900; color:var(--gold-dark); margin-bottom:8px;">💡 你知道邮轮什么时候订最好吗？</div>
+      <div style="font-size:12px; color:#6a5000; line-height:1.9;">
+        邮轮通常在 <strong>出发前 1 年半～2 年</strong> 就开放预订。<br>
+        越早订 ✓ <strong>价格越划算</strong>，<br>
+        ✓ <strong>舱房选择越多</strong>。<br>
+        实际上，大家平均在 <strong>出发前 7～18 个月</strong>预订。
+      </div>
+      <div style="margin-top:10px; background:#fff3cd; border-radius:8px; padding:10px 12px; font-size:12px; color:#7a5500; line-height:1.7;">
+        👉 适用于 270 天（约 9 个月）以后出发的行程<br>
+        一边累积积分，一边 <strong>提早预订</strong>，就是搭邮轮的诀窍！
+      </div>
+      <div style="margin-top:10px; background:#fff; border:1.5px solid var(--ocean); border-radius:10px; padding:13px;">
+        <div class="dday-box" style="font-size:12px; font-weight:900; color:var(--navy); margin-bottom:9px;">📅 什么时候可以预订？</div>
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
+          <span style="font-size:11px; color:var(--muted); flex-shrink:0;">基准日</span>
+          <input class="dday-from" type="date" onchange="calcDday(this)"
+            style="flex:1; min-width:0; font-size:13px; font-weight:700; color:var(--navy); border:1.5px solid var(--border2); border-radius:8px; padding:7px 9px; background:#fff; outline:none; font-family:inherit;">
+        </div>
+        <div style="background:var(--sky); border-radius:8px; padding:12px; text-align:center;">
+          <div style="font-size:10.5px; color:var(--muted); margin-bottom:4px;">270 天后</div>
+          <div class="dday-result" style="font-size:19px; font-weight:900; color:var(--ocean); letter-spacing:-.3px;">-</div>
+          <div style="font-size:10.5px; color:var(--muted); margin-top:6px; line-height:1.6;">
+            这个日期 <strong style="color:var(--navy);">之后出发</strong>的邮轮，<br>可以只用积分预订
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:rgba(10,110,158,.07); border-radius:10px; padding:14px;">
+      <div style="font-size:11px; font-weight:700; color:var(--ocean); margin-bottom:10px;">流程</div>
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <div style="display:flex; gap:8px; align-items:center; font-size:12px; color:#1a5a8a;">
+          <span style="width:20px; height:20px; border-radius:50%; background:var(--ocean); color:#fff; font-size:10px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0;">1</span>
+          维持会员，累积积分
+        </div>
+        <div style="display:flex; gap:8px; align-items:flex-start; font-size:12px; color:#1a5a8a;">
+          <span style="width:20px; height:20px; border-radius:50%; background:var(--ocean); color:#fff; font-size:10px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">2</span>
+          <span><strong>出发日在 270 天以后的行程</strong> 中挑选<br><span style="font-size:11px; color:var(--muted);">从现在算起，约 9 个月后出发的邮轮都可以</span></span>
+        </div>
+        <div style="display:flex; gap:8px; align-items:center; font-size:12px; color:#1a5a8a;">
+          <span style="width:20px; height:20px; border-radius:50%; background:var(--green); color:#fff; font-size:10px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0;">3</span>
+          只用积分全额预订邮轮 🎉
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#f0fff4; border:1.5px solid #86efac; border-radius:14px; padding:18px; margin-bottom:12px;">
+    <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+      <span style="background:var(--green); color:#fff; font-size:10px; font-weight:900; padding:3px 12px; border-radius:20px;">方法 2</span>
+      <span style="font-size:14px; font-weight:900; color:var(--green);">积分＋刷卡</span>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:12px;">
+      <div style="display:flex; align-items:flex-start; gap:10px; padding:11px 14px; background:rgba(22,163,74,.08); border-radius:10px;">
+        <span style="font-size:16px; flex-shrink:0;">1️⃣</span>
+        <div style="font-size:13px; color:#1a5c38; line-height:1.7;">
+          舱房总价的 <strong>50%</strong><br>
+          → <strong>积分</strong> 支付<br>
+          <span style="background:#fff3c0; color:#8a6000; font-size:10px; font-weight:900; padding:2px 8px; border-radius:20px; border:1px solid #e8d060; display:inline-block; margin-top:4px;">1 RP = $1</span>
+        </div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:10px; padding:11px 14px; background:rgba(22,163,74,.08); border-radius:10px;">
+        <span style="font-size:16px; flex-shrink:0;">2️⃣</span>
+        <div style="font-size:13px; color:#1a5c38; line-height:1.7;">
+          其余 <strong>50%</strong><br>
+          → <strong>刷卡</strong> 支付
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#fff; border:2px solid var(--green); border-radius:12px; padding:14px; margin-bottom:12px;">
+      <div style="font-size:13px; color:var(--navy); line-height:1.9; margin-bottom:10px;">
+        邮轮舱房以 <strong>2 人 1 室为基准</strong>。<br>
+        舱房价的 50% 是 <strong>自己的那份</strong>,<br>
+        其余 50% 是 <strong>旅伴的那份</strong>。
+      </div>
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <div style="display:flex; align-items:center; gap:10px; padding:10px 14px; background:var(--green-light); border-radius:10px;">
+          <span style="font-size:18px; flex-shrink:0;">🙋</span>
+          <div style="font-size:13px;"><strong>自己的那份 50%</strong><br><span style="font-size:12px; color:var(--green); font-weight:700;">→ 用积分支付＝等于不用付现</span></div>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; padding:10px 14px; background:#f0faff; border-radius:10px;">
+          <span style="font-size:18px; flex-shrink:0;">🧑‍🤝‍🧑</span>
+          <div style="font-size:13px;"><strong>旅伴的那份 50%</strong><br><span style="font-size:12px; color:var(--ocean); font-weight:700;">→ 刷卡支付</span></div>
+        </div>
+      </div>
+      <div style="margin-top:10px; background:var(--sky); border-radius:8px; padding:10px 12px; font-size:12px; color:#1a4a6e; line-height:1.7;">
+        📌 也就是说， <strong>自己的舱房费用是 $0</strong><br>只要另外刷卡支付旅伴的部分就可以了。
+      </div>
+    </div>
+
+    <div style="background:rgba(22,163,74,.08); border-radius:10px; padding:14px; margin-bottom:10px;">
+      <div style="font-size:11px; font-weight:700; color:var(--green); margin-bottom:10px;">🔄 也可以连续预订邮轮</div>
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <div style="display:flex; gap:8px; align-items:flex-start; font-size:12px; color:#1a5c38;">
+          <span style="width:20px; height:20px; border-radius:50%; background:var(--green); color:#fff; font-size:10px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">1</span>
+          <span>维持会员 → 积分累积中</span>
+        </div>
+        <div style="display:flex; gap:8px; align-items:flex-start; font-size:12px; color:#1a5c38;">
+          <span style="width:20px; height:20px; border-radius:50%; background:var(--green); color:#fff; font-size:10px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">2</span>
+          <span><strong>第一趟邮轮</strong> — 用方法 1 或方法 2 预订</span>
+        </div>
+        <div style="display:flex; gap:8px; align-items:flex-start; font-size:12px; color:#1a5c38;">
+          <span style="width:20px; height:20px; border-radius:50%; background:var(--green); color:#fff; font-size:10px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">3</span>
+          <span>等待上船的期间，积分继续累积</span>
+        </div>
+        <div style="display:flex; gap:8px; align-items:flex-start; font-size:12px; color:#1a5c38;">
+          <span style="width:20px; height:20px; border-radius:50%; background:#15803d; color:#fff; font-size:10px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">4</span>
+          <span><strong>第二趟邮轮</strong>也能接着预订 🎉</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:rgba(22,163,74,.1); border-radius:10px; padding:10px 14px; text-align:center; font-size:13px; font-weight:700; color:var(--green); margin-bottom:10px;">
+      “不是用一次就结束，<br>而是一边累积，一边接续下一趟旅行”
+    </div>
+
+    <div style="padding:10px 14px; background:rgba(0,0,0,.03); border-radius:8px; font-size:11px; color:var(--muted); line-height:1.8;">
+      ※ 依预订时间，需要 <strong style="color:var(--navy);">预付会员月费</strong><br>
+      ・预订 30 天后出发的行程：月费 <strong>2 期</strong> 预付<br>
+      ・预订 60 天后出发的行程：月费 <strong>1 期</strong> 预付
+      <span style="display:block; margin-top:9px; padding-top:9px; border-top:1px solid rgba(0,0,0,.08); color:#3a4a5a;">
+      📌 这里说的预付，是指提前缴 <strong style="color:var(--navy);">每月的会员月费，不是邮轮费用</strong>。<br>
+      提前缴不会让积分提早累积，而是 <strong style="color:var(--navy);">在原定的累积日正常入账</strong>。</span>
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#f0faff,#e8f4fd); border:2px solid var(--ocean); border-radius:14px; padding:16px 18px;">
+    <div style="font-size:13px; font-weight:900; color:var(--ocean); margin-bottom:8px;">🛳️ 方法 1＋方法 2 可以搭配使用</div>
+    <div style="font-size:12px; color:#1a5a8a; line-height:1.8;">
+      可以依情况选择其中一种，也可以<br>
+      <strong>连续预订邮轮</strong>。<br>
+      积分累积得越多，越能选择更划算的方式。
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="panel" id="sec8" data-n="8" data-title="实际上是怎么运作的？">
+<div class="card" style="word-break:normal;">
+  <div style="font-size:14px; color:var(--muted); margin-bottom:14px;">举例来说是这样</div>
+  <div style="background:var(--green-light); border:1.5px solid #86efac; border-radius:14px; padding:18px;">
+    <div style="font-size:12px; font-weight:700; color:var(--green); letter-spacing:1px; margin-bottom:12px;">🎉 范例 — 准备 5 个月后预订</div>
+    <div style="display:flex; flex-direction:column; gap:0;">
+      <div style="display:flex; justify-content:space-between; font-size:13px; padding:8px 0; border-bottom:1px dashed #86efac;"><span style="color:#1a5c38;">5 个月付款总额</span><strong>$1,500</strong></div>
+      <div style="display:flex; justify-content:space-between; font-size:13px; padding:8px 0; border-bottom:1px dashed #86efac;"><span style="color:#1a5c38;">累积的积分</span><strong style="color:var(--ocean);">相当于 $2,800</strong></div>
+      <div style="display:flex; justify-content:space-between; font-size:13px; padding:8px 0; border-bottom:1px dashed #86efac;"><span style="color:#1a5c38;">用于预订地中海邮轮（2 人）</span><strong>$2,700</strong></div>
+      <div style="display:flex; justify-content:space-between; align-items:center; font-size:13px; padding:8px 0;"><span style="color:#1a5c38;">不需额外付款，预订完成</span><strong style="color:var(--green); font-size:22px;">✓</strong></div>
+    </div>
+    <div style="margin-top:10px; font-size:10px; color:#3a9a5a; border-top:1px solid #86efac; padding-top:10px;">※ 此为帮助理解的预估方案，实际条件依平台政策而定。</div>
+  </div>
+</div>
+</div>
+
+
+
+
+<div class="panel" id="sec9" data-n="9" data-title="可以订得多划算？">
+<div class="card" style="word-break:normal;">
+  <div style="font-size:14px; color:var(--muted); margin-bottom:16px; line-height:1.7;">
+    同一趟邮轮，可以订得更划算。<br>自己算算看。
+  </div>
+
+  
+
+  <div style="margin-bottom:8px;">
+    <div style="font-size:11px; font-weight:700; color:var(--coral); letter-spacing:1px; margin-bottom:10px;">🌐 一般旅行社 — 每人（美元）</div>
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:9px 0; border-bottom:1px solid #f0f8ff;">
+      <span style="font-size:13px; color:var(--muted);">🧳 团费（每人）</span>
+      <div style="display:flex; align-items:center; gap:5px;">
+        <input id="n_pkg1" type="number" value="4800" oninput="calcAll()" style="width:76px; font-size:14px; font-weight:900; color:var(--coral); border:1px solid #f5c0c0; border-radius:8px; padding:5px 8px; text-align:right; background:#fff8f8; outline:none; -webkit-appearance:none;">
+        <span style="font-size:12px; color:#888;">美元</span>
+        <span style="font-size:10px; color:#c0a0a0; min-width:48px; text-align:right;" id="n_pkg1_usd"></span>
+      </div>
+    </div>
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:9px 0; border-bottom:1px solid #f0f8ff;">
+      <span style="font-size:13px; color:var(--muted);">⛴️ 船上小费（每人）</span>
+      <div style="display:flex; align-items:center; gap:5px;">
+        <input id="n_tip1" type="number" value="140" oninput="calcAll()" style="width:76px; font-size:14px; font-weight:900; color:var(--coral); border:1px solid #f5c0c0; border-radius:8px; padding:5px 8px; text-align:right; background:#fff8f8; outline:none; -webkit-appearance:none;">
+        <span style="font-size:12px; color:#888;">美元</span>
+        <span style="font-size:10px; color:#c0a0a0; min-width:48px; text-align:right;" id="n_tip1_usd"></span>
+      </div>
+    </div>
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:9px 0;">
+      <span style="font-size:13px; color:var(--muted);">🗺️ 导游小费（每人）</span>
+      <div style="display:flex; align-items:center; gap:5px;">
+        <input id="n_guide1" type="number" value="70" oninput="calcAll()" style="width:76px; font-size:14px; font-weight:900; color:var(--coral); border:1px solid #f5c0c0; border-radius:8px; padding:5px 8px; text-align:right; background:#fff8f8; outline:none; -webkit-appearance:none;">
+        <span style="font-size:12px; color:#888;">美元</span>
+        <span style="font-size:10px; color:#c0a0a0; min-width:48px; text-align:right;" id="n_guide1_usd"></span>
+      </div>
+    </div>
+    <div style="background:#fff5f5; border:1px dashed #f5c0c0; border-radius:10px; padding:10px 14px; margin:10px 0 6px; display:flex; justify-content:space-between; align-items:center;">
+      <span style="font-size:12px; color:var(--coral); font-weight:700;">每人小计</span>
+      <div style="text-align:right;"><span style="font-size:16px; font-weight:900; color:var(--coral);" id="n_sub1_krw">-</span><span style="font-size:10px; color:#c0a0a0; margin-left:6px;" id="n_sub1_usd"></span></div>
+    </div>
+    <div style="background:#fff5f5; border:1.5px solid #fde8e8; border-radius:12px; padding:14px; display:flex; justify-content:space-between; align-items:center;">
+      <div><div style="font-size:12px; font-weight:700; color:var(--coral);">一般旅行社 2 人合计</div><div style="font-size:10px; color:#e07070; margin-top:2px;">含船上小费・导游小费</div></div>
+      <div style="text-align:right;"><div style="font-size:20px; font-weight:900; color:var(--coral);" id="n_total_krw2">-</div><div style="font-size:11px; color:#e07070;" id="n_total_usd_ref">-</div></div>
+    </div>
+  </div>
+
+  <div style="text-align:center; font-size:20px; color:var(--ocean); margin:12px 0 16px;">⬇️</div>
+
+  <div>
+    <div style="background:linear-gradient(135deg,var(--navy),var(--ocean)); border-radius:14px; padding:14px 16px; margin-bottom:14px; position:relative; overflow:hidden;">
+      <div style="position:absolute; right:-8px; top:-8px; font-size:54px; opacity:.08;">🛳️</div>
+      <div style="font-size:11px; color:rgba(255,255,255,.7); letter-spacing:1.5px; font-weight:700; margin-bottom:4px;">CRUISE DIRECT</div>
+      <div style="font-size:13px; font-weight:900; color:#fff;">🛳️ 用会员自己直接订</div>
+      <div style="display:inline-flex; align-items:center; gap:5px; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.3); border-radius:20px; padding:3px 10px; margin-top:6px;"><span style="font-size:10px; color:#ffe566; font-weight:700;">🛏️ 以 2 人内舱房为例</span></div>
+    </div>
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:9px 0; border-bottom:1px solid #f0f8ff;"><span style="font-size:13px; color:var(--muted);">🚢 邮轮（使用积分，2 人）</span><div style="display:flex; align-items:center; gap:5px;"><span style="font-size:12px; color:#aaa;">$</span><input id="p_cruise" type="number" value="1500" oninput="calcAll()" style="width:86px; font-size:13px; font-weight:700; color:var(--ocean); border:1px solid #b0d8f0; border-radius:8px; padding:5px 8px; text-align:right; background:#f0faff; outline:none; -webkit-appearance:none;"><span style="font-size:10px; color:#9ab8cc; min-width:64px; text-align:right;" id="p_cruise_krw"></span></div></div>
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:9px 0; border-bottom:1px solid #f0f8ff;"><span style="font-size:13px; color:var(--muted);">✈️ 机票（2 人）</span><div style="display:flex; align-items:center; gap:5px;"><span style="font-size:12px; color:#aaa;">$</span><input id="p_air" type="number" value="2500" oninput="calcAll()" style="width:86px; font-size:13px; font-weight:700; color:var(--ocean); border:1px solid #b0d8f0; border-radius:8px; padding:5px 8px; text-align:right; background:#f0faff; outline:none; -webkit-appearance:none;"><span style="font-size:10px; color:#9ab8cc; min-width:64px; text-align:right;" id="p_air_krw"></span></div></div>
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:9px 0; border-bottom:1px solid #f0f8ff;"><span style="font-size:13px; color:var(--muted);">🗺️ 岸上费用・自费行程（2 人）</span><div style="display:flex; align-items:center; gap:5px;"><span style="font-size:12px; color:#aaa;">$</span><input id="p_land" type="number" value="0" oninput="calcAll()" style="width:86px; font-size:13px; font-weight:700; color:var(--ocean); border:1px solid #b0d8f0; border-radius:8px; padding:5px 8px; text-align:right; background:#f0faff; outline:none; -webkit-appearance:none;"><span style="font-size:10px; color:#9ab8cc; min-width:64px; text-align:right;" id="p_land_krw"></span></div></div>
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:9px 0; border-bottom:1px solid #f0f8ff;"><span style="font-size:13px; color:var(--muted);">⛴️ 船上小费（2 人）</span><div style="display:flex; align-items:center; gap:5px;"><span style="font-size:12px; color:#aaa;">$</span><input id="p_stip" type="number" value="0" oninput="calcAll()" style="width:86px; font-size:13px; font-weight:700; color:var(--ocean); border:1px solid #b0d8f0; border-radius:8px; padding:5px 8px; text-align:right; background:#f0faff; outline:none; -webkit-appearance:none;"><span style="font-size:10px; color:#9ab8cc; min-width:64px; text-align:right;" id="p_stip_krw"></span></div></div>
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:9px 0;"><span style="font-size:13px; color:var(--muted);">🗺️ 导游小费（2 人）</span><div style="display:flex; align-items:center; gap:5px;"><span style="font-size:12px; color:#aaa;">$</span><input id="p_gtip" type="number" value="0" oninput="calcAll()" style="width:86px; font-size:13px; font-weight:700; color:var(--ocean); border:1px solid #b0d8f0; border-radius:8px; padding:5px 8px; text-align:right; background:#f0faff; outline:none; -webkit-appearance:none;"><span style="font-size:10px; color:#9ab8cc; min-width:64px; text-align:right;" id="p_gtip_krw"></span></div></div>
+
+    <div style="background:linear-gradient(135deg,#e8f9ff,#d0f0f8); border:2px solid var(--teal); border-radius:14px; padding:16px; margin-top:12px; display:flex; justify-content:space-between; align-items:center;">
+      <div><div style="font-size:12px; font-weight:700; color:var(--ocean);">🛳️ 用会员 2 人总费用</div></div>
+      <div style="text-align:right;"><div style="font-size:18px; font-weight:900; color:var(--ocean);" id="p_total_usd">-</div><div style="font-size:11px; color:#1a8bbf;" id="p_total_krw">-</div></div>
+    </div>
+
+    <div style="background:linear-gradient(135deg,var(--green-light),#d0f5e8); border:2px solid #86efac; border-radius:14px; padding:18px; margin-top:10px;">
+      <div style="font-size:11px; font-weight:700; color:var(--green); letter-spacing:1px; margin-bottom:12px;">📊 同样的行程，不同订法的差别</div>
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <div><div style="font-size:12px; color:#1a5c38;">与一般相比</div><div style="font-size:18px; font-weight:900; color:var(--green);" id="save_krw">-</div><div style="font-size:11px; color:#3a9a5a;" id="save_usd">-</div></div>
+        <div style="text-align:right;"><div style="font-size:12px; color:#1a5c38;">差距</div><div style="font-size:24px; font-weight:900; color:var(--green);" id="save_pct">-</div></div>
+      </div>
+    </div>
+    <div style="font-size:10px; color:#b0c8d8; text-align:center; margin-top:8px;">※ 此为帮助理解的预估金额，实际费用依时间与条件而不同。</div>
+  </div>
+</div>
+</div>
+
+
+<div class="panel" id="sec10" data-n="10" data-title="舱房怎么选？">
+<div class="card" style="word-break:normal;">
+  <div style="font-size:13px; color:var(--muted); margin-bottom:14px;">可以自己挑选想要的房型</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+    <div style="border-radius:var(--rs); overflow:hidden; border:1px solid var(--border); box-shadow:var(--shadow);">
+      <img loading="lazy" decoding="async" src="img/13.jpg" alt="内舱房" style="width:100%; height:110px; object-fit:cover; display:block;">
+      <div style="padding:10px 12px; background:#fff;">
+        <div style="font-size:13px; font-weight:900; color:var(--navy);">🪟 内舱房</div>
+        <div style="font-size:11px; color:var(--muted); margin-top:3px;">没有窗户・最实惠</div>
+      </div>
+    </div>
+    <div style="border-radius:var(--rs); overflow:hidden; border:1px solid var(--border); box-shadow:var(--shadow);">
+      <img loading="lazy" decoding="async" src="img/14.jpg" alt="海景房" style="width:100%; height:110px; object-fit:cover; display:block;">
+      <div style="padding:10px 12px; background:#fff;">
+        <div style="font-size:13px; font-weight:900; color:var(--ocean);">🌊 海景房</div>
+        <div style="font-size:11px; color:var(--muted); margin-top:3px;">有海景窗・中间价位</div>
+      </div>
+    </div>
+    <div style="border-radius:var(--rs); overflow:hidden; border:2px solid var(--teal); box-shadow:var(--shadow);">
+      <div style="position:relative;">
+        <img loading="lazy" decoding="async" src="img/15.jpg" alt="阳台房" style="width:100%; height:110px; object-fit:cover; display:block;">
+        <div style="position:absolute; top:6px; right:6px; background:var(--teal); color:#fff; font-size:9px; font-weight:900; padding:2px 8px; border-radius:10px;">人气</div>
+      </div>
+      <div style="padding:10px 12px; background:#f0faff;">
+        <div style="font-size:13px; font-weight:900; color:var(--teal);">🏖️ 阳台房</div>
+        <div style="font-size:11px; color:var(--muted); margin-top:3px;">私人阳台・人气 No.1</div>
+      </div>
+    </div>
+    <div style="border-radius:var(--rs); overflow:hidden; border:1px solid var(--gold); box-shadow:var(--shadow);">
+      <img loading="lazy" decoding="async" src="img/16.jpg" alt="套房" style="width:100%; height:110px; object-fit:cover; display:block;">
+      <div style="padding:10px 12px; background:#fff;">
+        <div style="font-size:13px; font-weight:900; color:var(--gold-dark);">👑 套房</div>
+        <div style="font-size:11px; color:var(--muted); margin-top:3px;">奢华・顶级</div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:12px; background:var(--sky); border-radius:10px; padding:10px 14px; font-size:12px; color:#1a4a6e; line-height:1.7;">💡 第一次搭邮轮，选 <strong>内舱房</strong>就很够了，因为大部分时间都在享受船上设施。</div>
+  <div style="margin-top:8px; text-align:right; font-size:10px; color:#b0c8d8;">📸 照片来源：Virgin Voyages 官方数据</div>
+</div>
+</div>
+
+
+<div class="panel" id="sec11" data-n="11" data-title="怎么加入？">
+<div class="acc">
+  <div class="acc-t" onclick="toggleAcc('a1')"><div class="acc-ic b">📋</div><div class="acc-tw"><div class="acc-title">注册方式</div><div class="acc-sub">先准备好，5 分钟就能完成</div></div><div class="acc-arr" id="arr-a1">▼</div></div>
+  <div class="acc-body" id="a1">
+    <div style="padding-top:14px; display:flex; flex-direction:column; gap:12px;">
+      <div style="background:var(--sky); border-radius:12px; padding:14px 16px;">
+        <div style="font-size:12px; font-weight:700; color:var(--ocean); letter-spacing:1px; margin-bottom:12px;">📋 注册画面这样填</div>
+        <div class="sf-sub">实际的注册画面长这样， <strong style="color:var(--gold);">照范例</strong> 填写就可以了。</div>
+        <div class="sf" aria-label="注册画面范例">
+          <span class="sf-tag">范例画面</span>
+          <div class="sf-g">
+            <div><div class="sf-l">名字<i>*</i></div><div class="sf-i">XIAOMING</div><div class="sf-h">护照英文 <b>名字</b></div></div>
+            <div><div class="sf-l">姓氏<i>*</i></div><div class="sf-i">WANG</div><div class="sf-h">护照英文 <b>姓氏</b></div></div>
+            <div><div class="sf-l">电子邮箱<i>*</i></div><div class="sf-i sm">wang@gmail.com</div><div class="sf-h">常用的邮箱</div></div>
+            <div><div class="sf-l">确认电子邮箱<i>*</i></div><div class="sf-i sm">wang@gmail.com</div><div class="sf-h"><b>一模一样</b> 再输入一次</div></div>
+            <div><div class="sf-l">密码<i>*</i></div><div class="sf-i pw">••••••••<span class="eye">👁</span></div></div>
+            <div><div class="sf-l">确认密码<i>*</i></div><div class="sf-i pw">••••••••<span class="eye">👁</span></div></div>
+            <div class="sf-n sf-full">密码需 <b>8 码以上</b>, <b>英文＋数字</b> 混合</div>
+            <div><div class="sf-l">国家<i>*</i></div><div class="sf-i sm">Taiwan</div></div>
+            <div><div class="sf-l">电话号码<i>*</i></div><div class="sf-i sm"><span class="cc">🇹🇼 +886</span>912345678</div><div class="sf-h">开头的 <b>0 去掉</b> 后输入</div></div>
+            <div class="sf-full"><div class="sf-l">性别<i>*</i></div><div class="sf-i sel">选择女性／男性<span style="color:#6b7280">⌄</span></div></div>
+            <div class="sf-full"><div class="sf-cap"><span class="box">✓</span>我不是机器人<span class="sf-rc">reCAPTCHA</span></div><div class="sf-h">⚠️ <b>一定要勾选</b>才能完成注册。出现图片验证时，请依指示完成</div></div>
+            <div class="sf-btn sf-full">注册</div>
+          </div>
+        </div>
+        <div class="sf-name">⚠️ First name 是 <b>名字</b>，Last name 是 <b>姓氏</b>。例如王小明：名字栏填 <b>XIAOMING</b>，姓氏栏填 <b>WANG</b>!</div>
+        <div style="margin-top:10px; background:#fffbeb; border-radius:8px; padding:10px 12px; font-size:11px; color:#7a5500; line-height:1.7;">
+          💡 照上面先准备好， <strong>5 分钟内就能完成注册</strong>！
+        </div>
+      </div>
+
+      <div style="background:#fffdf5; border:1.5px solid #e8d060; border-radius:12px; padding:14px; display:flex; flex-direction:column; gap:9px;">
+        <div style="font-size:13px; font-weight:900; color:var(--navy);">📋 加入前请务必确认</div>
+        <div style="background:#fff; border:1px solid var(--border); border-radius:10px; padding:11px 13px; font-size:12px; color:var(--navy); line-height:1.7;">
+          <strong>1. 退费规定</strong><br>
+          <span style="color:var(--muted);">加入后只有在 <span style="color:#c0392b; font-weight:700;">14 天内</span>可以退费。之后的月费不再退还，依规定办理。</span>
+        </div>
+        <div style="background:#fff; border:1px solid var(--border); border-radius:10px; padding:11px 13px; font-size:12px; color:var(--navy); line-height:1.7;">
+          <strong>2. 用英文注册</strong><br>
+          <span style="color:var(--muted);"><span style="color:var(--ocean); font-weight:700;">请使用与护照相同的英文姓名</span>注册。若输入中文，预订时可能会出问题。</span>
+        </div>
+        <div style="background:#fff; border:1px solid var(--border); border-radius:10px; padding:11px 13px; font-size:12px; color:var(--navy); line-height:1.7;">
+          <strong>3. 设置自动扣款</strong><br>
+          <span style="color:var(--muted);">加入后请务必设置 <span style="color:#c0392b; font-weight:700;">信用卡自动扣款</span>。扣款中断的话，积分就会停止累积。</span>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:center; justify-content:center; text-align:center; background:linear-gradient(135deg,var(--gold),#ffe566); color:var(--navy); font-size:14px; font-weight:900; padding:15px; border-radius:12px; box-shadow:0 4px 16px rgba(200,152,58,.35); line-height:1.6;">💬 想加入？请联系分享这个页面给你的人</div>
+
+      <div style="background:var(--sky); border-radius:10px; padding:12px 14px; font-size:12px; color:#1a4a6e; line-height:1.8;">
+        📌 注册链接请向分享这个页面给你的人索取<br>
+        <span style="color:var(--muted);">完成注册后，会收到电子邮箱通知</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="acc">
+  <div class="acc-t" onclick="toggleAcc('a2')"><div class="acc-ic g">🔒</div><div class="acc-tw"><div class="acc-title">身分验证</div><div class="acc-sub">第一次需要验证身分</div></div><div class="acc-arr" id="arr-a2">▼</div></div>
+  <div class="acc-body" id="a2">
+    <div style="padding-top:14px; display:flex; flex-direction:column; gap:10px;">
+      <div style="background:var(--sky); border-radius:12px; padding:14px 16px;">
+        <div style="font-size:12px; font-weight:700; color:var(--ocean); letter-spacing:1px; margin-bottom:10px;">📎 需要准备（仅第一次）</div>
+        <div style="display:flex; flex-direction:column; gap:7px;">
+          <div style="display:flex; gap:8px; align-items:center; font-size:12px; color:var(--navy); padding:8px 12px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+            <span style="font-size:15px; flex-shrink:0;">🪪</span> 身分证件正反面照片（护照也可以） <span style="font-size:10px; color:var(--coral); margin-left:auto; font-weight:700;">可遮住部分号码</span>
+          </div>
+          <div style="display:flex; gap:8px; align-items:center; font-size:12px; color:var(--navy); padding:8px 12px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+            <span style="font-size:15px; flex-shrink:0;">🤳</span> 手持证件的自拍照
+          </div>
+          <div style="display:flex; gap:8px; align-items:center; font-size:12px; color:var(--navy); padding:8px 12px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+            <span style="font-size:15px; flex-shrink:0;">💳</span> 信用卡照片 <span style="font-size:10px; color:var(--coral); margin-left:auto; font-weight:700;">遮住中间 8 码</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff; border:1.5px solid var(--border); border-radius:12px; overflow:hidden;">
+        <div onclick="toggleAcc('a2_detail')" style="display:flex; align-items:center; justify-content:space-between; padding:14px 16px; cursor:pointer; -webkit-tap-highlight-color:transparent;">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="font-size:18px;">📤</span>
+            <div>
+              <div style="font-size:13px; font-weight:900; color:var(--navy);">查看提交方式</div>
+              <div style="font-size:11px; color:var(--muted); margin-top:2px;">登录后从“支持请求”提交</div>
+            </div>
+          </div>
+          <div id="arr-a2_detail" style="font-size:14px; color:var(--muted); transition:transform .3s;">▼</div>
+        </div>
+        <div id="a2_detail" style="display:none; border-top:1px solid var(--sky); padding:14px 16px;">
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <div style="display:flex; gap:10px; align-items:flex-start;">
+              <div style="width:24px; height:24px; border-radius:50%; background:var(--ocean); color:#fff; font-size:12px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">1</div>
+              <div style="font-size:13px; color:var(--navy); line-height:1.7;">在 App 或网页 <strong>登录</strong> 后，<br>点右上角的 <strong>❓（支持请求）</strong> 按钮</div>
+            </div>
+            <div style="display:flex; gap:10px; align-items:flex-start;">
+              <div style="width:24px; height:24px; border-radius:50%; background:var(--ocean); color:#fff; font-size:12px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">2</div>
+              <div style="font-size:13px; color:var(--navy); line-height:1.7;"><strong>选择“付款文档”</strong> </div>
+            </div>
+            <div style="display:flex; gap:10px; align-items:flex-start;">
+              <div style="width:24px; height:24px; border-radius:50%; background:var(--ocean); color:#fff; font-size:12px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">3</div>
+              <div style="width:100%;">
+                <div style="font-size:13px; color:var(--navy); line-height:1.7; margin-bottom:8px;">输入以下内容并附上文档</div>
+                <div style="background:var(--sky); border-radius:10px; padding:12px 14px; font-size:12px; color:#1a4a6e; line-height:2;">
+                  <div>📌 <strong>标题：</strong> 身分验证</div>
+                  <div>💬 <strong>消息：</strong> 附上验证文档，谢谢。</div>
+                  <div>📎 <strong>附件：</strong> 加入证件、信用卡、自拍照片</div>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex; gap:10px; align-items:flex-start;">
+              <div style="width:24px; height:24px; border-radius:50%; background:var(--green); color:#fff; font-size:12px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">4</div>
+              <div style="font-size:13px; color:var(--navy); line-height:1.7;"><strong>点“提交”</strong> 按钮 → 完成 🎉</div>
+            </div>
+            <div style="background:var(--green-light); border-radius:8px; padding:10px 14px; font-size:12px; color:#1a5c38; line-height:1.7;">
+              ✅ 提交后，审核通常需要 <strong>1～2 个工作天</strong> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="acc">
+  <div class="acc-t" onclick="toggleAcc('a3')"><div class="acc-ic y">💳</div><div class="acc-tw"><div class="acc-title">设置自动扣款信用卡</div><div class="acc-sub">可海外刷卡的 VISA / Mastercard</div></div><div class="acc-arr" id="arr-a3">▼</div></div>
+  <div class="acc-body" id="a3">
+    <div style="padding-top:14px; display:flex; flex-direction:column; gap:10px;">
+      <div style="background:var(--sky); border-radius:var(--rs); padding:14px;"><div style="font-size:11px; font-weight:700; color:var(--ocean); letter-spacing:1px; margin-bottom:10px;">📍 设置路径</div><div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap; font-size:13px; font-weight:700; color:var(--navy);"><span style="background:#fff; border:1px solid var(--border); border-radius:6px; padding:4px 10px;">付款</span><span style="color:var(--ocean);">→</span><span style="background:#fff; border:1px solid var(--border); border-radius:6px; padding:4px 10px;">账单</span><span style="color:var(--ocean);">→</span><span style="background:#fff; border:1px solid var(--border); border-radius:6px; padding:4px 10px;">设置定期付款方式</span></div></div>
+      <div style="background:#fff3cd; border:1px solid var(--gold); border-radius:var(--rs); padding:14px; display:flex; align-items:center; gap:12px;"><div style="background:#f5a623; color:#fff; font-size:13px; font-weight:900; padding:10px 16px; border-radius:10px; flex-shrink:0;">＋ 添加付款方式</div><div style="font-size:12px; color:#7a5500; line-height:1.6;">点上面的按钮，输入信用卡数据</div></div>
+      <div style="background:#f0faff; border:1px solid #b0d8f0; border-radius:var(--rs); padding:14px;"><div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:8px;"><span style="background:#1a6eb5; color:#fff; font-size:12px; font-weight:900; padding:5px 14px; border-radius:20px;">VISA</span><span style="background:#eb001b; color:#fff; font-size:12px; font-weight:900; padding:5px 14px; border-radius:20px;">Mastercard</span></div><div style="font-size:11px; color:#e07070; font-weight:700;">⚠️ 必须是可以海外刷卡的信用卡</div><div style="font-size:11px; color:var(--muted); margin-top:4px; line-height:1.6;">每月会自动扣款月费（尊享方案为 $250）。</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="acc">
+  <div class="acc-t" onclick="toggleAcc('a4')"><div class="acc-ic p">📱</div><div class="acc-tw"><div class="acc-title">加入手机主画面</div><div class="acc-sub">iPhone・Android 都可以</div></div><div class="acc-arr" id="arr-a4">▼</div></div>
+  <div class="acc-body" id="a4">
+    <div style="padding-top:14px; display:flex; flex-direction:column; gap:10px;">
+      <div style="background:#f0faff; border:1.5px solid #b0d8f0; border-radius:var(--rs); padding:14px;"><div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;"><span style="font-size:18px;">🍎</span><span style="font-size:13px; font-weight:900;">iPhone</span><span style="font-size:10px; background:#e8f4fd; color:var(--ocean); font-weight:700; padding:2px 8px; border-radius:10px; margin-left:auto;">Safari</span></div><div style="display:flex; flex-direction:column; gap:7px; font-size:12px; color:#1a5a8a;"><div style="display:flex; gap:8px; align-items:flex-start;"><span style="background:var(--ocean); color:#fff; border-radius:50%; width:18px; height:18px; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:900; flex-shrink:0; margin-top:1px;">1</span>用 Safari 打开</div><div style="display:flex; gap:8px; align-items:flex-start;"><span style="background:var(--ocean); color:#fff; border-radius:50%; width:18px; height:18px; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:900; flex-shrink:0; margin-top:1px;">2</span>点下方的 <strong>分享按钮</strong> </div><div style="display:flex; gap:8px; align-items:flex-start;"><span style="background:var(--ocean); color:#fff; border-radius:50%; width:18px; height:18px; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:900; flex-shrink:0; margin-top:1px;">3</span><strong>“加入主画面”</strong> → <strong>“加入”</strong></div></div></div>
+      <div style="background:#fff3f0; border:1.5px solid #f5c8b0; border-radius:var(--rs); padding:14px;"><div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;"><span style="font-size:18px;">🤖</span><span style="font-size:13px; font-weight:900;">Android</span><span style="font-size:10px; background:#fdeee8; color:#c0502b; font-weight:700; padding:2px 8px; border-radius:10px; margin-left:auto;">Chrome</span></div><div style="display:flex; flex-direction:column; gap:7px; font-size:12px; color:#7a3a20;"><div style="display:flex; gap:8px; align-items:flex-start;"><span style="background:#c0502b; color:#fff; border-radius:50%; width:18px; height:18px; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:900; flex-shrink:0; margin-top:1px;">1</span>用 Chrome 打开</div><div style="display:flex; gap:8px; align-items:flex-start;"><span style="background:#c0502b; color:#fff; border-radius:50%; width:18px; height:18px; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:900; flex-shrink:0; margin-top:1px;">2</span>点右上角的 <strong>⋮ 菜单</strong> </div><div style="display:flex; gap:8px; align-items:flex-start;"><span style="background:#c0502b; color:#fff; border-radius:50%; width:18px; height:18px; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:900; flex-shrink:0; margin-top:1px;">3</span><strong>“加入主画面”</strong> → <strong>“加入”</strong></div></div></div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="panel" id="sec-reward" data-n="💎" data-title="我的积分可以订多少钱的邮轮？">
+<style>
+.rc{background:#fff;border:2px solid var(--gold);border-radius:16px;padding:18px 16px;margin-bottom:14px;}
+.rc h3{font-size:15px;font-weight:900;color:var(--navy);margin:0 0 4px;}
+.rc .rc-sub{font-size:12px;color:var(--muted);margin-bottom:14px;line-height:1.6;}
+.rc label{display:block;font-size:12px;font-weight:700;color:var(--muted);margin-bottom:6px;}
+.rc .rc-field{display:flex;align-items:center;gap:8px;border:2px solid var(--navy);border-radius:12px;padding:6px 14px;background:#fff;}
+.rc .rc-field input{flex:1;min-width:0;border:0;outline:0;font:900 22px 'Noto Sans SC',sans-serif;color:var(--navy);background:transparent;padding:6px 0;-webkit-appearance:none;}
+.rc .rc-field span{font-weight:900;color:var(--navy);}
+.rc .rc-field:focus-within{outline:3px solid var(--gold);outline-offset:2px;}
+.rc .rc-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.rc .rc-chips button{all:unset;cursor:pointer;font-size:13px;font-weight:700;color:var(--navy);background:var(--sky);border-radius:20px;padding:7px 13px;}
+.rc .rc-res{border-radius:14px;padding:16px;margin-top:12px;}
+.rc .rc-r1{background:var(--navy);color:#fff;text-align:center;}
+.rc .rc-r1 .k{font-size:13px;font-weight:700;}
+.rc .rc-r1 .v{font-size:28px;font-weight:900;color:var(--gold);line-height:1.3;margin:4px 0;}
+.rc .rc-r1 .d{font-size:12.5px;color:rgba(255,255,255,.75);}
+.rc .rc-r2{background:var(--sky);color:var(--navy);}
+.rc .rc-row{display:flex;justify-content:space-between;font-size:14px;padding:4px 0;}
+.rc .rc-row small{color:var(--muted);}
+.rc .rc-row.t{padding-top:8px;margin-top:6px;border-top:1px solid #cfdcea;}
+.rc .rc-note{font-size:12px;color:var(--muted);line-height:1.8;margin-top:12px;}
+</style>
+<div class="rc">
+
+  <div class="rc-sub">输入积分，就能知道可以全额积分预订的邮轮金额</div>
+  <label for="rc_rp">目前拥有的积分</label>
+  <div class="rc-field"><input id="rc_rp" type="number" inputmode="numeric" min="0" value="2700"><span>RP</span></div>
+  <div class="rc-chips">
+    <button type="button" data-v="1500">1,500</button><button type="button" data-v="2800">2,800</button><button type="button" data-v="5000">5,000</button><button type="button" data-v="10000">10,000</button>
+  </div>
+  <div class="rc-res rc-r1">
+    <div class="k">可全额积分预订的邮轮</div>
+    <div class="v" id="rc_max">$1,800</div>
+    <div class="d">以下的邮轮， <b style="color:#fff">不用现金</b> ，只用积分就能预订</div>
+  </div>
+  <div class="rc-res rc-r2">
+    <div style="font-size:13px;font-weight:700;margin-bottom:8px">积分这样使用</div>
+    <div class="rc-row"><span>① 费用的一半 <small>(1 RP = $1)</small></span><b id="rc_h1">900 RP</b></div>
+    <div class="rc-row"><span>② 另一半 <small>(2 RP = $1)</small></span><b id="rc_h2">1,800 RP</b></div>
+    <div class="rc-row t"><span><b>合计</b></span><b id="rc_tot">2,700 RP</b></div>
+  </div>
+  <p class="rc-note">· <b>以含税的邮轮费用</b> 为基准，船上小费另计。<br>
+  ・全额积分支付适用于 <b>距离出发还有 270 天（约 9 个月）以上的邮轮</b>。<br>
+  ・实际金额依邮轮公司・行程・舱房而不同，请以预订画面的最终金额为准。</p>
+  <a href="javascript:void(0)" onclick="openPanel('sec-dday')" style="display:flex;align-items:center;justify-content:center;min-height:50px;margin-top:14px;border:1.5px solid var(--navy);border-radius:12px;color:var(--navy);font-weight:900;text-decoration:none">📅 查看什么时候可以预订</a>
+</div>
+<script>
+(function(){
+  var rp=document.getElementById('rc_rp');
+  function n(x){return Math.floor(x).toLocaleString();}
+  function calc(){var r=Math.max(0,parseFloat(rp.value)||0),p=Math.floor(r/1.5),h=p/2;
+    document.getElementById('rc_max').textContent='$'+n(p);
+    document.getElementById('rc_h1').textContent=n(h)+' RP';
+    document.getElementById('rc_h2').textContent=n(h*2)+' RP';
+    document.getElementById('rc_tot').textContent=n(h*3)+' RP';}
+  rp.addEventListener('input',calc);
+  document.querySelectorAll('.rc-chips button').forEach(function(b){b.addEventListener('click',function(){rp.value=b.dataset.v;calc();});});
+  calc();
+})();
+</script>
+</div>
+
+
+<div class="panel" id="sec-trust" data-n="🏆" data-title="值得信赖的理由">
+<div class="card" style="word-break:normal;">
+  <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:14px;">🌍 10 年来在全球受到肯定的旅游会员</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:14px;">
+    <div style="background:var(--sky); border-radius:12px; padding:14px; text-align:center;">
+      <div style="font-size:22px; font-weight:900; color:var(--ocean);">2015 年</div>
+      <div style="font-size:11px; color:var(--muted); margin-top:4px;">成立・营运 10 年</div>
+    </div>
+    <div style="background:var(--sky); border-radius:12px; padding:14px; text-align:center;">
+      <div style="font-size:22px; font-weight:900; color:var(--ocean);">193 国</div>
+      <div style="font-size:11px; color:var(--muted); margin-top:4px;">提供全球服务</div>
+    </div>
+    <div style="background:var(--sky); border-radius:12px; padding:14px; text-align:center;">
+      <div style="font-size:22px; font-weight:900; color:var(--ocean);">71 万+</div>
+      <div style="font-size:11px; color:var(--muted); margin-top:4px;">累计出游旅客</div>
+    </div>
+    <div style="background:var(--sky); border-radius:12px; padding:14px; text-align:center;">
+      <div style="font-size:18px; font-weight:900; color:var(--ocean);">美国｜波多黎各</div>
+      <div style="font-size:11px; color:var(--muted); margin-top:4px;">总部・正式登记法人</div>
+    </div>
+  </div>
+  <div style="background:var(--green-light); border-radius:10px; padding:12px 14px; font-size:13px; color:#1a5c38; line-height:1.7;">
+    ✅ 自 2015 年成立以来持续成长的全球旅游会员，<br>在全球 193 个国家提供正式服务。
+  </div>
+</div>
+
+<div class="card" style="word-break:normal;">
+  <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:16px;">⭐ 会员的真实评价</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+    <div style="border-radius:12px; overflow:hidden; box-shadow:0 2px 12px rgba(10,110,158,.08); border:1px solid var(--border);">
+      <img loading="lazy" decoding="async" class="img-skel" src="img/17.jpg" alt="Trustpilot 评价" style="width:100%; display:block;">
+    </div>
+    <div style="border-radius:12px; overflow:hidden; box-shadow:0 2px 12px rgba(10,110,158,.08); border:1px solid var(--border);">
+      <img loading="lazy" decoding="async" class="img-skel" src="img/18.jpg" alt="Google 评价" style="width:100%; display:block;">
+    </div>
+  </div>
+</div>
+
+<div class="card" style="word-break:normal;">
+  <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:12px;">🏅 全球旅游业奖项 & 付款保障</div>
+  <div style="display:flex; flex-direction:column; gap:10px;">
+    <div style="background:#fffdf5; border:1px solid #e8d060; border-radius:12px; padding:13px 15px;">
+      <div style="font-size:13px; font-weight:900; color:var(--navy); margin-bottom:6px;">🏆 DSN Global 100 &mdash; 2025 年第 39 名</div>
+      <div style="font-size:12px; color:#3a4a5a; line-height:1.8;">
+        在全球直销企业排行中名列 <strong style="color:var(--gold);">第 39 名</strong>.<br>
+        只有年营收 <strong style="color:var(--navy);">1 亿美元以上</strong> 的企业才能上榜。
+      </div>
+    </div>
+    <div style="background:#f0f8ff; border:1px solid #b8d8f0; border-radius:12px; padding:13px 15px;">
+      <div style="font-size:13px; font-weight:900; color:var(--navy); margin-bottom:6px;">🛡 Repayd &mdash; 已付款项保障</div>
+      <div style="font-size:12px; color:#3a4a5a; line-height:1.8;">
+        旅游・航空・邮轮 <strong style="color:var(--navy);">专业支付公司</strong>，<br>
+        为你付过的款项 <strong style="color:var(--ocean);">提供保障。</strong>
+      </div>
+    </div>
+    <div style="background:#fdf9f2; border:1px solid #e0cdb0; border-radius:12px; padding:13px 15px;">
+      <div style="font-size:13px; font-weight:900; color:var(--navy); margin-bottom:6px;">🥇🥈 麦哲伦奖 (Magellan Awards) &mdash; 金奖・银奖</div>
+      <div style="font-size:12px; color:#3a4a5a; line-height:1.8;">
+        <strong style="color:var(--navy);">在“不够优秀就从缺”的</strong><br>
+        旅游业 <strong style="color:var(--navy);">顶尖奖项</strong>中，<br>
+        <strong style="color:var(--gold);">同时获得金奖与银奖</strong> 。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card" style="word-break:normal;">
+  <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:12px;">🤝 公益活动</div>
+  <div style="position:relative; padding-bottom:56.25%; border-radius:12px; overflow:hidden; margin-bottom:10px;">
+    <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
+      src="https://www.youtube.com/embed/2lx4Y3_lZ90"
+      title="Mercy Ships 公益活动"
+      allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+  <div style="background:var(--green-light); border-radius:10px; padding:12px 14px; font-size:13px; color:#1a5c38; line-height:1.8;">
+    🤝 <strong>Make-A-Wish</strong>与 <strong>Mercy Ships</strong> 是合作伙伴，<br>
+    共同支持全球儿童与缺乏医疗资源的族群。<br>
+    <span style="font-size:11px; color:#3a9a5a;">累计捐款 $74 万+・持续投入公益</span>
+  </div>
+</div>
+</div>
+
+</div>
+
+
+<div style="background:linear-gradient(135deg,var(--navy),var(--ocean)); border-radius:var(--r); padding:30px 24px 28px; text-align:center; margin:30px 0 12px; position:relative; overflow:hidden;">
+  <div style="position:absolute; top:-10px; right:-10px; font-size:94px; opacity:.06;">🛳️</div>
+  <h2 style="font-size:20px; font-weight:900; color:#fff; margin-bottom:22px; line-height:1.4; word-break:normal; position:relative;">
+    有问题欢迎随时询问 😊
+  </h2>
+  <div style="display:flex; align-items:center; justify-content:center; text-align:center; width:100%; background:linear-gradient(135deg,var(--gold),#ffe566); color:var(--navy); font-size:15px; font-weight:900; padding:17px 20px; border-radius:50px; box-shadow:0 6px 24px rgba(240,192,64,.5); line-height:1.6;">💬 请直接联系分享这个页面给你的人</div>
+</div>
+
+
+<div style="background:rgba(255,255,255,.6); border:1px solid var(--border); border-radius:var(--rs); padding:16px 18px; font-size:11px; color:var(--muted); line-height:1.9; text-align:center; margin-top:20px;">
+  📌 本数据为 <strong style="color:var(--ocean);">帮助理解的预估方案</strong>。<br>
+  累积的积分不能换成 <span style="color:#e53935; font-weight:900;">现金</span><span style="color:#111; font-weight:700;"> ，是</span> <span style="color:#0a3d8f; font-weight:900;">预订邮轮专用</span>。<br>
+  实际的积分累积与预订条件，依平台政策而定。
+  <div style="margin-top:10px; padding-top:10px; border-top:1px solid var(--border); font-size:10.5px; color:var(--muted2); letter-spacing:.5px;">
+    CRUISE CLUB
+  </div>
+</div>
+
+</div>
+
+<script>
+
+var CURRENT_PANEL = null;
+
+function buildPanels(){
+  document.querySelectorAll('.panel').forEach(function(p){
+    var n  = p.getAttribute('data-n')     || '';
+    var tt = p.getAttribute('data-title') || '';
+
+    var head = document.createElement('div');
+    head.className = 'panel-head';
+    head.innerHTML =
+      '<div class="panel-head-n">' + n + '</div>' +
+      '<div class="panel-head-t">' + tt + '</div>' +
+      '<button class="panel-close" type="button">✕ 关闭</button>';
+    head.querySelector('.panel-close').addEventListener('click', function(){ closePanel(true); });
+    p.insertBefore(head, p.firstChild);
+
+    var foot = document.createElement('button');
+    foot.type = 'button';
+    foot.className = 'panel-foot';
+    foot.textContent = '📑 回到目录';
+    foot.addEventListener('click', function(){ closePanel(true); });
+    p.appendChild(foot);
+  });
+}
+
+function scrollToToc(smooth){
+  var el = document.getElementById('toc-menu');
+  if(!el) return;
+  window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 12, behavior: smooth === false ? 'auto' : 'smooth' });
+}
+
+function closePanel(goToc){
+  document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('open'); });
+  document.querySelectorAll('.toc-chip').forEach(function(c){ c.classList.remove('on'); });
+  CURRENT_PANEL = null;
+  if(goToc) scrollToToc(true);
+}
+
+function openPanel(id){
+  preloadPanel(id);
+  
+  if(CURRENT_PANEL === id){ closePanel(true); return; }
+
+  document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('open'); });
+  document.querySelectorAll('.toc-chip').forEach(function(c){ c.classList.remove('on'); });
+
+  var panel = document.getElementById(id);
+  if(!panel) return;
+  panel.classList.add('open');
+  var chip = document.getElementById('chip-' + id);
+  if(chip) chip.classList.add('on');
+  CURRENT_PANEL = id;
+
+  requestAnimationFrame(function(){
+    var y = panel.getBoundingClientRect().top + window.scrollY - 8;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  });
+}
+
+
+function toggleAcc(id){
+  var body = document.getElementById(id);
+  var arr  = document.getElementById('arr-' + id);
+  if(!body) return;
+  if(body.classList.contains('acc-body')){
+    var open = body.classList.contains('open');
+    body.classList.toggle('open', !open);
+    if(arr) arr.classList.toggle('open', !open);
+  } else {
+    var hidden = (body.style.display === 'none' || body.style.display === '');
+    body.style.display = hidden ? 'block' : 'none';
+    if(arr) arr.style.transform = hidden ? 'rotate(180deg)' : 'rotate(0deg)';
+  }
+}
+
+
+var simTab = 'allrp';
+function simSelectTab(tab){
+  simTab = tab;
+  var btnRP = document.getElementById('tab_allrp');
+  var btnCard = document.getElementById('tab_card');
+  var resRP = document.getElementById('result_allrp');
+  var resCard = document.getElementById('result_card');
+  if(!btnRP || !btnCard) return;
+  if(tab === 'allrp'){
+    btnRP.style.background='var(--ocean)'; btnRP.style.color='#fff'; btnRP.style.borderColor='var(--ocean)';
+    btnCard.style.background='#fff'; btnCard.style.color='var(--muted)'; btnCard.style.borderColor='var(--border)';
+    resRP.style.display='block'; resCard.style.display='none';
+  } else {
+    btnCard.style.background='var(--green)'; btnCard.style.color='#fff'; btnCard.style.borderColor='var(--green)';
+    btnRP.style.background='#fff'; btnRP.style.color='var(--muted)'; btnRP.style.borderColor='var(--border)';
+    resRP.style.display='none'; resCard.style.display='block';
+  }
+  simCalc();
+}
+function fmt(n){ return '$' + Math.round(n).toLocaleString(); }
+function fmtRP(n){ return Math.round(n).toLocaleString() + ' RP'; }
+
+function simCalc(){
+  var roomEl = document.getElementById('sim_room');
+  if(!roomEl) return;
+  var room = parseFloat(roomEl.value) || 0;
+  var rp   = parseFloat(document.getElementById('sim_rp').value) || 0;
+
+  var maxDiscount = room * 0.5;
+  var remaining   = room - maxDiscount;
+  var rpForStep1    = maxDiscount;
+  var rpForStep2    = remaining * 2;
+  var totalRpNeeded = rpForStep1 + rpForStep2;
+
+  function put(id,v){ var e=document.getElementById(id); if(e) e.textContent=v; }
+  put('sim_room_disp', fmt(room));
+  put('sim_max_reward', fmt(maxDiscount));
+
+  var statusEl = document.getElementById('sim_rp_status');
+  if(rp >= rpForStep1){
+    statusEl.style.background='var(--green-light)'; statusEl.style.color='var(--green)';
+    statusEl.textContent='✅ 积分足够 — 可使用最高折抵';
+  } else {
+    statusEl.style.background='#fff5f5'; statusEl.style.color='var(--coral)';
+    statusEl.textContent='⚠️ 积分不足 — 持有 ' + fmtRP(rp) + ' / 需要 ' + fmtRP(rpForStep1);
+  }
+
+  put('sim_step1_rp', fmtRP(Math.min(rp, rpForStep1)) + ' 使用');
+  put('sim_step2_rp', fmtRP(rpForStep2) + ' 需要');
+  put('sim_total_rp', fmtRP(totalRpNeeded) + ' 需要');
+
+  var allEl = document.getElementById('sim_allrp_result');
+  if(rp >= totalRpNeeded){
+    allEl.style.background='var(--green-light)'; allEl.style.color='var(--green)';
+    allEl.textContent='✅ 我的积分可以全额支付！';
+  } else if(rp >= rpForStep1){
+    allEl.style.background='#fffbeb'; allEl.style.color='#8a6000';
+    allEl.textContent='⚡ 积分还差 ' + fmtRP(totalRpNeeded - rp) + ' — 建议搭配刷卡';
+  } else {
+    allEl.style.background='#fff5f5'; allEl.style.color='var(--coral)';
+    allEl.textContent='⚠️ 积分不足 — 还差 ' + fmtRP(totalRpNeeded - rp) + '';
+  }
+
+  var usableRP = Math.min(rp, rpForStep1);
+  var cardPay  = room - usableRP;
+  put('sim_card_rp', fmtRP(usableRP) + ' 使用');
+  put('sim_card_pay', fmt(cardPay));
+  var cardEl = document.getElementById('sim_card_result');
+  cardEl.style.background = rp >= rpForStep1 ? '#f0f8ff' : '#fff5f5';
+  cardEl.style.color      = rp >= rpForStep1 ? 'var(--ocean)' : 'var(--coral)';
+  cardEl.textContent = '💳 刷卡金额：' + fmt(cardPay) + (rp >= rpForStep1 ? '' : ' — 积分不足');
+}
+
+
+function fmtUSD(n){ return '$'+Math.round(n).toLocaleString(); }
+function set(id,v){ var e=document.getElementById(id); if(e) e.textContent=v; }
+function calcAll(){
+  if(!document.getElementById('n_pkg1')) return;
+  function v(id){ return parseFloat(document.getElementById(id).value)||0; }
+  var sub=v('n_pkg1')+v('n_tip1')+v('n_guide1'), tot2=sub*2;
+  ['n_pkg1_usd','n_tip1_usd','n_guide1_usd','n_sub1_usd','n_total_usd_ref','p_cruise_krw','p_air_krw','p_land_krw','p_stip_krw','p_gtip_krw','p_total_krw','save_usd'].forEach(function(i){ set(i,''); });
+  set('n_sub1_krw', fmtUSD(sub));
+  set('n_total_krw2', fmtUSD(tot2));
+  var pT=v('p_cruise')+v('p_air')+v('p_land')+v('p_stip')+v('p_gtip');
+  set('p_total_usd', fmtUSD(pT));
+  var save=tot2-pT, pct=tot2>0?Math.round(save/tot2*100):0;
+  set('save_krw', fmtUSD(save));
+  set('save_pct', '约 '+pct+'%');
+}
+
+function calcDday(el){
+  if(!el) return;
+  var box = el.closest('.card') || document;
+  var out = box.querySelector('.dday-result');
+  if(!out) return;
+  var base = el.value ? new Date(el.value + 'T00:00:00') : new Date();
+  if(isNaN(base.getTime())) return;
+  var t = new Date(base.getTime());
+  t.setDate(t.getDate() + 270);
+  var days = ['日','一','二','三','四','五','六'];
+  out.textContent = t.getFullYear()+' 年 '+(t.getMonth()+1)+' 月 '+t.getDate()+' 日（周'+days[t.getDay()]+'）';
+}
+function initDday(){
+  var now = new Date();
+  var pad = function(v){ return (v<10?'0':'')+v; };
+  var today = now.getFullYear()+'-'+pad(now.getMonth()+1)+'-'+pad(now.getDate());
+  document.querySelectorAll('.dday-from').forEach(function(el){
+    el.value = today;
+    calcDday(el);
+  });
+}
+
+
+function loadYT(){
+  var wrap = document.getElementById('yt-thumb-wrap');
+  var iWrap = document.getElementById('yt-iframe-wrap');
+  var iframe = document.getElementById('yt-main');
+  var ytId = (typeof CONFIG !== 'undefined' && CONFIG.youtube) ? CONFIG.youtube : 'cYJvkeSffoo';
+  iframe.src = 'https://www.youtube.com/embed/' + ytId + '?autoplay=1&rel=0';
+  wrap.style.display='none'; iWrap.style.display='block';
+}
+function loadYT2(){
+  var w = document.getElementById('yt2-thumb-wrap');
+  var i = document.getElementById('yt2-iframe-wrap');
+  var f = document.getElementById('yt2-main');
+  if(!w || !i || !f) return;
+  f.src = 'https://www.youtube.com/embed/xOodUATanks?autoplay=1&rel=0';
+  w.style.display='none'; i.style.display='block';
+}
+
+
+
+var PRELOAD_ORDER = ['sec10','sec-review','sec1','sec-trust','sec4'];
+
+function preloadPanel(id){
+  var p = document.getElementById(id);
+  if(!p || p.dataset.preloaded) return;
+  p.dataset.preloaded = '1';
+  p.querySelectorAll('img[src]').forEach(function(im){
+    var pre = new Image();
+    pre.decoding = 'async';
+    pre.src = im.getAttribute('src');
+  });
+}
+
+function schedulePreload(){
+  var i = 0;
+  function next(){
+    if(i >= PRELOAD_ORDER.length) return;
+    preloadPanel(PRELOAD_ORDER[i++]);
+    setTimeout(next, 400);
+  }
+  if('requestIdleCallback' in window){
+    requestIdleCallback(next, { timeout: 2500 });
+  } else {
+    setTimeout(next, 1200);
+  }
+}
+
+
+function initPage(){
+  buildPanels();
+
+  
+  document.querySelectorAll('.btn-kakao').forEach(function(el){
+    if(CONFIG.kakao && CONFIG.kakao.indexOf('open.kakao.com') > -1){
+      el.href = CONFIG.kakao;
+    } else {
+      el.href = 'javascript:void(0)';
+      el.style.opacity = '.55';
+      el.style.cursor  = 'not-allowed';
+      
+    }
+  });
+
+  document.querySelectorAll('.toc-chip').forEach(function(c){
+    var pid = c.id.replace('chip-','');
+    var warm = function(){ preloadPanel(pid); };
+    c.addEventListener('touchstart', warm, {passive:true});
+    c.addEventListener('mouseenter', warm);
+  });
+
+  document.querySelectorAll('a[href^="http"]').forEach(function(el){
+    el.setAttribute('target','_blank');
+    el.setAttribute('rel','noopener noreferrer');
+  });
+
+  var floatTop = document.getElementById('float-top');
+  var floatToc = document.getElementById('float-toc');
+  window.addEventListener('scroll', function(){
+    var show = window.scrollY > 300;
+    if(floatTop) floatTop.classList.toggle('show', show);
+    if(floatToc) floatToc.classList.toggle('show', show && CURRENT_PANEL !== null);
+  }, {passive:true});
+
+  calcAll();
+  simCalc();
+  initDday();
+  schedulePreload();
+
+  var playBtn = document.getElementById('yt-play-btn');
+  var thumbWrap = document.getElementById('yt-thumb-wrap');
+  if(thumbWrap && playBtn){
+    thumbWrap.addEventListener('mouseenter', function(){ playBtn.style.transform='scale(1.12)'; });
+    thumbWrap.addEventListener('mouseleave', function(){ playBtn.style.transform='scale(1)'; });
+  }
+}
+
+if(document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', initPage);
+} else {
+  initPage();
+}
+</script>
+</body>
+</html>
