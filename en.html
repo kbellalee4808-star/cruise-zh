@@ -1,0 +1,2035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Cruise Subscription Membership — Save Monthly, Book with Rewards</title>
+<meta name="description" content="Instead of paying a lump sum, set aside a little each month and book your cruise with the rewards you earn. Check how rewards build up and the booking rules with the calculators.">
+
+
+<meta property="og:type"         content="website">
+<meta property="og:site_name"    content="Cruise Club">
+<meta property="og:title"        content="Cruise Subscription Membership — Save Monthly, Book with Rewards">
+<meta property="og:description"  content="Set aside a little each month and book your cruise with the rewards you earn. See how it works with the calculators.">
+<meta property="og:image"        content="https://kbellalee4808-star.github.io/cruise-zh/img/hero.jpg">
+<meta property="og:image:width"  content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale"       content="en_US">
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="Cruise Subscription Membership — Save Monthly, Book with Rewards">
+<meta name="twitter:description" content="Set aside a little each month and book your cruise with rewards.">
+<meta name="twitter:image"       content="https://kbellalee4808-star.github.io/cruise-zh/img/hero.jpg">
+<meta name="theme-color" content="#0a1f38">
+<link rel="icon" type="image/png" sizes="64x64" href="img/2.png">
+<link rel="icon" type="image/png" sizes="512x512" href="img/3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/4.png">
+<meta name="apple-mobile-web-app-title" content="Cruise Club">
+<meta name="application-name" content="Cruise Club">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --font-display: 'Noto Sans','Segoe UI',Roboto,-apple-system,sans-serif;
+  --font-body:    'Noto Sans','Segoe UI',Roboto,-apple-system,sans-serif;
+  --teal:        #0a9eb5;
+  --coral:       #d9534f;
+  --gold-dark:   #8a6000;
+  --green-light: #edfbf4;
+  --rs:          14px;
+  --navy:        #0a1f38;
+  --navy2:       #102d50;
+  --ocean:       #1a6fa8;
+  --ocean-lt:    #2485c4;
+  --sky:         #f0f6fc;
+  --sky2:        #e6f2fb;
+  --gold:        #c8983a;
+  --gold-lt:     #f5c842;
+  --gold-pale:   #fdf6e3;
+  --ivory:       #fafcfe;
+  --white:       #ffffff;
+  --text:        #0a1f38;
+  --text2:       #334e68;
+  --muted:       #5f7d96;
+  --muted2:      #8fa8bc;
+  --border:      #dbeaf5;
+  --border2:     #ccdded;
+  --green:       #1a7a4a;
+  --green-lt:    #edfbf4;
+  --red:         #c0392b;
+  --red-lt:      #fdf0ef;
+
+  --shadow-sm:   0 2px 8px rgba(10,31,56,.06);
+  --shadow:      0 4px 20px rgba(10,31,56,.09);
+  --shadow-lg:   0 8px 40px rgba(10,31,56,.14);
+  --r:           16px;
+  --r-sm:        10px;
+  --r-xs:        7px;
+
+  --fs-hero:     26px;
+  --fs-h1:       22px;
+  --fs-h2:       18px;
+  --fs-h3:       16px;
+  --fs-body:     14px;
+  --fs-sm:       13px;
+  --fs-xs:       12px;
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; overflow-x:hidden; }
+body {
+  background: linear-gradient(160deg, #e8f2fb 0%, #eff7ff 50%, #f5f9fd 100%);
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: var(--text);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  word-break:normal;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+}
+img { max-width:100%; display:block; }
+button { font-family: inherit; }
+
+h1, h2, h3, .panel-head-t, .step-badge, .acc-title { font-family: var(--font-display); }
+
+.wrap {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 16px 60px;
+  box-sizing: border-box;
+}
+
+
+.toc-chip{
+  background:var(--white); border:1.5px solid var(--border2); border-radius:12px;
+  padding:13px 8px; font-size:12px; font-weight:800; color:var(--navy);
+  cursor:pointer; text-align:center; line-height:1.35; transition:all .15s;
+  -webkit-tap-highlight-color:transparent; box-shadow:var(--shadow-sm);
+}
+.toc-chip:active{ transform:scale(.97); }
+.toc-chip.toc-hot{ background:#fffdf5; border-color:#e8d060; }
+.toc-chip.on{
+  background:linear-gradient(135deg,var(--navy),var(--ocean));
+  border-color:var(--navy); color:#fff;
+  box-shadow:0 4px 14px rgba(10,31,56,.28);
+}
+
+
+.panel{ display:none; margin-top:14px; }
+.panel.open{ display:block; animation:fadeUp .16s ease; }
+.panel img{ background: var(--sky); }
+.panel .img-skel{ background: var(--sky); min-height:90px; }
+.panel-head{
+  display:flex; align-items:center; gap:10px;
+  background:linear-gradient(135deg,var(--navy),var(--ocean));
+  border-radius:var(--r) var(--r) 0 0;
+  padding:15px 18px; margin-bottom:12px;
+  position:sticky; top:0; z-index:50;
+  box-shadow:0 4px 16px rgba(10,31,56,.18);
+}
+.panel-head-n{
+  width:28px; height:28px; border-radius:50%;
+  background:rgba(255,255,255,.18); border:1px solid rgba(255,255,255,.3);
+  color:#fff; font-size:12px; font-weight:900;
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+}
+.panel-head-t{ flex:1; min-width:0; font-size:15px; font-weight:900; color:#fff; letter-spacing:-.3px; }
+.panel-close{
+  flex-shrink:0; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.3);
+  color:#fff; font-size:11.5px; font-weight:800; padding:6px 12px; border-radius:50px;
+  cursor:pointer; -webkit-tap-highlight-color:transparent; white-space:nowrap;
+}
+.panel-close:active{ background:rgba(255,255,255,.3); }
+.panel-foot{
+  display:flex; align-items:center; justify-content:center; gap:6px;
+  width:100%; margin:14px 0 4px; padding:13px;
+  background:var(--white); border:1.5px solid var(--border2); border-radius:50px;
+  color:var(--ocean); font-size:13px; font-weight:800;
+  cursor:pointer; -webkit-tap-highlight-color:transparent; box-shadow:var(--shadow-sm);
+}
+.panel-foot:active{ background:var(--sky); }
+
+/* ─── CARD ─── */
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 20px 18px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ─── ACCORDION ─── */
+.acc {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  margin-bottom: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.acc-t {
+  display: flex; align-items: center; gap: 12px;
+  padding: 16px 18px; cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none; transition: background .15s;
+}
+.acc-t:active { background: var(--sky); }
+.acc-ic {
+  width: 42px; height: 42px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; flex-shrink: 0;
+}
+.acc-ic.b { background: #e8f3fc; }
+.acc-ic.g { background: var(--green-lt); }
+.acc-ic.y { background: #fef8e6; }
+.acc-ic.p { background: #f2ecff; }
+.acc-tw { flex: 1; min-width: 0; }
+.acc-title { font-size: 15px; font-weight: 900; color: var(--text); letter-spacing: -.3px; }
+.acc-sub { font-size: 12px; color: var(--muted); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.acc-arr { font-size: 14px; color: var(--muted2); transition: transform .3s; flex-shrink: 0; }
+.acc-arr.open { transform: rotate(180deg); }
+.acc-body { display: none; padding: 0 18px 20px; border-top: 1px solid var(--sky); }
+.acc-body.open { display: block; }
+
+.step-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--ocean); color: #fff; font-size: 13px; font-weight: 900; flex-shrink: 0;
+}
+.divider { height: 1px; background: var(--border); margin: 16px 0; }
+
+
+#float-toc {
+  position: fixed; bottom: 76px; right: 16px; z-index: 998;
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 10px 15px; border-radius: 50px;
+  background: var(--white); border: 1.5px solid var(--ocean); color: var(--ocean);
+  font-size: 12px; font-weight: 900; cursor: pointer; box-shadow: var(--shadow);
+  opacity: 0; transform: translateY(8px); transition: opacity .3s, transform .3s;
+  -webkit-tap-highlight-color: transparent; white-space: nowrap;
+}
+#float-toc.show { opacity: 1; transform: translateY(0); }
+#float-toc:active { transform: scale(.96); }
+#float-top {
+  position: fixed; bottom: 22px; right: 16px; z-index: 998;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--navy2); color: #fff; font-size: 16px; border: none;
+  cursor: pointer; box-shadow: var(--shadow);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transform: translateY(8px); transition: opacity .3s, transform .3s;
+  -webkit-tap-highlight-color: transparent;
+}
+#float-top.show { opacity: 1; transform: translateY(0); }
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+
+@keyframes fadeUp { from { opacity:0; transform:translateY(10px);} to { opacity:1; transform:translateY(0);} }
+
+@media (min-width: 600px) {
+  :root { --fs-hero:30px; --fs-h1:26px; --fs-h2:21px; --fs-h3:18px; --fs-body:15px; --fs-sm:14px; --fs-xs:13px; }
+  .wrap { max-width: 560px; padding: 0 24px 70px; }
+  .card { padding: 24px 22px; margin-bottom: 14px; }
+  .acc-t { padding: 18px 22px; }
+  .acc-body { padding: 0 22px 22px; }
+  .acc-title { font-size: 16px; }
+  .toc-chip { font-size: 13px; padding: 14px 8px; }
+  .panel-head-t { font-size: 16px; }
+  .grid2 { gap: 12px; }
+}
+@media (min-width: 900px) {
+  :root { --fs-hero:36px; --fs-h1:30px; --fs-h2:24px; --fs-h3:20px; --fs-body:16px; --fs-sm:15px; --fs-xs:14px; }
+  .wrap { max-width: 680px; padding: 0 40px 80px; }
+  .card { padding: 30px 28px; margin-bottom: 16px; }
+  .acc-t { padding: 20px 28px; }
+  .acc-body { padding: 0 28px 26px; }
+  .acc-ic { width: 46px; height: 46px; border-radius: 14px; }
+  .acc-title { font-size: 17px; }
+  .grid2 { gap: 14px; }
+  .grid3 { gap: 10px; }
+}
+</style>
+<style>
+.sf-sub{font-size:12px;color:var(--muted);margin:-4px 0 14px;line-height:1.6;}
+.sf{position:relative;background:#fff;border:1.5px solid #E2E6EC;border-radius:12px;padding:20px 11px 13px;}
+.sf-tag{position:absolute;top:-10px;left:11px;background:var(--navy);color:#fff;font-size:10.5px;font-weight:700;padding:2px 9px;border-radius:10px;}
+.sf-g{display:grid;grid-template-columns:1fr 1fr;gap:11px 8px;}
+.sf-g>div{min-width:0;}
+.sf-full{grid-column:1/-1;}
+.sf-l{font-size:12.5px;font-weight:700;color:#1f2937;margin-bottom:4px;}
+.sf-l i{color:#e11d48;font-style:normal;margin-left:1px;}
+.sf-i{border:1.5px solid var(--gold);background:#FFFCF5;border-radius:8px;padding:9px 8px;font-size:13px;color:#111827;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:flex;align-items:center;gap:6px;}
+.sf-i.sm{font-size:11.5px;}
+.sf-i.pw{justify-content:space-between;letter-spacing:2px;}
+.sf-i .eye{font-size:12px;opacity:.55;letter-spacing:0;}
+.sf-i .cc{color:#374151;border-right:1px solid #D5DBE3;padding-right:5px;flex-shrink:0;}
+.sf-i.sel{justify-content:space-between;}
+.sf-h{margin-top:3px;font-size:11px;color:#8a6a1f;line-height:1.4;}
+.sf-h b{color:#b5862a;}
+.sf-n{font-size:11.5px;color:#6b7280;background:var(--sky);border-radius:7px;padding:6px 8px;}
+.sf-n b{color:var(--navy);}
+.sf-cap{display:flex;align-items:center;gap:9px;background:#F9F9F9;border:1px solid #D3D3D3;border-radius:4px;padding:10px 11px;font-size:13px;color:#222;max-width:260px;}
+.sf-cap .box{width:22px;height:22px;border:2px solid #4CAF50;border-radius:3px;color:#4CAF50;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;}
+.sf-cap .sf-rc{margin-left:auto;font-size:9.5px;color:#666;}
+.sf-btn{background:#F0913A;color:#fff;text-align:center;font-weight:700;font-size:15px;border-radius:9px;padding:11px;}
+.sf-name{margin-top:10px;background:#fff;border:1px solid var(--border);border-radius:10px;padding:11px 12px;font-size:12px;color:var(--navy);line-height:1.7;}
+.sf-name b{color:var(--ocean);}
+</style>
+</head>
+<body>
+
+
+<button id="float-toc" onclick="closePanel(true)" aria-label="Go to contents"> 📑 Contents</button>
+<button id="float-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<div class="wrap">
+<div style="display:flex; flex-wrap:wrap; justify-content:flex-end; gap:6px; margin-top:12px;"><a href="./" lang="zh-Hant" style="min-height:34px; display:inline-flex; align-items:center; padding:0 12px; border-radius:999px; font-size:12.5px; font-weight:800; text-decoration:none; border:1.5px solid var(--border2); background:#fff; color:var(--navy);">繁體</a><a href="cn.html" lang="zh-Hans" style="min-height:34px; display:inline-flex; align-items:center; padding:0 12px; border-radius:999px; font-size:12.5px; font-weight:800; text-decoration:none; border:1.5px solid var(--border2); background:#fff; color:var(--navy);">简体</a><a href="ja.html" lang="ja" style="min-height:34px; display:inline-flex; align-items:center; padding:0 12px; border-radius:999px; font-size:12.5px; font-weight:800; text-decoration:none; border:1.5px solid var(--border2); background:#fff; color:var(--navy);">日本語</a><a href="en.html" lang="en" style="min-height:34px; display:inline-flex; align-items:center; padding:0 12px; border-radius:999px; font-size:12.5px; font-weight:800; text-decoration:none; border:1.5px solid var(--navy); background:var(--navy); color:#fff;">English</a></div>
+
+
+<script>const CONFIG = {};</script>
+
+
+
+<div style="margin-bottom:0; margin-top:16px;">
+  <div style="border-radius:var(--r) var(--r) 0 0; overflow:hidden; box-shadow:var(--shadow);"><img src="img/hero.jpg" alt="Cruise ship docked at port" style="width:100%; height:min(64vw,360px); object-fit:cover; display:block;"></div>
+
+  
+  <div style="background:linear-gradient(135deg,var(--navy) 0%,#0a4a7a 100%); border-radius:0 0 var(--r) var(--r); padding:28px 24px 32px; text-align:center; margin-bottom:16px;">
+    <div style="display:inline-block; background:var(--gold); color:var(--navy); font-size:11px; font-weight:900; letter-spacing:2px; padding:5px 14px; border-radius:20px; margin-bottom:14px;"> Cruise Subscription</div>
+    <div style="font-size:3.8rem; font-weight:900; color:var(--gold); line-height:1.1; margin-bottom:8px;"> $0</div>
+    <div style="font-size:1.3rem; font-weight:900; color:#fff; margin-bottom:10px;"> Pay 100% with rewards</div>
+    <div style="font-size:14px; color:rgba(255,255,255,.75); line-height:1.7;">
+      Use the reward points you earn<br> to pay your cruise cabin fare <strong style="color:var(--gold);"> in full</strong> 
+    </div>
+  </div>
+
+  
+  <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-bottom:20px;">
+    <span style="background:var(--sky); border:1px solid var(--border); color:var(--ocean); font-size:12px; font-weight:700; padding:6px 14px; border-radius:20px;"> ✅ Refund within 14 days</span>
+    <span style="background:var(--sky); border:1px solid var(--border); color:var(--ocean); font-size:12px; font-weight:700; padding:6px 14px; border-radius:20px;"> 🛡️ Your fees are never wasted</span>
+    <span style="background:var(--sky); border:1px solid var(--border); color:var(--ocean); font-size:12px; font-weight:700; padding:6px 14px; border-radius:20px;"> 🎁 2x your fee back in rewards</span>
+    <span style="background:var(--sky); border:1px solid var(--border); color:var(--ocean); font-size:12px; font-weight:700; padding:6px 14px; border-radius:20px;">🏷️ 17% member-only discount</span>
+    <span style="background:var(--sky); border:1px solid var(--border); color:var(--ocean); font-size:12px; font-weight:700; padding:6px 14px; border-radius:20px;">🌍 Compare cruises worldwide in one place</span>
+    <span style="background:var(--sky); border:1px solid var(--border); color:var(--ocean); font-size:12px; font-weight:700; padding:6px 14px; border-radius:20px;">🚢 Member prices, booked direct — no middleman</span>
+    <span style="background:var(--sky); border:1px solid var(--border); color:var(--ocean); font-size:12px; font-weight:700; padding:6px 14px; border-radius:20px;">💎 A loyalty program that pays off over time</span>
+  </div>
+</div>
+
+
+<div style="text-align:center; padding:28px 8px 22px; word-break:normal;">
+  <div style="font-size:72px; line-height:1; margin-bottom:20px;">🛳️</div>
+  <div style="display:inline-block; background:var(--white); border:1.5px solid var(--border2); border-radius:50px; padding:8px 22px; font-size:13px; font-weight:700; color:var(--navy); margin-bottom:24px; box-shadow:var(--shadow-sm);">
+    Cruise Membership Guide
+  </div>
+  <h1 style="font-size:clamp(28px,8vw,42px); font-weight:900; color:var(--navy); line-height:1.35; margin-bottom:20px; letter-spacing:-1px;">
+    Cruising,<br>
+    <span style="color:var(--ocean);"> by subscription.</span><br>
+    <span style="color:var(--ocean);"> Save monthly, book with rewards</span>
+  </h1>
+  <div style="font-size:15px; color:var(--muted); line-height:2.1;">
+    Instead of paying a lump sum,<br>
+    set aside a little each month<br>
+    and book your cruise with the rewards you earn
+  </div>
+</div>
+
+
+<div style="background:var(--white); border:2px solid var(--gold); border-radius:var(--r); padding:22px 18px; text-align:center; box-shadow:var(--shadow-lg); margin-bottom:22px;">
+  <div style="font-size:11px; font-weight:800; color:var(--gold); margin-bottom:10px; letter-spacing:1.5px;">GLOBAL NETWORK</div>
+  <h2 style="font-size:18px; font-weight:900; color:var(--navy); line-height:1.6; margin-bottom:16px; word-break:normal;">
+    Worldwide: <span style="color:var(--ocean);"> 200+ countries</span>,<br>
+    <span style="color:var(--ocean);"> 200,000+</span> destinations<br>
+    A global platform for booking cruises direct
+  </h2>
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; margin-bottom:14px;">
+    <div style="background:var(--sky); border:1px solid var(--border); border-radius:12px; padding:14px 8px;">
+      <div style="font-size:22px; margin-bottom:6px;">🌍</div>
+      <div style="font-size:18px; font-weight:900; color:var(--ocean); line-height:1;">200+</div>
+      <div style="font-size:10px; color:var(--muted); margin-top:3px; font-weight:700;"> countries</div>
+    </div>
+    <div style="background:var(--sky); border:1px solid var(--border); border-radius:12px; padding:14px 8px;">
+      <div style="font-size:22px; margin-bottom:6px;">🗺️</div>
+      <div style="font-size:18px; font-weight:900; color:var(--ocean); line-height:1;"> 200K+</div>
+      <div style="font-size:10px; color:var(--muted); margin-top:3px; font-weight:700;"> destinations</div>
+    </div>
+    <div style="background:var(--sky); border:1px solid var(--border); border-radius:12px; padding:14px 8px;">
+      <div style="font-size:22px; margin-bottom:6px;">🛳️</div>
+      <div style="font-size:18px; font-weight:900; color:var(--ocean); line-height:1;"> Worldwide</div>
+      <div style="font-size:10px; color:var(--muted); margin-top:3px; font-weight:700;"> cruise lines</div>
+    </div>
+  </div>
+  <div style="border-radius:12px; overflow:hidden; height:180px;">
+    <img src="img/5.jpg"
+      loading="lazy" decoding="async" alt="Several cruise ships docked at a port"
+      style="width:100%; height:100%; object-fit:cover; display:block;">
+  </div>
+</div>
+
+
+<div class="card" id="toc-menu" style="margin-bottom:8px; padding:18px 16px;">
+  <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:4px;"> 📑 What would you like to know?</div>
+  <div style="font-size:11.5px; color:var(--muted); margin-bottom:14px; line-height:1.6;"> Tap a topic and it opens right below</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+    <button onclick="openPanel('sec1')"       class="toc-chip" id="chip-sec1"> What's a cruise?</button>
+    <button onclick="openPanel('sec2')"       class="toc-chip" id="chip-sec2"> Why cruise?</button>
+    <button onclick="openPanel('sec3')"       class="toc-chip" id="chip-sec3"> How to book</button>
+    <button onclick="openPanel('sec4')"       class="toc-chip" id="chip-sec4"> The membership</button>
+    <button onclick="openPanel('sec5')"       class="toc-chip" id="chip-sec5"> Getting started</button>
+    <button onclick="openPanel('sec6')"       class="toc-chip toc-hot" id="chip-sec6"> How rewards work</button>
+    <button onclick="openPanel('sec7')"       class="toc-chip toc-hot" id="chip-sec7"> Book with rewards</button>
+    <button onclick="openPanel('sec8')"       class="toc-chip" id="chip-sec8"> Real example</button>
+    <button onclick="openPanel('sec9')"       class="toc-chip" id="chip-sec9"> Cost comparison</button>
+    <button onclick="openPanel('sec10')"      class="toc-chip" id="chip-sec10"> Cabin types</button>
+    <button onclick="openPanel('sec11')"      class="toc-chip toc-hot" id="chip-sec11" style="grid-column:1 / -1;"> How to join</button>
+    <button onclick="openPanel('sec-dday')"   class="toc-chip toc-hot" id="chip-sec-dday" style="grid-column:1 / -1;"> 📅 When can I book?</button>
+    <button onclick="openPanel('sec-reward')" class="toc-chip toc-hot" id="chip-sec-reward" style="grid-column:1 / -1;"> 💎 Rewards calculator</button>
+    <button onclick="openPanel('sec-trust')"  class="toc-chip" id="chip-sec-trust" style="grid-column:1 / -1;"> 🏆 Why trust it</button>
+  </div>
+</div>
+
+
+<div id="panel-zone">
+
+
+<div class="panel" id="sec1" data-n="1" data-title="What is a cruise?">
+<div class="card" style="word-break:normal;">
+  <div style="font-size:18px; font-weight:900; color:var(--navy); margin-bottom:6px;"> 🚢 In one sentence</div>
+  <div style="font-size:17px; color:var(--ocean); font-weight:700; background:var(--sky); border-radius:10px; padding:14px; line-height:1.7; margin-bottom:16px;">
+    A trip where your hotel travels across the sea
+  </div>
+  <div style="display:flex; flex-direction:column; gap:10px;">
+    <div style="display:flex; gap:12px; align-items:center; padding:10px 14px; background:var(--sky2); border-radius:10px;">
+      <span style="font-size:22px; flex-shrink:0;">🛏️</span>
+      <div><strong style="font-size:13px;"> Stay</strong> <span style="font-size:12px; color:var(--muted);"> + meals + travel, all in one</span></div>
+    </div>
+    <div style="display:flex; gap:12px; align-items:center; padding:10px 14px; background:var(--sky2); border-radius:10px;">
+      <span style="font-size:22px; flex-shrink:0;">🎭</span>
+      <div><strong style="font-size:13px;"> Shows, pools & spa</strong> <span style="font-size:12px; color:var(--muted);"> all on board</span></div>
+    </div>
+    <div style="display:flex; gap:12px; align-items:center; padding:10px 14px; background:var(--sky2); border-radius:10px;">
+      <span style="font-size:22px; flex-shrink:0;">🗺️</span>
+      <div><strong style="font-size:13px;"> Sail to the next city while you sleep</strong> <span style="font-size:12px; color:var(--muted);"> Wake up in a new port</span></div>
+    </div>
+  </div>
+</div>
+
+<div style="margin-bottom:12px;">
+  <div style="font-size:12px; font-weight:700; color:var(--muted); letter-spacing:1px; margin-bottom:10px; text-align:center;"> 📸 Life on a cruise</div>
+  <div style="border-radius:16px; overflow:hidden; margin-bottom:8px; box-shadow:var(--shadow);">
+    <img src="img/6.jpg" loading="lazy" decoding="async" alt="Pool on the cruise deck"
+      style="width:100%; height:220px; object-fit:cover; display:block;">
+    <div style="background:var(--white); padding:10px 14px; border:1px solid var(--border); border-top:none; border-radius:0 0 16px 16px;">
+      <div style="font-size:12px; font-weight:700; color:var(--navy);"> 🌅 Views from the deck</div>
+      <div style="font-size:11px; color:var(--muted); margin-top:2px;"> Everyday life at sea</div>
+    </div>
+  </div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:8px;">
+    <div style="border-radius:12px; overflow:hidden; box-shadow:var(--shadow);">
+      <img loading="lazy" decoding="async" src="img/7.jpg" alt="Cruise ship pool"
+        style="width:100%; height:130px; object-fit:cover; display:block;">
+      <div style="background:var(--white); padding:8px 12px; border:1px solid var(--border); border-top:none; border-radius:0 0 12px 12px;">
+        <div style="font-size:11px; font-weight:700; color:var(--navy);"> 🏊 Onboard pool</div>
+      </div>
+    </div>
+    <div style="border-radius:12px; overflow:hidden; box-shadow:var(--shadow);">
+      <img loading="lazy" decoding="async" src="img/8.jpg" alt="Cruise ship restaurant"
+        style="width:100%; height:130px; object-fit:cover; display:block;">
+      <div style="background:var(--white); padding:8px 12px; border:1px solid var(--border); border-top:none; border-radius:0 0 12px 12px;">
+        <div style="font-size:11px; font-weight:700; color:var(--navy);"> 🍽️ Onboard dining</div>
+      </div>
+    </div>
+  </div>
+  <div style="border-radius:12px; overflow:hidden; box-shadow:var(--shadow);">
+    <img loading="lazy" decoding="async" src="img/9.jpg" alt="Amalfi Coast"
+      style="width:100%; height:150px; object-fit:cover; display:block;">
+    <div style="background:var(--white); padding:10px 14px; border:1px solid var(--border); border-top:none; border-radius:0 0 12px 12px;">
+      <div style="font-size:12px; font-weight:700; color:var(--navy);"> 🏖️ Beaches at port stops</div>
+      <div style="font-size:11px; color:var(--muted); margin-top:2px;"> A new city every time you dock</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="panel" id="sec2" data-n="2" data-title="Why a cruise?">
+<div class="card" style="word-break:normal;">
+  <div style="font-size:14px; font-weight:700; color:var(--muted); margin-bottom:14px;"> A typical overseas trip looks like this</div>
+  <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:16px;">
+    <div style="display:flex; align-items:center; gap:10px; padding:10px 14px; background:#fff5f5; border-radius:10px; font-size:13px; color:#8a3a3a;">
+      <span>😫</span> Hotels booked and paid separately
+    </div>
+    <div style="display:flex; align-items:center; gap:10px; padding:10px 14px; background:#fff5f5; border-radius:10px; font-size:13px; color:#8a3a3a;">
+      <span>😫</span> Extra cost for every meal
+    </div>
+    <div style="display:flex; align-items:center; gap:10px; padding:10px 14px; background:#fff5f5; border-radius:10px; font-size:13px; color:#8a3a3a;">
+      <span>😫</span> Transport costs every time you change cities
+    </div>
+    <div style="display:flex; align-items:center; gap:10px; padding:10px 14px; background:#fff5f5; border-radius:10px; font-size:13px; color:#8a3a3a;">
+      <span>😫</span> A final bill much bigger than expected
+    </div>
+  </div>
+  <div style="text-align:center; font-size:20px; color:var(--muted); margin:4px 0 12px;">⬇️</div>
+  <div style="background:linear-gradient(135deg,var(--sky),#ddeef9); border-radius:12px; padding:16px; text-align:center;">
+    <div style="font-size:13px; color:var(--ocean); font-weight:700; margin-bottom:6px;"> A cruise solves all of this at once</div>
+    <div style="font-size:12px; color:var(--muted); line-height:1.8;"> Stay · meals · travel · entertainment<br> all included</div>
+  </div>
+</div>
+</div>
+
+
+<div class="panel" id="sec3" data-n="3" data-title="How do you book a cruise?">
+<div class="card" style="word-break:normal;">
+  <div style="font-size:14px; color:var(--muted); margin-bottom:16px; line-height:1.7;"> There are two main ways to book a cruise.</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+    <div style="background:#f8f9fa; border:1.5px solid #d8e0e8; border-radius:14px; padding:16px;">
+      <div style="font-size:18px; margin-bottom:8px;">🧳</div>
+      <div style="font-size:13px; font-weight:900; color:#6a7a8a; margin-bottom:8px;"> Through an agency</div>
+      <div style="font-size:11px; color:#8a9ab0; line-height:2;"> The agency books for you.<br> Convenient, but with<br> fees built in,<br> it can cost more</div>
+    </div>
+    <div style="background:#f0faff; border:2.5px solid var(--ocean); border-radius:14px; padding:16px; box-shadow:0 5px 18px rgba(26,111,168,.22);">
+      <div style="font-size:18px; margin-bottom:8px;">🛳️</div>
+      <div style="font-size:13px; font-weight:900; color:var(--ocean); margin-bottom:8px;"> Book it yourself</div>
+      <div style="font-size:11px; color:#1a6a8a; line-height:2;"> You choose everything.<br> Know how it works and<br> you can book<br> on better terms</div>
+    </div>
+  </div>
+  <div style="margin-top:14px; background:var(--sky); border-radius:10px; padding:12px 14px; font-size:13px; color:#1a4a6e; line-height:1.7;">
+    💡 So, is there <strong> a way to book direct on even better terms</strong>?<br>
+    → Yes: use a <strong style="color:var(--red); font-weight:900;"> cruise membership</strong>.
+  </div>
+</div>
+</div>
+
+
+<div class="panel" id="sec4" data-n="4" data-title="What is the cruise membership?">
+<div class="card" style="word-break:normal;">
+  <div style="font-size:16px; font-weight:900; color:var(--navy); margin-bottom:10px;"> In one line</div>
+  <div style="background:linear-gradient(135deg,var(--sky),#ddeef9); border-radius:12px; padding:16px; font-size:15px; font-weight:700; color:var(--ocean); line-height:1.7; margin-bottom:16px; text-align:center;">
+    A savings-style membership:<br> set aside your cruise budget and book with rewards
+  </div>
+  <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:var(--navy);">
+    <div style="display:flex; gap:10px; align-items:flex-start; padding:10px 14px; background:var(--sky2); border-radius:10px;">
+      <span style="font-size:18px; flex-shrink:0;">💳</span>
+      <div><strong> Keep your membership each month</strong> and rewards build up</div>
+    </div>
+    <div style="display:flex; gap:10px; align-items:flex-start; padding:10px 14px; background:var(--sky2); border-radius:10px;">
+      <span style="font-size:18px; flex-shrink:0;">✨</span>
+      <div> Your rewards are <strong> used to book cruises</strong></div>
+    </div>
+    <div style="display:flex; gap:10px; align-items:flex-start; padding:10px 14px; background:var(--sky2); border-radius:10px;">
+      <span style="font-size:18px; flex-shrink:0;">🚫</span>
+      <div> Rewards are <span style="color:#e53935; font-weight:900;"> not a cash</span><span style="color:#111; font-weight:700;"> refund — they are</span> <span style="color:#0a3d8f; font-weight:900;"> for booking cruises</span></div>
+    </div>
+    <div style="display:flex; gap:10px; align-items:flex-start; padding:10px 14px; background:var(--green-light); border-radius:10px;">
+      <span style="font-size:18px; flex-shrink:0;">✅</span>
+      <div> You keep the membership until you've booked and sailed;<br> after the trip you're free to <strong style="color:#e53935; font-size:120%;"> cancel</strong> anytime</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="card" style="border-left:4px solid #f5a623; background:linear-gradient(135deg,#fffbf0,#fff8e6);">
+  <div style="font-size:15px; font-weight:900; color:#0b2540; margin-bottom:14px;"> ⚠️ What if I stop paying the fee?</div>
+  <div style="display:flex; flex-direction:column; gap:0;">
+
+    <div style="display:flex; gap:12px; align-items:flex-start;">
+      <div style="display:flex; flex-direction:column; align-items:center; flex-shrink:0;">
+        <div style="width:32px; height:32px; border-radius:50%; background:#f5a623; color:#fff; font-size:12px; font-weight:900; display:flex; align-items:center; justify-content:center;">1</div>
+        <div style="width:2px; height:28px; background:#f5a623; opacity:.3;"></div>
+      </div>
+      <div style="padding:6px 0 20px;">
+        <div style="font-size:13px; font-weight:900; color:#0b2540; margin-bottom:4px;"> Invoice issued</div>
+        <div style="font-size:12px; color:#5a6a7a; line-height:1.6;"> An invoice for the monthly fee is issued each month</div>
+      </div>
+    </div>
+
+    <div style="display:flex; gap:12px; align-items:flex-start;">
+      <div style="display:flex; flex-direction:column; align-items:center; flex-shrink:0;">
+        <div style="width:32px; height:32px; border-radius:50%; background:#e07b54; color:#fff; font-size:12px; font-weight:900; display:flex; align-items:center; justify-content:center;">2</div>
+        <div style="width:2px; height:28px; background:#e07b54; opacity:.3;"></div>
+      </div>
+      <div style="padding:6px 0 20px;">
+        <div style="font-size:13px; font-weight:900; color:#0b2540; margin-bottom:4px;"> Not paid within 30 days → Basic Access</div>
+        <div style="font-size:12px; color:#5a6a7a; line-height:1.6;"> If an invoice isn't paid within <strong style="color:#e53935;"> 30 days</strong> of being issued,<br> your membership switches to <strong> Basic Access</strong>.</div>
+      </div>
+    </div>
+
+    <div style="display:flex; gap:12px; align-items:flex-start;">
+      <div style="display:flex; flex-direction:column; align-items:center; flex-shrink:0;">
+        <div style="width:32px; height:32px; border-radius:50%; background:#0a6e9e; color:#fff; font-size:12px; font-weight:900; display:flex; align-items:center; justify-content:center;">✓</div>
+      </div>
+      <div style="padding:6px 0;">
+        <div style="font-size:13px; font-weight:900; color:#0b2540; margin-bottom:8px;"> Here's what happens with Basic Access</div>
+        <div style="background:#fff5f5; border:1px solid #f5c6c6; border-radius:12px; padding:14px; display:flex; flex-direction:column; gap:10px; margin-bottom:10px;">
+          <div style="display:flex; gap:8px; align-items:flex-start; font-size:12px; color:#0b2540; line-height:1.7;">
+            <span style="color:#c0392b; flex-shrink:0; font-size:14px;">✕</span>
+            <div><strong style="color:#c0392b;"> The 2x rewards bonus ends</strong><br><span style="color:#5a6a7a;"> The doubled rewards are not kept as they are</span></div>
+          </div>
+          <div style="display:flex; gap:8px; align-items:flex-start; font-size:12px; color:#0b2540; line-height:1.7;">
+            <span style="color:#1a8a3a; flex-shrink:0; font-size:14px;">✓</span>
+            <div><strong style="color:#1a8a3a;"> 100% of what you actually paid stays</strong><br><span style="color:#5a6a7a;"> Your money doesn't disappear</span></div>
+          </div>
+        </div>
+        <div style="background:#e8f4fd; border:1px solid #b0d8f0; border-radius:12px; padding:14px; display:flex; flex-direction:column; gap:8px;">
+          <div style="display:flex; gap:8px; align-items:flex-start; font-size:12px; color:#0b2540; line-height:1.7;">
+            <span style="color:#0a6e9e; flex-shrink:0; font-size:14px;">🎯</span>
+            <div> Within your <strong> remaining rewards,</strong> you still get a <strong> 17% discount</strong> when you book</div>
+          </div>
+          <div style="display:flex; gap:8px; align-items:flex-start; font-size:12px; color:#0b2540; line-height:1.7;">
+            <span style="color:#1a8a3a; flex-shrink:0; font-size:14px;">♾️</span>
+            <div> Remaining rewards <strong style="color:#1a8a3a;"> never expire until you leave</strong></div>
+          </div>
+        </div>
+        <div style="margin-top:12px; background:#fff; border:1px solid var(--border); border-radius:12px; padding:12px 10px;">
+          <svg viewBox="0 0 480 258" style="width:100%; height:auto; display:block;" role="img" xmlns="http://www.w3.org/2000/svg">
+            <title> If you stop paying, the 2x bonus ends but the money you paid stays</title>
+            <desc> Your $1,500 earns a 2x bonus for 3,000 rewards. If you stop paying, the bonus goes away and the 1,500 rewards you paid for remain.</desc>
+            <g font-family="'Noto Sans','Segoe UI',Roboto,sans-serif">
+              <text x="8" y="18" font-size="13" font-weight="700" fill="#0a1f38"> Cruise membership</text>
+              <text x="120" y="46" font-size="11" font-weight="700" fill="#5a6a7a" text-anchor="middle"> Active member</text>
+              <text x="360" y="46" font-size="11" font-weight="700" fill="#5a6a7a" text-anchor="middle"> Stopped paying · Basic Access</text>
+              <rect x="30" y="60" width="180" height="86" rx="8" fill="#fdf6e3" stroke="#c8983a" stroke-width="1.2"/>
+              <text x="120" y="94" font-size="13" font-weight="700" fill="#8a6000" text-anchor="middle"> 2x bonus</text>
+              <text x="120" y="118" font-size="12" font-weight="700" fill="#8a6000" text-anchor="middle"> 3,000 rewards</text>
+              <rect x="30" y="150" width="180" height="86" rx="8" fill="#e8f4fd" stroke="#1a6fa8" stroke-width="1.2"/>
+              <text x="120" y="184" font-size="13" font-weight="700" fill="#1a5a8a" text-anchor="middle"> What you paid</text>
+              <text x="120" y="208" font-size="12" fill="#1a5a8a" text-anchor="middle">$1,500</text>
+              <line x1="222" y1="148" x2="258" y2="148" stroke="#9aa8b8" stroke-width="2" stroke-linecap="round"/>
+              <path d="M250 142 L258 148 L250 154" fill="none" stroke="#9aa8b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="270" y="60" width="180" height="86" rx="8" fill="#f1f4f7" stroke="#9aa8b8" stroke-width="1.2" stroke-dasharray="6 5"/>
+              <text x="360" y="94" font-size="13" font-weight="700" fill="#8a97a8" text-anchor="middle"> Bonus gone</text>
+              <text x="360" y="118" font-size="12" fill="#8a97a8" text-anchor="middle"> 2x → back to 1x</text>
+              <rect x="270" y="150" width="180" height="86" rx="8" fill="#e8f4fd" stroke="#1a6fa8" stroke-width="1.2"/>
+              <text x="360" y="184" font-size="13" font-weight="700" fill="#1a5a8a" text-anchor="middle"> What you paid</text>
+              <text x="360" y="208" font-size="12" fill="#1a5a8a" text-anchor="middle"> 1,500 rewards</text>
+            </g>
+          </svg>
+        </div>
+        <div style="margin-top:10px; background:#f8fafc; border-left:3px solid #0a6e9e; border-radius:0 8px 8px 0; padding:11px 13px; font-size:11.5px; color:#3a4a5a; line-height:1.8;">
+          📌 In short — <strong style="color:#0b2540;"> you lose the 2x bonus, not the money you paid.</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="card" style="background:var(--white); border:1px solid var(--border); padding:20px 18px;">
+  <div style="font-size:14px; font-weight:900; color:var(--navy); margin-bottom:14px;"> 📺 The subscriptions you know — now for cruises</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:0; background:var(--sky); border-radius:14px; overflow:hidden; margin-bottom:16px;">
+    <div style="display:flex; flex-direction:column; align-items:center; padding:14px 6px; border-right:1px solid var(--border2);">
+      <div style="width:36px; height:36px; background:#e50914; border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:7px; box-shadow:0 2px 8px rgba(229,9,20,.25);">
+        <span style="color:#fff; font-size:15px; font-weight:900; letter-spacing:-1px;">N</span>
+      </div>
+      <div style="font-size:11px; font-weight:700; color:var(--text); margin-bottom:4px; text-align:center; line-height:1.3;"> Netflix</div>
+      <div style="font-size:10px; color:var(--muted); text-align:center; line-height:1.6;"> Monthly fee<br> → Unlimited video</div>
+    </div>
+    <div style="display:flex; flex-direction:column; align-items:center; padding:14px 6px; border-right:1px solid var(--border2);">
+      <div style="width:36px; height:36px; background:#1fc0e0; border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:7px; box-shadow:0 2px 8px rgba(31,192,224,.25);">
+        <span style="color:#fff; font-size:15px; font-weight:900;"> S</span>
+      </div>
+      <div style="font-size:11px; font-weight:700; color:var(--text); margin-bottom:4px; text-align:center; line-height:1.3;"> Shopping membership</div>
+      <div style="font-size:10px; color:var(--muted); text-align:center; line-height:1.6;"> Monthly fee<br> → Free shipping</div>
+    </div>
+    <div style="display:flex; flex-direction:column; align-items:center; padding:14px 6px; border-right:1px solid var(--border2);">
+      <div style="width:36px; height:36px; background:#ff0000; border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:7px; box-shadow:0 2px 8px rgba(255,0,0,.25);">
+        <span style="color:#fff; font-size:15px; font-weight:900;">▶</span>
+      </div>
+      <div style="font-size:11px; font-weight:700; color:var(--text); margin-bottom:4px; text-align:center; line-height:1.3;"> YouTube<br> Premium</div>
+      <div style="font-size:10px; color:var(--muted); text-align:center; line-height:1.6;"> Monthly fee<br> → No ads</div>
+    </div>
+    <div style="display:flex; flex-direction:column; align-items:center; padding:14px 6px; background:linear-gradient(160deg,#e8f3fc,#ddeef8); border:2.5px solid var(--red); border-radius:12px; box-shadow:0 4px 14px rgba(192,57,43,.18);">
+      <div style="width:36px; height:36px; background:var(--ocean); border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:7px; box-shadow:0 2px 8px rgba(26,111,168,.3);">
+        <span style="color:#fff; font-size:15px;">🚢</span>
+      </div>
+      <div style="font-size:11px; font-weight:900; color:var(--ocean); margin-bottom:4px; text-align:center; line-height:1.3;"> Cruise<br> subscription</div>
+      <div style="font-size:10px; color:var(--ocean); text-align:center; font-weight:700; line-height:1.6;"> Monthly fee<br> → 2x rewards ✦</div>
+    </div>
+  </div>
+
+  <div style="font-size:13px; font-weight:900; color:var(--navy); margin-bottom:10px;"> 💸 No middleman markup — it comes back to you as rewards</div>
+  <div style="background:var(--sky); border-radius:12px; padding:16px 14px;">
+    <div style="margin-bottom:14px;">
+      <div style="font-size:12px; font-weight:800; color:#c0392b; margin-bottom:8px;"> ❌ Typical booking</div>
+      <div style="display:flex; align-items:stretch; height:48px;">
+        <div style="flex:1; background:var(--ocean); border-radius:8px 0 0 8px; display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:12px; font-weight:900; color:#fff;"> 🚢 Cruise line</span>
+        </div>
+        <div style="width:0; height:0; border-top:24px solid transparent; border-bottom:24px solid transparent; border-left:10px solid var(--ocean);"></div>
+        <div style="flex:1.6; background:#b85c00; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:2px;">
+          <span style="font-size:12px; font-weight:900; color:#fff;"> Travel agencies</span>
+          <span style="font-size:10px; color:#ffd4a8; font-weight:700;"> markups pile up ↑</span>
+        </div>
+        <div style="width:0; height:0; border-top:24px solid transparent; border-bottom:24px solid transparent; border-left:10px solid #b85c00;"></div>
+        <div style="flex:1; background:#6b7280; border-radius:0 8px 8px 0; display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:12px; font-weight:900; color:#fff;"> Traveler 😔</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:12px; font-weight:800; color:var(--green); margin-bottom:8px;"> ✅ Booking direct</div>
+      <div style="display:flex; align-items:stretch; height:48px;">
+        <div style="flex:1; background:var(--ocean); border-radius:8px 0 0 8px; display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:12px; font-weight:900; color:#fff;"> 🚢 Cruise line</span>
+        </div>
+        <div style="width:0; height:0; border-top:24px solid transparent; border-bottom:24px solid transparent; border-left:10px solid var(--ocean);"></div>
+        <div style="flex:1.6; background:#1a7a4a; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:2px;">
+          <span style="font-size:12px; font-weight:900; color:#fff;"> Direct platform</span>
+          <span style="font-size:10px; color:#a8ffd8; font-weight:700;"> markup → rewards</span>
+        </div>
+        <div style="width:0; height:0; border-top:24px solid transparent; border-bottom:24px solid transparent; border-left:10px solid #1a7a4a;"></div>
+        <div style="flex:1; background:linear-gradient(135deg,#0a6e9e,#1a7a4a); border-radius:0 8px 8px 0; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:2px;">
+          <span style="font-size:12px; font-weight:900; color:#fff;"> Member 😊</span>
+          <span style="font-size:10px; color:#a8f0ff; font-weight:700;"> 2x rewards!</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="panel" id="sec5" data-n="5" data-title="How does it work?">
+<div class="card" style="word-break:normal;">
+  <div style="font-size:14px; color:var(--muted); margin-bottom:18px;"> Three simple steps</div>
+  <div style="display:flex; flex-direction:column; gap:0;">
+    <div style="display:flex; gap:16px; align-items:flex-start; padding-bottom:20px;">
+      <div style="display:flex; flex-direction:column; align-items:center; flex-shrink:0;">
+        <div class="step-badge">1</div>
+        <div style="width:2px; height:40px; background:var(--border); margin-top:6px;"></div>
+      </div>
+      <div style="padding-top:4px;">
+        <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:4px;"> Start your membership</div>
+        <div style="font-size:13px; color:var(--muted); line-height:1.7;"> Set aside a travel budget each month<br>
+          <span style="font-size:12px; display:flex; flex-direction:column; gap:3px; margin-top:4px;">
+            <span> 💙 Monthly <strong style="color:#085a8a;">$100</strong> → <strong style="color:#085a8a;">200 RP</strong> earned</span>
+            <span> ❤️ Monthly <strong style="color:#a02050;">$250</strong> → <strong style="color:#a02050;">500 RP</strong> earned</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex; gap:16px; align-items:flex-start; padding-bottom:20px;">
+      <div style="display:flex; flex-direction:column; align-items:center; flex-shrink:0;">
+        <div class="step-badge">2</div>
+        <div style="width:2px; height:40px; background:var(--border); margin-top:6px;"></div>
+      </div>
+      <div style="padding-top:4px;">
+        <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:4px;"> Earn rewards</div>
+        <div style="font-size:13px; color:var(--muted); line-height:1.7;"> Pay on time and you earn rewards for booking<br><span style="font-size:12px; color:var(--ocean); font-weight:700;"> (pay within 5 days of the invoice for <strong style="color:#e53935;"> double rewards</strong>)</span></div>
+      </div>
+    </div>
+    <div style="display:flex; gap:16px; align-items:flex-start;">
+      <div style="display:flex; flex-direction:column; align-items:center; flex-shrink:0;">
+        <div class="step-badge" style="background:var(--green);">3</div>
+      </div>
+      <div style="padding-top:4px;">
+        <div style="font-size:15px; font-weight:900; color:var(--green); margin-bottom:4px;"> Book a cruise 🎉</div>
+        <div style="font-size:13px; color:var(--muted); line-height:1.7;"> Use your rewards to book a cruise<br><span style="font-size:12px;"> You choose the dates, cabin and route</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="panel" id="sec6" data-n="6" data-title="How do rewards build up?">
+<div class="card" style="padding:22px 18px;">
+  <div style="text-align:center; margin-bottom:20px;">
+    <div style="font-size:17px; color:var(--navy); margin-bottom:6px;"> Both plans earn</div>
+    <div style="font-size:clamp(1.6rem, 5vw, 2.2rem); font-weight:900; color:#e53935; line-height:1.1;"> 2x your fee in rewards!<span style="font-size:1.4rem; color:var(--navy);"> </span></div>
+  </div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:18px;">
+    <div style="background:linear-gradient(160deg,#e8f4ff,#d0e8ff); border:2px solid #5ba8e0; border-radius:16px; padding:18px 12px; text-align:center;">
+      <div style="font-size:12px; font-weight:900; color:#085a8a; letter-spacing:1.5px; margin-bottom:10px; background:rgba(8,90,138,.1); border-radius:20px; padding:3px 10px; display:inline-block;">CLASSIC</div>
+      <div style="font-size:16px; color:#2a5a8a; margin-bottom:6px; font-weight:700;"> Fee $100</div>
+      <div style="font-size:1rem; font-weight:900; color:#085a8a; margin-bottom:4px;">→</div>
+      <div style="font-size:clamp(1.5rem, 4.5vw, 2rem); font-weight:900; color:#085a8a; line-height:1;">$200</div>
+      <div style="font-size:13px; color:#0a6e9e; font-weight:800; margin-top:6px; background:rgba(8,90,138,.12); border-radius:20px; padding:3px 12px; display:inline-block;"> in rewards</div>
+    </div>
+    <div style="background:linear-gradient(160deg,#ffe8f0,#ffd0e0); border:2px solid #e0507a; border-radius:16px; padding:18px 12px; text-align:center; position:relative;">
+      <div style="position:absolute; top:-1px; right:-1px; background:linear-gradient(135deg,#e91e8c,#ff6eb4); color:#fff; font-size:10px; font-weight:900; padding:4px 10px; border-radius:0 16px 0 10px;"> Popular</div>
+      <div style="font-size:12px; font-weight:900; color:#a02050; letter-spacing:1.5px; margin-bottom:10px; background:rgba(160,32,80,.1); border-radius:20px; padding:3px 10px; display:inline-block;">PREMIUM</div>
+      <div style="font-size:16px; color:#7a1030; margin-bottom:6px; font-weight:700;"> Fee $250</div>
+      <div style="font-size:1rem; font-weight:900; color:#a02050; margin-bottom:4px;">→</div>
+      <div style="font-size:clamp(1.5rem, 4.5vw, 2rem); font-weight:900; color:#a02050; line-height:1;">$500</div>
+      <div style="font-size:13px; color:#c0395a; font-weight:800; margin-top:6px; background:rgba(160,32,80,.12); border-radius:20px; padding:3px 12px; display:inline-block;"> in rewards</div>
+    </div>
+  </div>
+
+  <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:12px; display:flex; align-items:center; gap:8px;">
+    <span style="background:var(--ocean); color:#fff; border-radius:8px; padding:4px 10px; font-size:13px;">📊</span>
+    Example: 5 months on Premium
+  </div>
+
+  <div style="background:linear-gradient(135deg,#fffbeb,#fff8d6); border:2px solid #f5c842; border-radius:14px; padding:16px 18px; margin-bottom:16px;">
+    <div style="font-size:15px; font-weight:900; color:#7a5a00; margin-bottom:10px;"> 💡 What's the activation fee?</div>
+    <div style="font-size:14px; color:#5a4000; line-height:2;">
+      A fee you pay <strong style="color:#c07000;"> only once,</strong> when you first join.<br>
+      First month: $250 fee + $250 activation = <strong style="color:#c07000; font-size:16px;">$500</strong><br>
+      So in the first month you earn <strong style="color:#e53935; font-size:18px;">$800</strong> in rewards.
+    </div>
+  </div>
+
+  <div style="border-radius:14px; overflow:hidden; border:2px solid #d0dff0; margin-bottom:16px;">
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; background:linear-gradient(135deg,#0a6e9e,#0b2540); padding:13px 16px;">
+      <div style="font-size:13px; font-weight:900; color:#fff;"> Month</div>
+      <div style="text-align:center; font-size:14px; font-weight:900; color:#fff;"> Paid</div>
+      <div style="text-align:right; font-size:14px; font-weight:900; color:#FFD700;"> Rewards 🔴</div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; padding:13px 16px; border-bottom:1.5px solid #e8f0f8; align-items:center; background:linear-gradient(135deg,#fff5f5,#fff0f0);">
+      <div>
+        <div style="font-size:13px; font-weight:700; color:var(--navy);"> Month 1</div>
+        <div style="font-size:11px; color:#e53935; font-weight:800; margin-top:2px;"> incl. activation</div>
+      </div>
+      <div style="text-align:center; font-size:16px; font-weight:800; color:var(--navy);">$500</div>
+      <div style="text-align:right; font-size:1.4rem; font-weight:900; color:#e53935;">$800</div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; padding:13px 16px; border-bottom:1.5px solid #e8f0f8; align-items:center; background:#fff;">
+      <div style="font-size:13px; font-weight:700; color:var(--navy);"> Month 2</div>
+      <div style="text-align:center; font-size:16px; font-weight:800; color:var(--navy);">$250</div>
+      <div style="text-align:right; font-size:1.4rem; font-weight:900; color:#0a6e9e;">$500</div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; padding:13px 16px; border-bottom:1.5px solid #e8f0f8; align-items:center; background:#f8fbff;">
+      <div style="font-size:13px; font-weight:700; color:var(--navy);"> Month 3</div>
+      <div style="text-align:center; font-size:16px; font-weight:800; color:var(--navy);">$250</div>
+      <div style="text-align:right; font-size:1.4rem; font-weight:900; color:#0a6e9e;">$500</div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; padding:13px 16px; border-bottom:1.5px solid #e8f0f8; align-items:center; background:#fff;">
+      <div style="font-size:13px; font-weight:700; color:var(--navy);"> Month 4</div>
+      <div style="text-align:center; font-size:16px; font-weight:800; color:var(--navy);">$250</div>
+      <div style="text-align:right; font-size:1.4rem; font-weight:900; color:#0a6e9e;">$500</div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; padding:13px 16px; border-bottom:2px solid #0a6e9e; align-items:center; background:#f8fbff;">
+      <div style="font-size:13px; font-weight:700; color:var(--navy);"> Month 5</div>
+      <div style="text-align:center; font-size:16px; font-weight:800; color:var(--navy);">$250</div>
+      <div style="text-align:right; font-size:1.4rem; font-weight:900; color:#0a6e9e;">$500</div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; padding:16px; align-items:center; background:linear-gradient(135deg,#0b2540,#0a3a6e);">
+      <div style="font-size:16px; font-weight:900; color:#fff;"> Total</div>
+      <div style="text-align:center; font-size:18px; font-weight:900; color:#FFD700;">$1,500</div>
+      <div style="text-align:right; font-size:1.8rem; font-weight:900; color:#50e3c2; text-shadow:0 0 14px rgba(80,227,194,.5);">$2,800</div>
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#0a1f38,#102d50); border-radius:16px; padding:22px 16px;">
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:6px;">
+      <div style="text-align:center; flex:1;">
+        <div style="font-size:12px; font-weight:700; color:#88b4d0; margin-bottom:6px; letter-spacing:.5px;"> Paid over 5 months</div>
+        <div style="font-size:clamp(1.4rem,5vw,1.9rem); font-weight:900; color:#fff; line-height:1.1;">$1,500</div>
+        <div style="font-size:11px; color:#88b4d0; margin-top:6px; font-weight:700; background:rgba(255,255,255,.08); border-radius:50px; padding:3px 10px; display:inline-block;"> incl. activation</div>
+      </div>
+      <div style="text-align:center; flex:0; padding:0 2px;">
+        <div style="font-size:11px; font-weight:800; color:#c8983a; margin-bottom:3px;"> 2x rewards</div>
+        <div style="font-size:1.6rem; color:#c8983a; font-weight:900; line-height:1;">→</div>
+      </div>
+      <div style="text-align:center; flex:1;">
+        <div style="font-size:12px; font-weight:700; color:#88b4d0; margin-bottom:6px; letter-spacing:.5px;"> Total rewards</div>
+        <div style="font-size:clamp(1.4rem,5vw,1.9rem); font-weight:900; color:#f5c842; line-height:1.1; text-shadow:0 2px 10px rgba(245,200,66,.3);">$2,800</div>
+        <div style="font-size:11px; color:#88b4d0; margin-top:6px; font-weight:700; background:rgba(255,255,255,.08); border-radius:50px; padding:3px 10px; display:inline-block;"> for booking cruises</div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:10px; font-size:12px; color:#7a9ab8; text-align:center; font-weight:600; line-height:1.8;">
+    ※ Example based on the Premium plan<br>
+    <span style="color:#a8c8e8;"> You can downgrade to Classic $100 (once only)</span>
+  </div>
+</div>
+
+
+<div style="background:linear-gradient(135deg,var(--navy),#0a3a6e); border-radius:var(--r); padding:24px 20px; margin-bottom:12px; box-shadow:0 6px 28px rgba(10,37,64,.25); position:relative; overflow:hidden;">
+  <div style="position:absolute; right:-20px; bottom:-20px; font-size:114px; opacity:.05;">💎</div>
+  <div style="text-align:center; margin-bottom:16px;">
+    <div style="display:inline-block; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); color:rgba(255,255,255,.8); font-size:11px; font-weight:700; letter-spacing:2px; padding:4px 14px; border-radius:20px;"> How rewards are used</div>
+  </div>
+  <div style="display:flex; flex-direction:column; gap:10px; position:relative;">
+    <div style="background:rgba(245,200,66,.1); border:1.5px solid rgba(245,200,66,.45); border-radius:14px; padding:16px 18px;">
+      <div style="font-size:12px; font-weight:900; color:var(--gold-lt); letter-spacing:.5px; margin-bottom:10px;"> Step 1 · Reward discount</div>
+      <div style="display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:12px;">
+        <div style="text-align:center;">
+          <div style="font-size:40px; font-weight:900; color:var(--gold-lt); line-height:1;">1</div>
+          <div style="font-size:10px; font-weight:700; color:rgba(255,255,255,.6); margin-top:3px;">RP</div>
+        </div>
+        <div style="font-size:26px; font-weight:900; color:rgba(255,255,255,.35);">=</div>
+        <div style="text-align:center;">
+          <div style="font-size:40px; font-weight:900; color:#4ade80; line-height:1;">$1</div>
+          <div style="font-size:10px; font-weight:700; color:rgba(255,255,255,.6); margin-top:3px;"> Discount</div>
+        </div>
+      </div>
+      <div style="font-size:12.5px; color:rgba(255,255,255,.85); text-align:center; line-height:1.8;">
+        Up to <strong style="color:var(--gold-lt);"> 50% of the cabin fare</strong><br>
+        <span style="font-size:11.5px; color:rgba(255,255,255,.6);"> (this doesn't mean you can only use 50% of your rewards)</span>
+      </div>
+    </div>
+    <div style="background:rgba(255,255,255,.07); border:1.5px solid rgba(255,255,255,.18); border-radius:14px; padding:16px 18px;">
+      <div style="font-size:12px; font-weight:900; color:#8fc4e8; letter-spacing:.5px; margin-bottom:10px;"> Step 2 · Remaining balance</div>
+      <div style="display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:12px;">
+        <div style="text-align:center;">
+          <div style="font-size:40px; font-weight:900; color:#8fc4e8; line-height:1;">2</div>
+          <div style="font-size:10px; font-weight:700; color:rgba(255,255,255,.6); margin-top:3px;">RP</div>
+        </div>
+        <div style="font-size:26px; font-weight:900; color:rgba(255,255,255,.35);">=</div>
+        <div style="text-align:center;">
+          <div style="font-size:40px; font-weight:900; color:#4ade80; line-height:1;">$1</div>
+          <div style="font-size:10px; font-weight:700; color:rgba(255,255,255,.6); margin-top:3px;"> Payment</div>
+        </div>
+      </div>
+      <div style="font-size:12.5px; color:rgba(255,255,255,.85); text-align:center; line-height:1.8;">
+        <strong> Pay by card</strong> or<br>
+        pay with rewards at <strong style="color:#8fc4e8;">2 RP = $1</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="card" style="border:2px solid var(--ocean); padding:18px 16px;">
+  <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:4px;"> 🧮 Reward booking simulator</div>
+  <div style="font-size:12px; color:var(--muted); margin-bottom:16px; line-height:1.6;"> Enter the cabin fare and your rewards to see the math instantly</div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:16px;">
+    <div style="background:var(--sky); border-radius:10px; padding:12px;">
+      <label style="font-size:10px; font-weight:700; color:var(--muted); display:block; margin-bottom:6px;"> 🛳️ Cabin fare <span style="font-weight:500;"> (incl. taxes)</span></label>
+      <div style="display:flex; align-items:center; gap:4px;">
+        <span style="font-size:14px; font-weight:800; color:var(--navy); flex-shrink:0;">$</span>
+        <input id="sim_room" type="number" inputmode="numeric" value="1800" min="0" oninput="simCalc()"
+          style="flex:1; min-width:0; font-size:18px; font-weight:900; color:var(--ocean); border:2px solid var(--ocean); border-radius:8px; padding:7px 8px; text-align:right; background:#fff; outline:none; -webkit-appearance:none; appearance:none; width:100%;">
+      </div>
+    </div>
+    <div style="background:#fdf9e8; border-radius:10px; padding:12px;">
+      <label style="font-size:10px; font-weight:700; color:var(--muted); display:block; margin-bottom:6px;"> ✨ Reward points</label>
+      <div style="display:flex; align-items:center; gap:4px;">
+        <input id="sim_rp" type="number" inputmode="numeric" value="2800" min="0" oninput="simCalc()"
+          style="flex:1; min-width:0; font-size:18px; font-weight:900; color:#8a6000; border:2px solid var(--gold); border-radius:8px; padding:7px 8px; text-align:right; background:#fff; outline:none; -webkit-appearance:none; appearance:none; width:100%;">
+        <span style="font-size:12px; font-weight:800; color:#8a6000; flex-shrink:0;">RP</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#fffdf5; border:1.5px solid #e8d060; border-radius:12px; padding:14px; margin-bottom:10px;">
+    <div style="font-size:13.5px; font-weight:900; color:var(--navy); margin-bottom:4px;"> 💡 You can use 100% of your rewards</div>
+    <div style="font-size:11.5px; color:var(--muted); line-height:1.7; margin-bottom:11px;">
+      However, only <strong style="color:var(--navy);"> up to 50% of a 2-person cabin fare</strong> can be paid at 1 RP = $1.
+    </div>
+    <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:11px;">
+      <div style="background:#fff; border:1px solid var(--border); border-radius:10px; padding:12px 13px;">
+        <div style="display:flex; align-items:center; gap:7px; margin-bottom:7px;">
+          <span style="background:var(--ocean); color:#fff; font-size:10px; font-weight:900; width:18px; height:18px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; flex-shrink:0;">1</span>
+          <span style="font-size:12.5px; font-weight:900; color:var(--navy);"> Step 1 &mdash; Reward discount</span>
+          <span style="margin-left:auto; font-size:10px; font-weight:900; color:#8a6000; background:#fff3c0; border:1px solid #e8d060; padding:2px 8px; border-radius:20px; flex-shrink:0;">1 RP = $1</span>
+        </div>
+        <div style="font-size:11.5px; color:var(--muted); line-height:1.85;">
+          Up to <strong style="color:var(--navy);"> 50% of the cabin fare</strong> can be discounted.<br>
+          Rewards: <strong style="color:var(--navy);"> 1 point = $1</strong>.
+        </div>
+      </div>
+      <div style="background:#fff; border:1px solid var(--border); border-radius:10px; padding:12px 13px;">
+        <div style="display:flex; align-items:center; gap:7px; margin-bottom:7px;">
+          <span style="background:var(--gold); color:#fff; font-size:10px; font-weight:900; width:18px; height:18px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; flex-shrink:0;">2</span>
+          <span style="font-size:12.5px; font-weight:900; color:var(--navy);"> Step 2 &mdash; Choose one of two ways</span>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <div style="background:var(--sky); border-radius:8px; padding:9px 11px; font-size:11.5px; color:var(--navy); line-height:1.7;">
+            <strong>①</strong> Pay the balance <strong> by card</strong>
+          </div>
+          <div style="background:#fffdf5; border:1px solid #e8d060; border-radius:8px; padding:9px 11px; font-size:11.5px; color:var(--navy); line-height:1.7;">
+            <strong>②</strong> Pay the balance <strong> with rewards</strong><br>
+            <span style="color:var(--muted);"> Rewards: <strong style="color:#8a6000;"> 2 points = $1</strong>.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="background:#f0f8ff; border-left:3px solid var(--ocean); border-radius:0 8px 8px 0; padding:13px 14px; font-size:11.5px; color:#3a4a5a; line-height:1.9;">
+      <strong style="color:var(--navy); font-size:12.5px;"> "So I can't use all my rewards?"</strong>
+      <span style="display:block; margin-top:8px;"> Not at all — <strong style="color:var(--ocean);"> you can use 100% of them.</strong></span>
+      <span style="display:block; margin-top:6px;"> 50% isn't a cap; it's <strong style="color:var(--navy);"> the range where rewards are worth the most</strong>.</span>
+      <span style="display:block; margin-top:6px;"> After that, you can keep using rewards.</span>
+    </div>
+  </div>
+
+  <div style="background:#f0f8ff; border:1.5px solid #b8d8f0; border-radius:12px; padding:14px; margin-bottom:10px;">
+    <div style="display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-bottom:10px;">
+      <span style="background:var(--ocean); color:#fff; font-size:11px; font-weight:900; padding:3px 11px; border-radius:20px;">STEP 1</span>
+      <span style="font-size:13px; font-weight:900; color:var(--ocean);"> Maximum reward discount</span>
+    </div>
+    <div style="margin-bottom:10px;">
+      <span style="background:#fff3c0; color:#8a6000; font-size:11px; font-weight:900; padding:4px 12px; border-radius:20px; border:1px solid #e8d060; display:inline-block;"> At 1 RP = $1</span>
+    </div>
+    <div style="font-size:12px; color:var(--muted); margin-bottom:10px; line-height:1.6;">
+      The 1 RP = $1 limit is <strong style="color:var(--navy);"> 50% of the cabin fare (incl. taxes)</strong>.
+    </div>
+    <div style="background:var(--white); border-radius:8px; padding:12px; border:1px solid var(--border);">
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:5px 0; border-bottom:1px solid var(--border);">
+        <span style="font-size:12px; color:var(--muted);"> Cabin fare</span>
+        <span style="font-size:14px; font-weight:900; color:var(--navy);" id="sim_room_disp">$1,800</span>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:5px 0; border-bottom:1px solid var(--border);">
+        <span style="font-size:12px; color:var(--muted);"> Max reward discount <span style="font-size:10px;"> (50% of the fare)</span></span>
+        <span style="font-size:14px; font-weight:900; color:var(--ocean);" id="sim_max_reward">$900</span>
+      </div>
+    </div>
+    <div id="sim_rp_status" style="font-size:12px; text-align:center; font-weight:700; padding:8px; border-radius:8px; background:var(--green-light); color:var(--green); margin-top:10px;">
+      ✅ Enough rewards — maximum discount applies
+    </div>
+  </div>
+
+  <div style="background:#f0fff6; border:1.5px solid #86efac; border-radius:12px; padding:14px; margin-bottom:12px;">
+    <div style="display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-bottom:12px;">
+      <span style="background:var(--green); color:#fff; font-size:11px; font-weight:900; padding:3px 11px; border-radius:20px;">STEP 2</span>
+      <span style="font-size:13px; font-weight:900; color:var(--green);"> Choose how to pay the rest</span>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:12px;">
+      <button id="tab_allrp" onclick="simSelectTab('allrp')"
+        style="padding:10px 8px; border-radius:10px; border:2px solid var(--ocean); background:var(--ocean); color:#fff; font-size:12px; font-weight:900; cursor:pointer; -webkit-tap-highlight-color:transparent; word-break:normal;">
+        💎 All rewards
+      </button>
+      <button id="tab_card" onclick="simSelectTab('card')"
+        style="padding:10px 8px; border-radius:10px; border:2px solid var(--border); background:#fff; color:var(--muted); font-size:12px; font-weight:900; cursor:pointer; -webkit-tap-highlight-color:transparent; word-break:normal;">
+        💳 Card
+      </button>
+    </div>
+    <div id="result_allrp">
+      <div style="background:rgba(22,100,74,.05); border-radius:10px; padding:12px; margin-bottom:8px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:6px 0; border-bottom:1px dashed #86efac;">
+          <div style="flex:1;">
+            <div style="font-size:12px; color:#1a5c38; font-weight:700; margin-bottom:4px;"> ① Reward discount (50%)</div>
+            <span style="background:#fff3c0; color:#8a6000; font-size:10px; font-weight:900; padding:2px 8px; border-radius:20px; border:1px solid #e8d060; display:inline-block;">1 RP = $1</span>
+          </div>
+          <strong id="sim_step1_rp" style="font-size:13px; color:var(--navy); flex-shrink:0;">900 RP</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:6px 0; border-bottom:1px dashed #86efac;">
+          <div style="flex:1;">
+            <div style="font-size:12px; color:#1a5c38; font-weight:700; margin-bottom:4px;"> ② Rest paid with rewards</div>
+            <span style="background:#e8f3fc; color:var(--ocean); font-size:10px; font-weight:900; padding:2px 8px; border-radius:20px; border:1px solid #b8d8f0; display:inline-block;">2 RP = $1</span>
+          </div>
+          <strong id="sim_step2_rp" style="font-size:13px; color:var(--navy); flex-shrink:0;">1,800 RP</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:6px 0;">
+          <span style="font-size:12px; color:#1a5c38; font-weight:700;"> Total rewards needed</span>
+          <strong id="sim_total_rp" style="font-size:14px; color:var(--ocean);">2,700 RP</strong>
+        </div>
+      </div>
+      <div id="sim_allrp_result" style="background:var(--green-light); border-radius:8px; padding:10px 12px; text-align:center; font-size:13px; font-weight:700; color:var(--green);">
+        ✅ Your rewards cover it all!
+      </div>
+    </div>
+    <div id="result_card" style="display:none;">
+      <div style="background:rgba(10,110,158,.05); border-radius:10px; padding:12px; margin-bottom:8px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:6px 0; border-bottom:1px dashed #86efac;">
+          <div style="flex:1;">
+            <div style="font-size:12px; color:#1a5c38; font-weight:700; margin-bottom:4px;"> ① Paid with rewards (50%)</div>
+            <span style="background:#fff3c0; color:#8a6000; font-size:10px; font-weight:900; padding:2px 8px; border-radius:20px; border:1px solid #e8d060; display:inline-block;">1 RP = $1</span>
+          </div>
+          <strong id="sim_card_rp" style="font-size:13px; color:var(--navy); flex-shrink:0;">900 RP</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:6px 0;">
+          <span style="font-size:12px; color:#1a5c38;"> ② Paid by card</span>
+          <strong id="sim_card_pay" style="font-size:13px; color:var(--ocean);">$900</strong>
+        </div>
+      </div>
+      <div id="sim_card_result" style="background:#f0f8ff; border-radius:8px; padding:10px 12px; text-align:center; font-size:13px; font-weight:700; color:var(--ocean);">
+        💳 Card payment: $900
+      </div>
+    </div>
+  </div>
+
+  <div style="font-size:11px; color:var(--muted2); text-align:center; line-height:1.7;">
+    ※ The cabin fare above is <strong style="color:var(--navy);"> tax-inclusive</strong>, and the 1 RP = $1 limit is <strong style="color:var(--navy);"> 50% of it</strong>.<br>
+    <span style="display:inline-block; margin-top:6px;"> Actual prices vary by cruise line, dates and cabin, so please check the final amount on the booking screen.</span>
+  </div>
+</div>
+</div>
+
+
+<div class="panel" id="sec-dday" data-n="📅" data-title="When can I book?">
+<div class="card" style="border:2px solid var(--ocean); padding:20px 18px;">
+  <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:4px;"> 📅 Booking date calculator</div>
+  <div style="font-size:12px; color:var(--muted); margin-bottom:16px; line-height:1.6;">
+    Pick a start date to see which departures you can book with rewards
+  </div>
+
+  <div style="background:#fff; border:1.5px solid var(--ocean); border-radius:12px; padding:16px;">
+    <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+      <span style="font-size:12px; color:var(--muted); flex-shrink:0; font-weight:700;"> Start date</span>
+      <input class="dday-from" type="date" onchange="calcDday(this)"
+        style="flex:1; min-width:0; font-size:14px; font-weight:700; color:var(--navy); border:1.5px solid var(--border2); border-radius:8px; padding:9px 10px; background:#fff; outline:none; font-family:inherit;">
+    </div>
+    <div style="background:linear-gradient(135deg,var(--navy),var(--ocean)); border-radius:10px; padding:18px 14px; text-align:center;">
+      <div style="font-size:11px; color:rgba(255,255,255,.7); margin-bottom:6px; font-weight:700; letter-spacing:1px;"> 270 days later</div>
+      <div class="dday-result" style="font-size:22px; font-weight:900; color:var(--gold-lt); letter-spacing:-.3px;">-</div>
+      <div style="font-size:11px; color:rgba(255,255,255,.75); margin-top:8px; line-height:1.7;">
+        Cruises departing <strong style="color:#fff;"> on or after this date</strong><br> can be booked with rewards alone
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card" style="word-break:normal;">
+  <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:12px;"> 💡 Why 270 days?</div>
+  <div style="background:var(--sky); border-radius:12px; padding:14px 16px; font-size:13px; color:#1a4a6e; line-height:1.9; margin-bottom:12px;">
+    This rule applies only when you pay <strong> in full</strong> with rewards alone.<br>
+    <strong style="color:var(--navy);"> If you pay partly by card</strong>, there's no 270-day rule.
+  </div>
+
+  <div style="background:#fffbeb; border:1px solid var(--gold); border-radius:12px; padding:14px 16px;">
+    <div style="font-size:12.5px; font-weight:900; color:var(--gold-dark); margin-bottom:8px;"> 🛳️ When to book a cruise</div>
+    <div style="font-size:12.5px; color:#6a5000; line-height:1.9;">
+      Cruises usually open for booking <strong> 1.5–2 years</strong> ahead.<br>
+      Book early ✓ <strong> for lower prices</strong><br>
+      ✓ <strong> and more cabin</strong> choices.<br>
+      On average, people book <strong> 7–18 months</strong> before departure.
+    </div>
+    <div style="margin-top:10px; background:#fff3cd; border-radius:8px; padding:11px 13px; font-size:12.5px; color:#7a5500; line-height:1.8;">
+      👉 Earn rewards and <strong> book early</strong> — the smart way to cruise!
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="panel" id="sec7" data-n="7" data-title="How do I book?">
+<div class="card" style="margin-bottom:10px;">
+  <div style="font-size:13px; color:var(--muted); margin-bottom:16px; line-height:1.7;">
+    There are two main ways to book a cruise with rewards.
+  </div>
+
+  <div style="background:#f0faff; border:1.5px solid #b0d8f0; border-radius:14px; padding:18px; margin-bottom:12px;">
+    <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+      <span style="background:var(--ocean); color:#fff; font-size:10px; font-weight:900; padding:3px 12px; border-radius:20px;"> Method 1</span>
+      <span style="font-size:14px; font-weight:900; color:var(--ocean);"> All-reward payment</span>
+      <span style="font-size:10px; color:var(--muted);">All Reward Point</span>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:12px;">
+      <div style="display:flex; align-items:flex-start; gap:10px; padding:11px 14px; background:rgba(10,110,158,.07); border-radius:10px;">
+        <span style="font-size:16px; flex-shrink:0;">1️⃣</span>
+        <div style="font-size:13px; color:#1a5a8a; line-height:1.7;">
+          Of the total fare, <strong>50%</strong><br>
+          → <strong> reward discount</strong><br>
+          <span style="background:#fff3c0; color:#8a6000; font-size:10px; font-weight:900; padding:2px 8px; border-radius:20px; border:1px solid #e8d060; display:inline-block; margin-top:4px;">1 RP = $1</span>
+        </div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:10px; padding:11px 14px; background:rgba(10,110,158,.07); border-radius:10px;">
+        <span style="font-size:16px; flex-shrink:0;">2️⃣</span>
+        <div style="font-size:13px; color:#1a5a8a; line-height:1.7;">
+          The other <strong>50%</strong><br>
+          → <strong>2RP = $1</strong> paid in points
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#ddeef8; border-radius:10px; padding:12px 14px; margin-bottom:10px;">
+      <div style="font-size:11px; font-weight:700; color:var(--ocean); margin-bottom:8px;"> 📌 Example — $1,800 cabin</div>
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:12px; color:#1a5a8a;">
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:6px;">
+          <div>
+            <div style="margin-bottom:3px;"> ① 50% reward discount</div>
+            <span style="background:#fff3c0; color:#8a6000; font-size:10px; font-weight:900; padding:2px 8px; border-radius:20px; border:1px solid #e8d060; display:inline-block;">1 RP = $1</span>
+          </div>
+          <strong style="flex-shrink:0;">$900 (900 RP)</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:6px;">
+          <div>
+            <div style="margin-bottom:3px;"> ② Remaining $900 → paid in points</div>
+            <span style="background:#0a6e9e; color:#fff; font-size:10px; font-weight:900; padding:2px 8px; border-radius:20px; display:inline-block;">2 RP = $1</span>
+          </div>
+          <strong style="flex-shrink:0;">1,800 RP</strong>
+        </div>
+        <div style="height:1px; background:rgba(10,110,158,.2); margin:3px 0;"></div>
+        <div style="display:flex; justify-content:space-between; font-weight:900; color:var(--ocean);"><span> Total rewards used</span><span> 2,700 RP → paid in full ✓</span></div>
+      </div>
+    </div>
+
+    <div style="background:var(--green-light); border-radius:8px; padding:10px 12px; font-size:12px; color:#1a5c38; font-weight:700; text-align:center; margin-bottom:10px;">
+      💳 Pay entirely with rewards, no cash
+    </div>
+
+    <div style="background:#fffbeb; border:1px solid var(--gold); border-radius:12px; padding:14px 16px; margin-bottom:10px;">
+      <div style="font-size:12px; font-weight:900; color:var(--gold-dark); margin-bottom:8px;"> 💡 Do you know when to book?</div>
+      <div style="font-size:12px; color:#6a5000; line-height:1.9;">
+        Cruises usually open for booking <strong> 1.5–2 years</strong> ahead.<br>
+        Book early ✓ <strong> for lower prices</strong><br>
+        ✓ <strong> and more cabin</strong> choices.<br>
+        On average, people book <strong> 7–18 months</strong> before departure.
+      </div>
+      <div style="margin-top:10px; background:#fff3cd; border-radius:8px; padding:10px 12px; font-size:12px; color:#7a5500; line-height:1.7;">
+        👉 Applies to cruises departing 270+ days (about 9 months) out<br>
+        Earn rewards and <strong> book early</strong> — the smart way to cruise!
+      </div>
+      <div style="margin-top:10px; background:#fff; border:1.5px solid var(--ocean); border-radius:10px; padding:13px;">
+        <div class="dday-box" style="font-size:12px; font-weight:900; color:var(--navy); margin-bottom:9px;"> 📅 When can I book?</div>
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
+          <span style="font-size:11px; color:var(--muted); flex-shrink:0;"> Start date</span>
+          <input class="dday-from" type="date" onchange="calcDday(this)"
+            style="flex:1; min-width:0; font-size:13px; font-weight:700; color:var(--navy); border:1.5px solid var(--border2); border-radius:8px; padding:7px 9px; background:#fff; outline:none; font-family:inherit;">
+        </div>
+        <div style="background:var(--sky); border-radius:8px; padding:12px; text-align:center;">
+          <div style="font-size:10.5px; color:var(--muted); margin-bottom:4px;"> 270 days later</div>
+          <div class="dday-result" style="font-size:19px; font-weight:900; color:var(--ocean); letter-spacing:-.3px;">-</div>
+          <div style="font-size:10.5px; color:var(--muted); margin-top:6px; line-height:1.6;">
+            Cruises departing <strong style="color:var(--navy);"> on or after this date</strong><br> can be booked with rewards alone
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:rgba(10,110,158,.07); border-radius:10px; padding:14px;">
+      <div style="font-size:11px; font-weight:700; color:var(--ocean); margin-bottom:10px;"> How it goes</div>
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <div style="display:flex; gap:8px; align-items:center; font-size:12px; color:#1a5a8a;">
+          <span style="width:20px; height:20px; border-radius:50%; background:var(--ocean); color:#fff; font-size:10px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0;">1</span>
+          Keep your membership and earn rewards
+        </div>
+        <div style="display:flex; gap:8px; align-items:flex-start; font-size:12px; color:#1a5a8a;">
+          <span style="width:20px; height:20px; border-radius:50%; background:var(--ocean); color:#fff; font-size:10px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">2</span>
+          <span><strong> Pick a cruise departing 270+ days out</strong> <br><span style="font-size:11px; color:var(--muted);"> i.e. cruises leaving about 9 months from now</span></span>
+        </div>
+        <div style="display:flex; gap:8px; align-items:center; font-size:12px; color:#1a5a8a;">
+          <span style="width:20px; height:20px; border-radius:50%; background:var(--green); color:#fff; font-size:10px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0;">3</span>
+          Book the whole cruise with rewards alone 🎉
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#f0fff4; border:1.5px solid #86efac; border-radius:14px; padding:18px; margin-bottom:12px;">
+    <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+      <span style="background:var(--green); color:#fff; font-size:10px; font-weight:900; padding:3px 12px; border-radius:20px;"> Method 2</span>
+      <span style="font-size:14px; font-weight:900; color:var(--green);"> Rewards + card</span>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:12px;">
+      <div style="display:flex; align-items:flex-start; gap:10px; padding:11px 14px; background:rgba(22,163,74,.08); border-radius:10px;">
+        <span style="font-size:16px; flex-shrink:0;">1️⃣</span>
+        <div style="font-size:13px; color:#1a5c38; line-height:1.7;">
+          Of the total fare, <strong>50%</strong><br>
+          → <strong> Rewards</strong> payment<br>
+          <span style="background:#fff3c0; color:#8a6000; font-size:10px; font-weight:900; padding:2px 8px; border-radius:20px; border:1px solid #e8d060; display:inline-block; margin-top:4px;">1 RP = $1</span>
+        </div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:10px; padding:11px 14px; background:rgba(22,163,74,.08); border-radius:10px;">
+        <span style="font-size:16px; flex-shrink:0;">2️⃣</span>
+        <div style="font-size:13px; color:#1a5c38; line-height:1.7;">
+          The other <strong>50%</strong><br>
+          → <strong> Card</strong> payment
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#fff; border:2px solid var(--green); border-radius:12px; padding:14px; margin-bottom:12px;">
+      <div style="font-size:13px; color:var(--navy); line-height:1.9; margin-bottom:10px;">
+        Cruise cabins are <strong> priced for 2 people</strong>.<br>
+        50% of the fare is <strong> your share</strong>,<br>
+        the other 50% is <strong> your companion's share</strong>.
+      </div>
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <div style="display:flex; align-items:center; gap:10px; padding:10px 14px; background:var(--green-light); border-radius:10px;">
+          <span style="font-size:18px; flex-shrink:0;">🙋</span>
+          <div style="font-size:13px;"><strong> Your share 50%</strong><br><span style="font-size:12px; color:var(--green); font-weight:700;"> → paid with rewards = practically free</span></div>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; padding:10px 14px; background:#f0faff; border-radius:10px;">
+          <span style="font-size:18px; flex-shrink:0;">🧑‍🤝‍🧑</span>
+          <div style="font-size:13px;"><strong> Companion's share 50%</strong><br><span style="font-size:12px; color:var(--ocean); font-weight:700;"> → paid by card</span></div>
+        </div>
+      </div>
+      <div style="margin-top:10px; background:var(--sky); border-radius:8px; padding:10px 12px; font-size:12px; color:#1a4a6e; line-height:1.7;">
+        📌 So <strong> your own trip costs $0 —</strong><br> you only pay your companion's share by card.
+      </div>
+    </div>
+
+    <div style="background:rgba(22,163,74,.08); border-radius:10px; padding:14px; margin-bottom:10px;">
+      <div style="font-size:11px; font-weight:700; color:var(--green); margin-bottom:10px;"> 🔄 You can book cruises back to back</div>
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <div style="display:flex; gap:8px; align-items:flex-start; font-size:12px; color:#1a5c38;">
+          <span style="width:20px; height:20px; border-radius:50%; background:var(--green); color:#fff; font-size:10px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">1</span>
+          <span> Keep your membership → keep earning</span>
+        </div>
+        <div style="display:flex; gap:8px; align-items:flex-start; font-size:12px; color:#1a5c38;">
+          <span style="width:20px; height:20px; border-radius:50%; background:var(--green); color:#fff; font-size:10px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">2</span>
+          <span><strong> 1st cruise</strong> — book with Method 1 or 2</span>
+        </div>
+        <div style="display:flex; gap:8px; align-items:flex-start; font-size:12px; color:#1a5c38;">
+          <span style="width:20px; height:20px; border-radius:50%; background:var(--green); color:#fff; font-size:10px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">3</span>
+          <span> Rewards keep building while you wait to sail</span>
+        </div>
+        <div style="display:flex; gap:8px; align-items:flex-start; font-size:12px; color:#1a5c38;">
+          <span style="width:20px; height:20px; border-radius:50%; background:#15803d; color:#fff; font-size:10px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">4</span>
+          <span><strong> 2nd cruise</strong> can be booked right after 🎉</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:rgba(22,163,74,.1); border-radius:10px; padding:10px 14px; text-align:center; font-size:13px; font-weight:700; color:var(--green); margin-bottom:10px;">
+      "It's not one-and-done —<br> it keeps building toward your next trip"
+    </div>
+
+    <div style="padding:10px 14px; background:rgba(0,0,0,.03); border-radius:8px; font-size:11px; color:var(--muted); line-height:1.8;">
+      ※ Depending on when you book, <strong style="color:var(--navy);"> membership fee prepayment</strong> applies<br>
+      · Cruise departing 30+ days out: prepay <strong> 2 months</strong> of fees<br>
+      · Cruise departing 60+ days out: prepay <strong> 1 month</strong> of fees
+      <span style="display:block; margin-top:9px; padding-top:9px; border-top:1px solid rgba(0,0,0,.08); color:#3a4a5a;">
+      📌 "Prepayment" here means paying <strong style="color:var(--navy);"> your monthly membership fee — not the cruise fare —</strong> in advance.<br>
+      Prepaying doesn't earn rewards early; <strong style="color:var(--navy);"> they are added on the usual schedule</strong>.</span>
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#f0faff,#e8f4fd); border:2px solid var(--ocean); border-radius:14px; padding:16px 18px;">
+    <div style="font-size:13px; font-weight:900; color:var(--ocean); margin-bottom:8px;"> 🛳️ You can combine Method 1 and Method 2</div>
+    <div style="font-size:12px; color:#1a5a8a; line-height:1.8;">
+      Choose whichever method suits you, or<br>
+      <strong> book cruises back to back</strong>.<br>
+      The more rewards you build, the better your options.
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="panel" id="sec8" data-n="8" data-title="What does it look like in practice?">
+<div class="card" style="word-break:normal;">
+  <div style="font-size:14px; color:var(--muted); margin-bottom:14px;"> Here's an example</div>
+  <div style="background:var(--green-light); border:1.5px solid #86efac; border-radius:14px; padding:18px;">
+    <div style="font-size:12px; font-weight:700; color:var(--green); letter-spacing:1px; margin-bottom:12px;"> 🎉 Example — booking after 5 months</div>
+    <div style="display:flex; flex-direction:column; gap:0;">
+      <div style="display:flex; justify-content:space-between; font-size:13px; padding:8px 0; border-bottom:1px dashed #86efac;"><span style="color:#1a5c38;"> Paid over 5 months</span><strong>$1,500</strong></div>
+      <div style="display:flex; justify-content:space-between; font-size:13px; padding:8px 0; border-bottom:1px dashed #86efac;"><span style="color:#1a5c38;"> Rewards earned</span><strong style="color:var(--ocean);"> worth $2,800</strong></div>
+      <div style="display:flex; justify-content:space-between; font-size:13px; padding:8px 0; border-bottom:1px dashed #86efac;"><span style="color:#1a5c38;"> Used for a Mediterranean cruise for 2</span><strong>$2,700</strong></div>
+      <div style="display:flex; justify-content:space-between; align-items:center; font-size:13px; padding:8px 0;"><span style="color:#1a5c38;"> Booked with no extra payment</span><strong style="color:var(--green); font-size:22px;">✓</strong></div>
+    </div>
+    <div style="margin-top:10px; font-size:10px; color:#3a9a5a; border-top:1px solid #86efac; padding-top:10px;"> ※ An illustrative plan. Actual terms depend on the platform's policies.</div>
+  </div>
+</div>
+</div>
+
+
+
+
+<div class="panel" id="sec9" data-n="9" data-title="How much can I save?">
+<div class="card" style="word-break:normal;">
+  <div style="font-size:14px; color:var(--muted); margin-bottom:16px; line-height:1.7;">
+    You can book the same cruise on better terms.<br> Try the numbers yourself.
+  </div>
+
+  
+
+  <div style="margin-bottom:8px;">
+    <div style="font-size:11px; font-weight:700; color:var(--coral); letter-spacing:1px; margin-bottom:10px;"> 🌐 Typical travel agency — per person (USD)</div>
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:9px 0; border-bottom:1px solid #f0f8ff;">
+      <span style="font-size:13px; color:var(--muted);"> 🧳 Package price (1 person)</span>
+      <div style="display:flex; align-items:center; gap:5px;">
+        <input id="n_pkg1" type="number" value="4800" oninput="calcAll()" style="width:76px; font-size:14px; font-weight:900; color:var(--coral); border:1px solid #f5c0c0; border-radius:8px; padding:5px 8px; text-align:right; background:#fff8f8; outline:none; -webkit-appearance:none;">
+        <span style="font-size:12px; color:#888;"> USD</span>
+        <span style="font-size:10px; color:#c0a0a0; min-width:48px; text-align:right;" id="n_pkg1_usd"></span>
+      </div>
+    </div>
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:9px 0; border-bottom:1px solid #f0f8ff;">
+      <span style="font-size:13px; color:var(--muted);"> ⛴️ Onboard tips (1 person)</span>
+      <div style="display:flex; align-items:center; gap:5px;">
+        <input id="n_tip1" type="number" value="140" oninput="calcAll()" style="width:76px; font-size:14px; font-weight:900; color:var(--coral); border:1px solid #f5c0c0; border-radius:8px; padding:5px 8px; text-align:right; background:#fff8f8; outline:none; -webkit-appearance:none;">
+        <span style="font-size:12px; color:#888;"> USD</span>
+        <span style="font-size:10px; color:#c0a0a0; min-width:48px; text-align:right;" id="n_tip1_usd"></span>
+      </div>
+    </div>
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:9px 0;">
+      <span style="font-size:13px; color:var(--muted);"> 🗺️ Guide tips (1 person)</span>
+      <div style="display:flex; align-items:center; gap:5px;">
+        <input id="n_guide1" type="number" value="70" oninput="calcAll()" style="width:76px; font-size:14px; font-weight:900; color:var(--coral); border:1px solid #f5c0c0; border-radius:8px; padding:5px 8px; text-align:right; background:#fff8f8; outline:none; -webkit-appearance:none;">
+        <span style="font-size:12px; color:#888;"> USD</span>
+        <span style="font-size:10px; color:#c0a0a0; min-width:48px; text-align:right;" id="n_guide1_usd"></span>
+      </div>
+    </div>
+    <div style="background:#fff5f5; border:1px dashed #f5c0c0; border-radius:10px; padding:10px 14px; margin:10px 0 6px; display:flex; justify-content:space-between; align-items:center;">
+      <span style="font-size:12px; color:var(--coral); font-weight:700;"> Subtotal per person</span>
+      <div style="text-align:right;"><span style="font-size:16px; font-weight:900; color:var(--coral);" id="n_sub1_krw">-</span><span style="font-size:10px; color:#c0a0a0; margin-left:6px;" id="n_sub1_usd"></span></div>
+    </div>
+    <div style="background:#fff5f5; border:1.5px solid #fde8e8; border-radius:12px; padding:14px; display:flex; justify-content:space-between; align-items:center;">
+      <div><div style="font-size:12px; font-weight:700; color:var(--coral);"> Agency total for 2</div><div style="font-size:10px; color:#e07070; margin-top:2px;"> incl. onboard & guide tips</div></div>
+      <div style="text-align:right;"><div style="font-size:20px; font-weight:900; color:var(--coral);" id="n_total_krw2">-</div><div style="font-size:11px; color:#e07070;" id="n_total_usd_ref">-</div></div>
+    </div>
+  </div>
+
+  <div style="text-align:center; font-size:20px; color:var(--ocean); margin:12px 0 16px;">⬇️</div>
+
+  <div>
+    <div style="background:linear-gradient(135deg,var(--navy),var(--ocean)); border-radius:14px; padding:14px 16px; margin-bottom:14px; position:relative; overflow:hidden;">
+      <div style="position:absolute; right:-8px; top:-8px; font-size:54px; opacity:.08;">🛳️</div>
+      <div style="font-size:11px; color:rgba(255,255,255,.7); letter-spacing:1.5px; font-weight:700; margin-bottom:4px;">CRUISE DIRECT</div>
+      <div style="font-size:13px; font-weight:900; color:#fff;"> 🛳️ Booking direct with the membership</div>
+      <div style="display:inline-flex; align-items:center; gap:5px; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.3); border-radius:20px; padding:3px 10px; margin-top:6px;"><span style="font-size:10px; color:#ffe566; font-weight:700;"> 🛏️ Based on an inside cabin for 2</span></div>
+    </div>
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:9px 0; border-bottom:1px solid #f0f8ff;"><span style="font-size:13px; color:var(--muted);"> 🚢 Cruise (with rewards, 2 people)</span><div style="display:flex; align-items:center; gap:5px;"><span style="font-size:12px; color:#aaa;">$</span><input id="p_cruise" type="number" value="1500" oninput="calcAll()" style="width:86px; font-size:13px; font-weight:700; color:var(--ocean); border:1px solid #b0d8f0; border-radius:8px; padding:5px 8px; text-align:right; background:#f0faff; outline:none; -webkit-appearance:none;"><span style="font-size:10px; color:#9ab8cc; min-width:64px; text-align:right;" id="p_cruise_krw"></span></div></div>
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:9px 0; border-bottom:1px solid #f0f8ff;"><span style="font-size:13px; color:var(--muted);"> ✈️ Flights (2 people)</span><div style="display:flex; align-items:center; gap:5px;"><span style="font-size:12px; color:#aaa;">$</span><input id="p_air" type="number" value="2500" oninput="calcAll()" style="width:86px; font-size:13px; font-weight:700; color:var(--ocean); border:1px solid #b0d8f0; border-radius:8px; padding:5px 8px; text-align:right; background:#f0faff; outline:none; -webkit-appearance:none;"><span style="font-size:10px; color:#9ab8cc; min-width:64px; text-align:right;" id="p_air_krw"></span></div></div>
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:9px 0; border-bottom:1px solid #f0f8ff;"><span style="font-size:13px; color:var(--muted);"> 🗺️ Land costs & extras (2 people)</span><div style="display:flex; align-items:center; gap:5px;"><span style="font-size:12px; color:#aaa;">$</span><input id="p_land" type="number" value="0" oninput="calcAll()" style="width:86px; font-size:13px; font-weight:700; color:var(--ocean); border:1px solid #b0d8f0; border-radius:8px; padding:5px 8px; text-align:right; background:#f0faff; outline:none; -webkit-appearance:none;"><span style="font-size:10px; color:#9ab8cc; min-width:64px; text-align:right;" id="p_land_krw"></span></div></div>
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:9px 0; border-bottom:1px solid #f0f8ff;"><span style="font-size:13px; color:var(--muted);"> ⛴️ Onboard tips (2 people)</span><div style="display:flex; align-items:center; gap:5px;"><span style="font-size:12px; color:#aaa;">$</span><input id="p_stip" type="number" value="0" oninput="calcAll()" style="width:86px; font-size:13px; font-weight:700; color:var(--ocean); border:1px solid #b0d8f0; border-radius:8px; padding:5px 8px; text-align:right; background:#f0faff; outline:none; -webkit-appearance:none;"><span style="font-size:10px; color:#9ab8cc; min-width:64px; text-align:right;" id="p_stip_krw"></span></div></div>
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:9px 0;"><span style="font-size:13px; color:var(--muted);"> 🗺️ Guide tips (2 people)</span><div style="display:flex; align-items:center; gap:5px;"><span style="font-size:12px; color:#aaa;">$</span><input id="p_gtip" type="number" value="0" oninput="calcAll()" style="width:86px; font-size:13px; font-weight:700; color:var(--ocean); border:1px solid #b0d8f0; border-radius:8px; padding:5px 8px; text-align:right; background:#f0faff; outline:none; -webkit-appearance:none;"><span style="font-size:10px; color:#9ab8cc; min-width:64px; text-align:right;" id="p_gtip_krw"></span></div></div>
+
+    <div style="background:linear-gradient(135deg,#e8f9ff,#d0f0f8); border:2px solid var(--teal); border-radius:14px; padding:16px; margin-top:12px; display:flex; justify-content:space-between; align-items:center;">
+      <div><div style="font-size:12px; font-weight:700; color:var(--ocean);"> 🛳️ Total for 2 with the membership</div></div>
+      <div style="text-align:right;"><div style="font-size:18px; font-weight:900; color:var(--ocean);" id="p_total_usd">-</div><div style="font-size:11px; color:#1a8bbf;" id="p_total_krw">-</div></div>
+    </div>
+
+    <div style="background:linear-gradient(135deg,var(--green-light),#d0f5e8); border:2px solid #86efac; border-radius:14px; padding:18px; margin-top:10px;">
+      <div style="font-size:11px; font-weight:700; color:var(--green); letter-spacing:1px; margin-bottom:12px;"> 📊 Same trip, different booking method</div>
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <div><div style="font-size:12px; color:#1a5c38;"> vs. agency</div><div style="font-size:18px; font-weight:900; color:var(--green);" id="save_krw">-</div><div style="font-size:11px; color:#3a9a5a;" id="save_usd">-</div></div>
+        <div style="text-align:right;"><div style="font-size:12px; color:#1a5c38;"> difference</div><div style="font-size:24px; font-weight:900; color:var(--green);" id="save_pct">-</div></div>
+      </div>
+    </div>
+    <div style="font-size:10px; color:#b0c8d8; text-align:center; margin-top:8px;"> ※ Illustrative figures. Actual costs vary by season and conditions.</div>
+  </div>
+</div>
+</div>
+
+
+<div class="panel" id="sec10" data-n="10" data-title="How do I choose a cabin?">
+<div class="card" style="word-break:normal;">
+  <div style="font-size:13px; color:var(--muted); margin-bottom:14px;"> You pick the type you want</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+    <div style="border-radius:var(--rs); overflow:hidden; border:1px solid var(--border); box-shadow:var(--shadow);">
+      <img loading="lazy" decoding="async" src="img/13.jpg" alt="Inside cabin" style="width:100%; height:110px; object-fit:cover; display:block;">
+      <div style="padding:10px 12px; background:#fff;">
+        <div style="font-size:13px; font-weight:900; color:var(--navy);"> 🪟 Inside</div>
+        <div style="font-size:11px; color:var(--muted); margin-top:3px;"> No window · best value</div>
+      </div>
+    </div>
+    <div style="border-radius:var(--rs); overflow:hidden; border:1px solid var(--border); box-shadow:var(--shadow);">
+      <img loading="lazy" decoding="async" src="img/14.jpg" alt="Ocean-view cabin" style="width:100%; height:110px; object-fit:cover; display:block;">
+      <div style="padding:10px 12px; background:#fff;">
+        <div style="font-size:13px; font-weight:900; color:var(--ocean);"> 🌊 Ocean view</div>
+        <div style="font-size:11px; color:var(--muted); margin-top:3px;"> Sea window · mid-range</div>
+      </div>
+    </div>
+    <div style="border-radius:var(--rs); overflow:hidden; border:2px solid var(--teal); box-shadow:var(--shadow);">
+      <div style="position:relative;">
+        <img loading="lazy" decoding="async" src="img/15.jpg" alt="Balcony cabin" style="width:100%; height:110px; object-fit:cover; display:block;">
+        <div style="position:absolute; top:6px; right:6px; background:var(--teal); color:#fff; font-size:9px; font-weight:900; padding:2px 8px; border-radius:10px;"> Popular</div>
+      </div>
+      <div style="padding:10px 12px; background:#f0faff;">
+        <div style="font-size:13px; font-weight:900; color:var(--teal);"> 🏖️ Balcony</div>
+        <div style="font-size:11px; color:var(--muted); margin-top:3px;"> Private balcony · No.1 pick</div>
+      </div>
+    </div>
+    <div style="border-radius:var(--rs); overflow:hidden; border:1px solid var(--gold); box-shadow:var(--shadow);">
+      <img loading="lazy" decoding="async" src="img/16.jpg" alt="Suite" style="width:100%; height:110px; object-fit:cover; display:block;">
+      <div style="padding:10px 12px; background:#fff;">
+        <div style="font-size:13px; font-weight:900; color:var(--gold-dark);"> 👑 Suite</div>
+        <div style="font-size:11px; color:var(--muted); margin-top:3px;"> Luxury · premium</div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:12px; background:var(--sky); border-radius:10px; padding:10px 14px; font-size:12px; color:#1a4a6e; line-height:1.7;"> 💡 First time? An <strong> inside cabin</strong> is plenty — you'll spend most of your time around the ship.</div>
+  <div style="margin-top:8px; text-align:right; font-size:10px; color:#b0c8d8;"> 📸 Photos: Virgin Voyages official materials</div>
+</div>
+</div>
+
+
+<div class="panel" id="sec11" data-n="11" data-title="How do I join?">
+<div class="acc">
+  <div class="acc-t" onclick="toggleAcc('a1')"><div class="acc-ic b">📋</div><div class="acc-tw"><div class="acc-title"> How to sign up</div><div class="acc-sub"> Takes 5 minutes if you're prepared</div></div><div class="acc-arr" id="arr-a1">▼</div></div>
+  <div class="acc-body" id="a1">
+    <div style="padding-top:14px; display:flex; flex-direction:column; gap:12px;">
+      <div style="background:var(--sky); border-radius:12px; padding:14px 16px;">
+        <div style="font-size:12px; font-weight:700; color:var(--ocean); letter-spacing:1px; margin-bottom:12px;"> 📋 Filling in the sign-up form</div>
+        <div class="sf-sub"> This is what the real sign-up screen looks like. <strong style="color:var(--gold);"> Just fill it in</strong> like the example.</div>
+        <div class="sf" aria-label="Sign-up screen example">
+          <span class="sf-tag"> Example</span>
+          <div class="sf-g">
+            <div><div class="sf-l"> First name<i>*</i></div><div class="sf-i">JOHN</div><div class="sf-h"> As on passport: <b> first name</b></div></div>
+            <div><div class="sf-l"> Last name<i>*</i></div><div class="sf-i">SMITH</div><div class="sf-h"> As on passport: <b> last name</b></div></div>
+            <div><div class="sf-l"> Email<i>*</i></div><div class="sf-i sm">john@gmail.com</div><div class="sf-h"> An email you use often</div></div>
+            <div><div class="sf-l"> Confirm email<i>*</i></div><div class="sf-i sm">john@gmail.com</div><div class="sf-h"><b> Same email</b> again</div></div>
+            <div><div class="sf-l"> Password<i>*</i></div><div class="sf-i pw">••••••••<span class="eye">👁</span></div></div>
+            <div><div class="sf-l"> Confirm password<i>*</i></div><div class="sf-i pw">••••••••<span class="eye">👁</span></div></div>
+            <div class="sf-n sf-full"> Password: <b> 8+ characters</b>, <b> letters + numbers</b> mixed</div>
+            <div><div class="sf-l"> Country<i>*</i></div><div class="sf-i sm">United States</div></div>
+            <div><div class="sf-l"> Phone<i>*</i></div><div class="sf-i sm"><span class="cc">🇺🇸 +1</span>2125550123</div><div class="sf-h"> Drop the <b> leading 0</b> if there is one</div></div>
+            <div class="sf-full"><div class="sf-l"> Gender<i>*</i></div><div class="sf-i sel"> Select Female / Male<span style="color:#6b7280">⌄</span></div></div>
+            <div class="sf-full"><div class="sf-cap"><span class="box">✓</span> I'm not a robot<span class="sf-rc">reCAPTCHA</span></div><div class="sf-h">⚠️ <b> Be sure to check</b> this box. Solve the picture quiz if one appears</div></div>
+            <div class="sf-btn sf-full"> Sign up</div>
+          </div>
+        </div>
+        <div class="sf-name"> ⚠️ First name is <b> your given name</b>, Last name is <b> your family name</b>. For John Smith: First name <b>JOHN</b>, Last name <b>SMITH</b>!</div>
+        <div style="margin-top:10px; background:#fffbeb; border-radius:8px; padding:10px 12px; font-size:11px; color:#7a5500; line-height:1.7;">
+          💡 Prepare as above and <strong> you'll be signed up in 5 minutes</strong>!
+        </div>
+      </div>
+
+      <div style="background:#fffdf5; border:1.5px solid #e8d060; border-radius:12px; padding:14px; display:flex; flex-direction:column; gap:9px;">
+        <div style="font-size:13px; font-weight:900; color:var(--navy);"> 📋 Please check before you join</div>
+        <div style="background:#fff; border:1px solid var(--border); border-radius:10px; padding:11px 13px; font-size:12px; color:var(--navy); line-height:1.7;">
+          <strong> 1. Refund policy</strong><br>
+          <span style="color:var(--muted);"> Refunds are available only <span style="color:#c0392b; font-weight:700;"> within 14 days</span> of joining. After that, fees are not refunded and the platform's terms apply.</span>
+        </div>
+        <div style="background:#fff; border:1px solid var(--border); border-radius:10px; padding:11px 13px; font-size:12px; color:var(--navy); line-height:1.7;">
+          <strong> 2. Use your passport name</strong><br>
+          <span style="color:var(--muted);"><span style="color:var(--ocean); font-weight:700;"> Sign up with your name exactly as on your passport</span>. A different spelling can cause booking problems.</span>
+        </div>
+        <div style="background:#fff; border:1px solid var(--border); border-radius:10px; padding:11px 13px; font-size:12px; color:var(--navy); line-height:1.7;">
+          <strong> 3. Set up auto-pay</strong><br>
+          <span style="color:var(--muted);"> After joining, be sure to set up <span style="color:#c0392b; font-weight:700;"> credit card auto-pay</span>. If payments stop, rewards stop too.</span>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:center; justify-content:center; text-align:center; background:linear-gradient(135deg,var(--gold),#ffe566); color:var(--navy); font-size:14px; font-weight:900; padding:15px; border-radius:12px; box-shadow:0 4px 16px rgba(200,152,58,.35); line-height:1.6;">💬 Interested? Contact the person who shared this page with you</div>
+
+      <div style="background:var(--sky); border-radius:10px; padding:12px 14px; font-size:12px; color:#1a4a6e; line-height:1.8;">
+        📌 Ask the person who shared this page for the sign-up link<br>
+        <span style="color:var(--muted);"> You'll get an email once you've signed up</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="acc">
+  <div class="acc-t" onclick="toggleAcc('a2')"><div class="acc-ic g">🔒</div><div class="acc-tw"><div class="acc-title"> Verify your identity</div><div class="acc-sub"> One-time ID check required</div></div><div class="acc-arr" id="arr-a2">▼</div></div>
+  <div class="acc-body" id="a2">
+    <div style="padding-top:14px; display:flex; flex-direction:column; gap:10px;">
+      <div style="background:var(--sky); border-radius:12px; padding:14px 16px;">
+        <div style="font-size:12px; font-weight:700; color:var(--ocean); letter-spacing:1px; margin-bottom:10px;"> 📎 What you need (one time only)</div>
+        <div style="display:flex; flex-direction:column; gap:7px;">
+          <div style="display:flex; gap:8px; align-items:center; font-size:12px; color:var(--navy); padding:8px 12px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+            <span style="font-size:15px; flex-shrink:0;">🪪</span> Photo of your ID, front & back (passport is fine) <span style="font-size:10px; color:var(--coral); margin-left:auto; font-weight:700;"> you may cover part of the number</span>
+          </div>
+          <div style="display:flex; gap:8px; align-items:center; font-size:12px; color:var(--navy); padding:8px 12px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+            <span style="font-size:15px; flex-shrink:0;">🤳</span> Selfie holding your ID
+          </div>
+          <div style="display:flex; gap:8px; align-items:center; font-size:12px; color:var(--navy); padding:8px 12px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+            <span style="font-size:15px; flex-shrink:0;">💳</span> Photo of your credit card <span style="font-size:10px; color:var(--coral); margin-left:auto; font-weight:700;"> cover the middle 8 digits</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff; border:1.5px solid var(--border); border-radius:12px; overflow:hidden;">
+        <div onclick="toggleAcc('a2_detail')" style="display:flex; align-items:center; justify-content:space-between; padding:14px 16px; cursor:pointer; -webkit-tap-highlight-color:transparent;">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="font-size:18px;">📤</span>
+            <div>
+              <div style="font-size:13px; font-weight:900; color:var(--navy);"> How to submit</div>
+              <div style="font-size:11px; color:var(--muted); margin-top:2px;"> Log in and submit via Support</div>
+            </div>
+          </div>
+          <div id="arr-a2_detail" style="font-size:14px; color:var(--muted); transition:transform .3s;">▼</div>
+        </div>
+        <div id="a2_detail" style="display:none; border-top:1px solid var(--sky); padding:14px 16px;">
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <div style="display:flex; gap:10px; align-items:flex-start;">
+              <div style="width:24px; height:24px; border-radius:50%; background:var(--ocean); color:#fff; font-size:12px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">1</div>
+              <div style="font-size:13px; color:var(--navy); line-height:1.7;"> In the app or on the web, <strong> log in,</strong> then tap the<br> top-right <strong> ❓ (Support)</strong> button</div>
+            </div>
+            <div style="display:flex; gap:10px; align-items:flex-start;">
+              <div style="width:24px; height:24px; border-radius:50%; background:var(--ocean); color:#fff; font-size:12px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">2</div>
+              <div style="font-size:13px; color:var(--navy); line-height:1.7;"><strong> Choose "Payment documents"</strong> </div>
+            </div>
+            <div style="display:flex; gap:10px; align-items:flex-start;">
+              <div style="width:24px; height:24px; border-radius:50%; background:var(--ocean); color:#fff; font-size:12px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">3</div>
+              <div style="width:100%;">
+                <div style="font-size:13px; color:var(--navy); line-height:1.7; margin-bottom:8px;"> Fill in the following and attach your documents</div>
+                <div style="background:var(--sky); border-radius:10px; padding:12px 14px; font-size:12px; color:#1a4a6e; line-height:2;">
+                  <div>📌 <strong> Subject:</strong> Verification</div>
+                  <div>💬 <strong> Message:</strong> Sending my verification documents. Thank you.</div>
+                  <div>📎 <strong> Attachments:</strong> ID, card and selfie photos</div>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex; gap:10px; align-items:flex-start;">
+              <div style="width:24px; height:24px; border-radius:50%; background:var(--green); color:#fff; font-size:12px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">4</div>
+              <div style="font-size:13px; color:var(--navy); line-height:1.7;"><strong> Tap "Submit"</strong> → done 🎉</div>
+            </div>
+            <div style="background:var(--green-light); border-radius:8px; padding:10px 14px; font-size:12px; color:#1a5c38; line-height:1.7;">
+              ✅ Review usually takes <strong> 1–2 business days</strong> after you submit
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="acc">
+  <div class="acc-t" onclick="toggleAcc('a3')"><div class="acc-ic y">💳</div><div class="acc-tw"><div class="acc-title"> Register a card for auto-pay</div><div class="acc-sub"> VISA / Mastercard that works internationally</div></div><div class="acc-arr" id="arr-a3">▼</div></div>
+  <div class="acc-body" id="a3">
+    <div style="padding-top:14px; display:flex; flex-direction:column; gap:10px;">
+      <div style="background:var(--sky); border-radius:var(--rs); padding:14px;"><div style="font-size:11px; font-weight:700; color:var(--ocean); letter-spacing:1px; margin-bottom:10px;"> 📍 Where to set it</div><div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap; font-size:13px; font-weight:700; color:var(--navy);"><span style="background:#fff; border:1px solid var(--border); border-radius:6px; padding:4px 10px;"> Payments</span><span style="color:var(--ocean);">→</span><span style="background:#fff; border:1px solid var(--border); border-radius:6px; padding:4px 10px;"> Invoices</span><span style="color:var(--ocean);">→</span><span style="background:#fff; border:1px solid var(--border); border-radius:6px; padding:4px 10px;"> Recurring payment method</span></div></div>
+      <div style="background:#fff3cd; border:1px solid var(--gold); border-radius:var(--rs); padding:14px; display:flex; align-items:center; gap:12px;"><div style="background:#f5a623; color:#fff; font-size:13px; font-weight:900; padding:10px 16px; border-radius:10px; flex-shrink:0;"> + Add payment method</div><div style="font-size:12px; color:#7a5500; line-height:1.6;"> Tap the button above and enter your card details</div></div>
+      <div style="background:#f0faff; border:1px solid #b0d8f0; border-radius:var(--rs); padding:14px;"><div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:8px;"><span style="background:#1a6eb5; color:#fff; font-size:12px; font-weight:900; padding:5px 14px; border-radius:20px;">VISA</span><span style="background:#eb001b; color:#fff; font-size:12px; font-weight:900; padding:5px 14px; border-radius:20px;">Mastercard</span></div><div style="font-size:11px; color:#e07070; font-weight:700;"> ⚠️ The card must accept international payments</div><div style="font-size:11px; color:var(--muted); margin-top:4px; line-height:1.6;"> Your monthly fee ($250 on Premium) is charged automatically.</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="acc">
+  <div class="acc-t" onclick="toggleAcc('a4')"><div class="acc-ic p">📱</div><div class="acc-tw"><div class="acc-title"> Add to your phone's home screen</div><div class="acc-sub"> Works on iPhone and Android</div></div><div class="acc-arr" id="arr-a4">▼</div></div>
+  <div class="acc-body" id="a4">
+    <div style="padding-top:14px; display:flex; flex-direction:column; gap:10px;">
+      <div style="background:#f0faff; border:1.5px solid #b0d8f0; border-radius:var(--rs); padding:14px;"><div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;"><span style="font-size:18px;">🍎</span><span style="font-size:13px; font-weight:900;"> iPhone</span><span style="font-size:10px; background:#e8f4fd; color:var(--ocean); font-weight:700; padding:2px 8px; border-radius:10px; margin-left:auto;">Safari</span></div><div style="display:flex; flex-direction:column; gap:7px; font-size:12px; color:#1a5a8a;"><div style="display:flex; gap:8px; align-items:flex-start;"><span style="background:var(--ocean); color:#fff; border-radius:50%; width:18px; height:18px; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:900; flex-shrink:0; margin-top:1px;">1</span> Open in Safari</div><div style="display:flex; gap:8px; align-items:flex-start;"><span style="background:var(--ocean); color:#fff; border-radius:50%; width:18px; height:18px; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:900; flex-shrink:0; margin-top:1px;">2</span> Tap the <strong> Share button</strong> at the bottom</div><div style="display:flex; gap:8px; align-items:flex-start;"><span style="background:var(--ocean); color:#fff; border-radius:50%; width:18px; height:18px; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:900; flex-shrink:0; margin-top:1px;">3</span><strong> Tap "Add to Home Screen"</strong> → <strong> "Add"</strong></div></div></div>
+      <div style="background:#fff3f0; border:1.5px solid #f5c8b0; border-radius:var(--rs); padding:14px;"><div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;"><span style="font-size:18px;">🤖</span><span style="font-size:13px; font-weight:900;"> Android</span><span style="font-size:10px; background:#fdeee8; color:#c0502b; font-weight:700; padding:2px 8px; border-radius:10px; margin-left:auto;">Chrome</span></div><div style="display:flex; flex-direction:column; gap:7px; font-size:12px; color:#7a3a20;"><div style="display:flex; gap:8px; align-items:flex-start;"><span style="background:#c0502b; color:#fff; border-radius:50%; width:18px; height:18px; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:900; flex-shrink:0; margin-top:1px;">1</span> Open in Chrome</div><div style="display:flex; gap:8px; align-items:flex-start;"><span style="background:#c0502b; color:#fff; border-radius:50%; width:18px; height:18px; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:900; flex-shrink:0; margin-top:1px;">2</span> Tap the <strong> ⋮ menu</strong> at the top right</div><div style="display:flex; gap:8px; align-items:flex-start;"><span style="background:#c0502b; color:#fff; border-radius:50%; width:18px; height:18px; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:900; flex-shrink:0; margin-top:1px;">3</span><strong> Tap "Add to Home Screen"</strong> → <strong> "Add"</strong></div></div></div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="panel" id="sec-reward" data-n="💎" data-title="How much cruise can my rewards buy?">
+<style>
+.rc{background:#fff;border:2px solid var(--gold);border-radius:16px;padding:18px 16px;margin-bottom:14px;}
+.rc h3{font-size:15px;font-weight:900;color:var(--navy);margin:0 0 4px;}
+.rc .rc-sub{font-size:12px;color:var(--muted);margin-bottom:14px;line-height:1.6;}
+.rc label{display:block;font-size:12px;font-weight:700;color:var(--muted);margin-bottom:6px;}
+.rc .rc-field{display:flex;align-items:center;gap:8px;border:2px solid var(--navy);border-radius:12px;padding:6px 14px;background:#fff;}
+.rc .rc-field input{flex:1;min-width:0;border:0;outline:0;font:900 22px 'Noto Sans','Segoe UI',Roboto,sans-serif;color:var(--navy);background:transparent;padding:6px 0;-webkit-appearance:none;}
+.rc .rc-field span{font-weight:900;color:var(--navy);}
+.rc .rc-field:focus-within{outline:3px solid var(--gold);outline-offset:2px;}
+.rc .rc-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.rc .rc-chips button{all:unset;cursor:pointer;font-size:13px;font-weight:700;color:var(--navy);background:var(--sky);border-radius:20px;padding:7px 13px;}
+.rc .rc-res{border-radius:14px;padding:16px;margin-top:12px;}
+.rc .rc-r1{background:var(--navy);color:#fff;text-align:center;}
+.rc .rc-r1 .k{font-size:13px;font-weight:700;}
+.rc .rc-r1 .v{font-size:28px;font-weight:900;color:var(--gold);line-height:1.3;margin:4px 0;}
+.rc .rc-r1 .d{font-size:12.5px;color:rgba(255,255,255,.75);}
+.rc .rc-r2{background:var(--sky);color:var(--navy);}
+.rc .rc-row{display:flex;justify-content:space-between;font-size:14px;padding:4px 0;}
+.rc .rc-row small{color:var(--muted);}
+.rc .rc-row.t{padding-top:8px;margin-top:6px;border-top:1px solid #cfdcea;}
+.rc .rc-note{font-size:12px;color:var(--muted);line-height:1.8;margin-top:12px;}
+</style>
+<div class="rc">
+
+  <div class="rc-sub"> Enter your rewards to see the cruise price you can book with rewards alone</div>
+  <label for="rc_rp"> Reward points you have</label>
+  <div class="rc-field"><input id="rc_rp" type="number" inputmode="numeric" min="0" value="2700"><span>RP</span></div>
+  <div class="rc-chips">
+    <button type="button" data-v="1500">1,500</button><button type="button" data-v="2800">2,800</button><button type="button" data-v="5000">5,000</button><button type="button" data-v="10000">10,000</button>
+  </div>
+  <div class="rc-res rc-r1">
+    <div class="k"> Cruise you can book with rewards alone</div>
+    <div class="v" id="rc_max">$1,800</div>
+    <div class="d"> or under — pick a cruise in this range and book it <b style="color:#fff"> with no cash —</b> rewards only</div>
+  </div>
+  <div class="rc-res rc-r2">
+    <div style="font-size:13px;font-weight:700;margin-bottom:8px"> How the rewards are used</div>
+    <div class="rc-row"><span> ① First half of the fare <small>(1 RP = $1)</small></span><b id="rc_h1">900 RP</b></div>
+    <div class="rc-row"><span> ② Second half <small>(2 RP = $1)</small></span><b id="rc_h2">1,800 RP</b></div>
+    <div class="rc-row t"><span><b> Total</b></span><b id="rc_tot">2,700 RP</b></div>
+  </div>
+  <p class="rc-note">· <b> Prices are based on the tax-inclusive cruise fare</b> — onboard tips are paid separately.<br>
+  · All-reward payment applies to <b> cruises departing 270+ days (about 9 months) out</b>.<br>
+  · Actual prices vary by cruise line, dates and cabin — please check the final amount on the booking screen.</p>
+  <a href="javascript:void(0)" onclick="openPanel('sec-dday')" style="display:flex;align-items:center;justify-content:center;min-height:50px;margin-top:14px;border:1.5px solid var(--navy);border-radius:12px;color:var(--navy);font-weight:900;text-decoration:none"> 📅 See when you can book</a>
+</div>
+<script>
+(function(){
+  var rp=document.getElementById('rc_rp');
+  function n(x){return Math.floor(x).toLocaleString();}
+  function calc(){var r=Math.max(0,parseFloat(rp.value)||0),p=Math.floor(r/1.5),h=p/2;
+    document.getElementById('rc_max').textContent='$'+n(p);
+    document.getElementById('rc_h1').textContent=n(h)+' RP';
+    document.getElementById('rc_h2').textContent=n(h*2)+' RP';
+    document.getElementById('rc_tot').textContent=n(h*3)+' RP';}
+  rp.addEventListener('input',calc);
+  document.querySelectorAll('.rc-chips button').forEach(function(b){b.addEventListener('click',function(){rp.value=b.dataset.v;calc();});});
+  calc();
+})();
+</script>
+</div>
+
+
+<div class="panel" id="sec-trust" data-n="🏆" data-title="Why you can trust it">
+<div class="card" style="word-break:normal;">
+  <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:14px;"> 🌍 A travel membership proven worldwide for 10 years</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:14px;">
+    <div style="background:var(--sky); border-radius:12px; padding:14px; text-align:center;">
+      <div style="font-size:22px; font-weight:900; color:var(--ocean);"> 2015</div>
+      <div style="font-size:11px; color:var(--muted); margin-top:4px;"> founded · 10 years running</div>
+    </div>
+    <div style="background:var(--sky); border-radius:12px; padding:14px; text-align:center;">
+      <div style="font-size:22px; font-weight:900; color:var(--ocean);"> 193 countries</div>
+      <div style="font-size:11px; color:var(--muted); margin-top:4px;"> served worldwide</div>
+    </div>
+    <div style="background:var(--sky); border-radius:12px; padding:14px; text-align:center;">
+      <div style="font-size:22px; font-weight:900; color:var(--ocean);"> 710K+</div>
+      <div style="font-size:11px; color:var(--muted); margin-top:4px;"> guests to date</div>
+    </div>
+    <div style="background:var(--sky); border-radius:12px; padding:14px; text-align:center;">
+      <div style="font-size:18px; font-weight:900; color:var(--ocean);"> USA | Puerto Rico</div>
+      <div style="font-size:11px; color:var(--muted); margin-top:4px;"> HQ · registered company</div>
+    </div>
+  </div>
+  <div style="background:var(--green-light); border-radius:10px; padding:12px 14px; font-size:13px; color:#1a5c38; line-height:1.7;">
+    ✅ A global travel membership growing steadily since 2015,<br> officially serving 193 countries.
+  </div>
+</div>
+
+<div class="card" style="word-break:normal;">
+  <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:16px;"> ⭐ Verified member reviews</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+    <div style="border-radius:12px; overflow:hidden; box-shadow:0 2px 12px rgba(10,110,158,.08); border:1px solid var(--border);">
+      <img loading="lazy" decoding="async" class="img-skel" src="img/17.jpg" alt="Trustpilot reviews" style="width:100%; display:block;">
+    </div>
+    <div style="border-radius:12px; overflow:hidden; box-shadow:0 2px 12px rgba(10,110,158,.08); border:1px solid var(--border);">
+      <img loading="lazy" decoding="async" class="img-skel" src="img/18.jpg" alt="Google reviews" style="width:100%; display:block;">
+    </div>
+  </div>
+</div>
+
+<div class="card" style="word-break:normal;">
+  <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:12px;"> 🏅 Industry awards & payment protection</div>
+  <div style="display:flex; flex-direction:column; gap:10px;">
+    <div style="background:#fffdf5; border:1px solid #e8d060; border-radius:12px; padding:13px 15px;">
+      <div style="font-size:13px; font-weight:900; color:var(--navy); margin-bottom:6px;"> 🏆 DSN Global 100 &mdash; #39 in 2025</div>
+      <div style="font-size:12px; color:#3a4a5a; line-height:1.8;">
+        Ranked <strong style="color:var(--gold);"> #39 worldwide</strong>.<br>
+        Only companies with annual revenue of <strong style="color:var(--navy);"> $100M+</strong> make this list.
+      </div>
+    </div>
+    <div style="background:#f0f8ff; border:1px solid #b8d8f0; border-radius:12px; padding:13px 15px;">
+      <div style="font-size:13px; font-weight:900; color:var(--navy); margin-bottom:6px;"> 🛡 Repayd &mdash; protection for what you pay</div>
+      <div style="font-size:12px; color:#3a4a5a; line-height:1.8;">
+        A travel, airline & cruise <strong style="color:var(--navy);"> payment specialist</strong><br>
+        protects the money <strong style="color:var(--ocean);"> you pay in.</strong>
+      </div>
+    </div>
+    <div style="background:#fdf9f2; border:1px solid #e0cdb0; border-radius:12px; padding:13px 15px;">
+      <div style="font-size:13px; font-weight:900; color:var(--navy); margin-bottom:6px;"> 🥇🥈 Magellan Awards &mdash; Gold & Silver</div>
+      <div style="font-size:12px; color:#3a4a5a; line-height:1.8;">
+        <strong style="color:var(--navy);"> At one of the</strong><br>
+        travel industry's <strong style="color:var(--navy);"> top awards — where no prize is given unless an entry truly excels —</strong><br>
+        <strong style="color:var(--gold);"> it won Gold and Silver</strong> at the same time.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card" style="word-break:normal;">
+  <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:12px;"> 🤝 Giving back</div>
+  <div style="position:relative; padding-bottom:56.25%; border-radius:12px; overflow:hidden; margin-bottom:10px;">
+    <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
+      src="https://www.youtube.com/embed/2lx4Y3_lZ90"
+      title="Mercy Ships charity work"
+      allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+  <div style="background:var(--green-light); border-radius:10px; padding:12px 14px; font-size:13px; color:#1a5c38; line-height:1.8;">
+    🤝 <strong>Make-A-Wish</strong> and <strong>Mercy Ships</strong> partnerships<br>
+    support children and underserved communities around the world.<br>
+    <span style="font-size:11px; color:#3a9a5a;"> $740K+ donated · ongoing charity work</span>
+  </div>
+</div>
+</div>
+
+</div>
+
+
+<div style="background:linear-gradient(135deg,var(--navy),var(--ocean)); border-radius:var(--r); padding:30px 24px 28px; text-align:center; margin:30px 0 12px; position:relative; overflow:hidden;">
+  <div style="position:absolute; top:-10px; right:-10px; font-size:94px; opacity:.06;">🛳️</div>
+  <h2 style="font-size:20px; font-weight:900; color:#fff; margin-bottom:22px; line-height:1.4; word-break:normal; position:relative;">
+    Feel free to ask anything 😊
+  </h2>
+  <div style="display:flex; align-items:center; justify-content:center; text-align:center; width:100%; background:linear-gradient(135deg,var(--gold),#ffe566); color:var(--navy); font-size:15px; font-weight:900; padding:17px 20px; border-radius:50px; box-shadow:0 6px 24px rgba(240,192,64,.5); line-height:1.6;">💬 Please contact the person who shared this page with you</div>
+</div>
+
+
+<div style="background:rgba(255,255,255,.6); border:1px solid var(--border); border-radius:var(--rs); padding:16px 18px; font-size:11px; color:var(--muted); line-height:1.9; text-align:center; margin-top:20px;">
+  📌 This material shows <strong style="color:var(--ocean);"> an illustrative plan</strong>.<br>
+  Rewards earned are <span style="color:#e53935; font-weight:900;"> not a cash</span><span style="color:#111; font-weight:700;"> refund — they are</span> <span style="color:#0a3d8f; font-weight:900;"> for booking cruises</span>.<br>
+  Actual reward and booking terms depend on the platform's policies.
+  <div style="margin-top:10px; padding-top:10px; border-top:1px solid var(--border); font-size:10.5px; color:var(--muted2); letter-spacing:.5px;">
+    CRUISE CLUB
+  </div>
+</div>
+
+</div>
+
+<script>
+
+var CURRENT_PANEL = null;
+
+function buildPanels(){
+  document.querySelectorAll('.panel').forEach(function(p){
+    var n  = p.getAttribute('data-n')     || '';
+    var tt = p.getAttribute('data-title') || '';
+
+    var head = document.createElement('div');
+    head.className = 'panel-head';
+    head.innerHTML =
+      '<div class="panel-head-n">' + n + '</div>' +
+      '<div class="panel-head-t">' + tt + '</div>' +
+      '<button class="panel-close" type="button">✕ Close</button>';
+    head.querySelector('.panel-close').addEventListener('click', function(){ closePanel(true); });
+    p.insertBefore(head, p.firstChild);
+
+    var foot = document.createElement('button');
+    foot.type = 'button';
+    foot.className = 'panel-foot';
+    foot.textContent = '📑 Back to contents';
+    foot.addEventListener('click', function(){ closePanel(true); });
+    p.appendChild(foot);
+  });
+}
+
+function scrollToToc(smooth){
+  var el = document.getElementById('toc-menu');
+  if(!el) return;
+  window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 12, behavior: smooth === false ? 'auto' : 'smooth' });
+}
+
+function closePanel(goToc){
+  document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('open'); });
+  document.querySelectorAll('.toc-chip').forEach(function(c){ c.classList.remove('on'); });
+  CURRENT_PANEL = null;
+  if(goToc) scrollToToc(true);
+}
+
+function openPanel(id){
+  preloadPanel(id);
+  
+  if(CURRENT_PANEL === id){ closePanel(true); return; }
+
+  document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('open'); });
+  document.querySelectorAll('.toc-chip').forEach(function(c){ c.classList.remove('on'); });
+
+  var panel = document.getElementById(id);
+  if(!panel) return;
+  panel.classList.add('open');
+  var chip = document.getElementById('chip-' + id);
+  if(chip) chip.classList.add('on');
+  CURRENT_PANEL = id;
+
+  requestAnimationFrame(function(){
+    var y = panel.getBoundingClientRect().top + window.scrollY - 8;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  });
+}
+
+
+function toggleAcc(id){
+  var body = document.getElementById(id);
+  var arr  = document.getElementById('arr-' + id);
+  if(!body) return;
+  if(body.classList.contains('acc-body')){
+    var open = body.classList.contains('open');
+    body.classList.toggle('open', !open);
+    if(arr) arr.classList.toggle('open', !open);
+  } else {
+    var hidden = (body.style.display === 'none' || body.style.display === '');
+    body.style.display = hidden ? 'block' : 'none';
+    if(arr) arr.style.transform = hidden ? 'rotate(180deg)' : 'rotate(0deg)';
+  }
+}
+
+
+var simTab = 'allrp';
+function simSelectTab(tab){
+  simTab = tab;
+  var btnRP = document.getElementById('tab_allrp');
+  var btnCard = document.getElementById('tab_card');
+  var resRP = document.getElementById('result_allrp');
+  var resCard = document.getElementById('result_card');
+  if(!btnRP || !btnCard) return;
+  if(tab === 'allrp'){
+    btnRP.style.background='var(--ocean)'; btnRP.style.color='#fff'; btnRP.style.borderColor='var(--ocean)';
+    btnCard.style.background='#fff'; btnCard.style.color='var(--muted)'; btnCard.style.borderColor='var(--border)';
+    resRP.style.display='block'; resCard.style.display='none';
+  } else {
+    btnCard.style.background='var(--green)'; btnCard.style.color='#fff'; btnCard.style.borderColor='var(--green)';
+    btnRP.style.background='#fff'; btnRP.style.color='var(--muted)'; btnRP.style.borderColor='var(--border)';
+    resRP.style.display='none'; resCard.style.display='block';
+  }
+  simCalc();
+}
+function fmt(n){ return '$' + Math.round(n).toLocaleString(); }
+function fmtRP(n){ return Math.round(n).toLocaleString() + ' RP'; }
+
+function simCalc(){
+  var roomEl = document.getElementById('sim_room');
+  if(!roomEl) return;
+  var room = parseFloat(roomEl.value) || 0;
+  var rp   = parseFloat(document.getElementById('sim_rp').value) || 0;
+
+  var maxDiscount = room * 0.5;
+  var remaining   = room - maxDiscount;
+  var rpForStep1    = maxDiscount;
+  var rpForStep2    = remaining * 2;
+  var totalRpNeeded = rpForStep1 + rpForStep2;
+
+  function put(id,v){ var e=document.getElementById(id); if(e) e.textContent=v; }
+  put('sim_room_disp', fmt(room));
+  put('sim_max_reward', fmt(maxDiscount));
+
+  var statusEl = document.getElementById('sim_rp_status');
+  if(rp >= rpForStep1){
+    statusEl.style.background='var(--green-light)'; statusEl.style.color='var(--green)';
+    statusEl.textContent='✅ Enough rewards — maximum discount applies';
+  } else {
+    statusEl.style.background='#fff5f5'; statusEl.style.color='var(--coral)';
+    statusEl.textContent='⚠️ Not enough rewards — you have ' + fmtRP(rp) + ' / need ' + fmtRP(rpForStep1);
+  }
+
+  put('sim_step1_rp', fmtRP(Math.min(rp, rpForStep1)) + ' used');
+  put('sim_step2_rp', fmtRP(rpForStep2) + ' needed');
+  put('sim_total_rp', fmtRP(totalRpNeeded) + ' needed');
+
+  var allEl = document.getElementById('sim_allrp_result');
+  if(rp >= totalRpNeeded){
+    allEl.style.background='var(--green-light)'; allEl.style.color='var(--green)';
+    allEl.textContent='✅ Your rewards cover it all!';
+  } else if(rp >= rpForStep1){
+    allEl.style.background='#fffbeb'; allEl.style.color='#8a6000';
+    allEl.textContent='⚡ ' + fmtRP(totalRpNeeded - rp) + ' short — consider adding a card';
+  } else {
+    allEl.style.background='#fff5f5'; allEl.style.color='var(--coral)';
+    allEl.textContent='⚠️ Not enough rewards — ' + fmtRP(totalRpNeeded - rp) + ' more needed';
+  }
+
+  var usableRP = Math.min(rp, rpForStep1);
+  var cardPay  = room - usableRP;
+  put('sim_card_rp', fmtRP(usableRP) + ' used');
+  put('sim_card_pay', fmt(cardPay));
+  var cardEl = document.getElementById('sim_card_result');
+  cardEl.style.background = rp >= rpForStep1 ? '#f0f8ff' : '#fff5f5';
+  cardEl.style.color      = rp >= rpForStep1 ? 'var(--ocean)' : 'var(--coral)';
+  cardEl.textContent = '💳 Card payment: ' + fmt(cardPay) + (rp >= rpForStep1 ? '' : ' — not enough rewards');
+}
+
+
+function fmtUSD(n){ return '$'+Math.round(n).toLocaleString(); }
+function set(id,v){ var e=document.getElementById(id); if(e) e.textContent=v; }
+function calcAll(){
+  if(!document.getElementById('n_pkg1')) return;
+  function v(id){ return parseFloat(document.getElementById(id).value)||0; }
+  var sub=v('n_pkg1')+v('n_tip1')+v('n_guide1'), tot2=sub*2;
+  ['n_pkg1_usd','n_tip1_usd','n_guide1_usd','n_sub1_usd','n_total_usd_ref','p_cruise_krw','p_air_krw','p_land_krw','p_stip_krw','p_gtip_krw','p_total_krw','save_usd'].forEach(function(i){ set(i,''); });
+  set('n_sub1_krw', fmtUSD(sub));
+  set('n_total_krw2', fmtUSD(tot2));
+  var pT=v('p_cruise')+v('p_air')+v('p_land')+v('p_stip')+v('p_gtip');
+  set('p_total_usd', fmtUSD(pT));
+  var save=tot2-pT, pct=tot2>0?Math.round(save/tot2*100):0;
+  set('save_krw', fmtUSD(save));
+  set('save_pct', '~'+pct+'%');
+}
+
+function calcDday(el){
+  if(!el) return;
+  var box = el.closest('.card') || document;
+  var out = box.querySelector('.dday-result');
+  if(!out) return;
+  var base = el.value ? new Date(el.value + 'T00:00:00') : new Date();
+  if(isNaN(base.getTime())) return;
+  var t = new Date(base.getTime());
+  t.setDate(t.getDate() + 270);
+  var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  out.textContent = days[t.getDay()]+', '+['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][t.getMonth()]+' '+t.getDate()+', '+t.getFullYear();
+}
+function initDday(){
+  var now = new Date();
+  var pad = function(v){ return (v<10?'0':'')+v; };
+  var today = now.getFullYear()+'-'+pad(now.getMonth()+1)+'-'+pad(now.getDate());
+  document.querySelectorAll('.dday-from').forEach(function(el){
+    el.value = today;
+    calcDday(el);
+  });
+}
+
+
+function loadYT(){
+  var wrap = document.getElementById('yt-thumb-wrap');
+  var iWrap = document.getElementById('yt-iframe-wrap');
+  var iframe = document.getElementById('yt-main');
+  var ytId = (typeof CONFIG !== 'undefined' && CONFIG.youtube) ? CONFIG.youtube : 'cYJvkeSffoo';
+  iframe.src = 'https://www.youtube.com/embed/' + ytId + '?autoplay=1&rel=0';
+  wrap.style.display='none'; iWrap.style.display='block';
+}
+function loadYT2(){
+  var w = document.getElementById('yt2-thumb-wrap');
+  var i = document.getElementById('yt2-iframe-wrap');
+  var f = document.getElementById('yt2-main');
+  if(!w || !i || !f) return;
+  f.src = 'https://www.youtube.com/embed/xOodUATanks?autoplay=1&rel=0';
+  w.style.display='none'; i.style.display='block';
+}
+
+
+
+var PRELOAD_ORDER = ['sec10','sec-review','sec1','sec-trust','sec4'];
+
+function preloadPanel(id){
+  var p = document.getElementById(id);
+  if(!p || p.dataset.preloaded) return;
+  p.dataset.preloaded = '1';
+  p.querySelectorAll('img[src]').forEach(function(im){
+    var pre = new Image();
+    pre.decoding = 'async';
+    pre.src = im.getAttribute('src');
+  });
+}
+
+function schedulePreload(){
+  var i = 0;
+  function next(){
+    if(i >= PRELOAD_ORDER.length) return;
+    preloadPanel(PRELOAD_ORDER[i++]);
+    setTimeout(next, 400);
+  }
+  if('requestIdleCallback' in window){
+    requestIdleCallback(next, { timeout: 2500 });
+  } else {
+    setTimeout(next, 1200);
+  }
+}
+
+
+function initPage(){
+  buildPanels();
+
+  
+  document.querySelectorAll('.btn-kakao').forEach(function(el){
+    if(CONFIG.kakao && CONFIG.kakao.indexOf('open.kakao.com') > -1){
+      el.href = CONFIG.kakao;
+    } else {
+      el.href = 'javascript:void(0)';
+      el.style.opacity = '.55';
+      el.style.cursor  = 'not-allowed';
+      
+    }
+  });
+
+  document.querySelectorAll('.toc-chip').forEach(function(c){
+    var pid = c.id.replace('chip-','');
+    var warm = function(){ preloadPanel(pid); };
+    c.addEventListener('touchstart', warm, {passive:true});
+    c.addEventListener('mouseenter', warm);
+  });
+
+  document.querySelectorAll('a[href^="http"]').forEach(function(el){
+    el.setAttribute('target','_blank');
+    el.setAttribute('rel','noopener noreferrer');
+  });
+
+  var floatTop = document.getElementById('float-top');
+  var floatToc = document.getElementById('float-toc');
+  window.addEventListener('scroll', function(){
+    var show = window.scrollY > 300;
+    if(floatTop) floatTop.classList.toggle('show', show);
+    if(floatToc) floatToc.classList.toggle('show', show && CURRENT_PANEL !== null);
+  }, {passive:true});
+
+  calcAll();
+  simCalc();
+  initDday();
+  schedulePreload();
+
+  var playBtn = document.getElementById('yt-play-btn');
+  var thumbWrap = document.getElementById('yt-thumb-wrap');
+  if(thumbWrap && playBtn){
+    thumbWrap.addEventListener('mouseenter', function(){ playBtn.style.transform='scale(1.12)'; });
+    thumbWrap.addEventListener('mouseleave', function(){ playBtn.style.transform='scale(1)'; });
+  }
+}
+
+if(document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', initPage);
+} else {
+  initPage();
+}
+</script>
+</body>
+</html>
